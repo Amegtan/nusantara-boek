@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nusantara-boek.nl/sitemap.xml

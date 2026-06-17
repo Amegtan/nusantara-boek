@@ -1,0 +1,160 @@
+/* Nusantara companion-site - basis-stylesheet (skeleton v1.0)
+ * Stijl: rustig academisch, één lettertype-familie, twee accentkleuren,
+ * mobielvriendelijk. Wordt in week 1 (typografie/colorscheme) verder uitgewerkt.
+ */
+
+:root {
+  --c-bg: #fbf9f5;          /* off-white papier */
+  --c-text: #1c1c1c;        /* near-black */
+  --c-muted: #6a6a6a;       /* subtitels, captions */
+  --c-accent: #8B2C2C;      /* hidde-rood (cinnaber) - links, accenten */
+  --c-accent-soft: #c9d6c4; /* zachtgroen voor banners/blocks */
+  --c-rule: #d8d2c2;        /* hairline separator */
+  --maxw: 720px;
+  --maxw-wide: 960px;
+  --font: 'Georgia', 'Cambria', 'Times New Roman', serif;
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--c-text);
+  background: var(--c-bg);
+}
+
+/* Layout */
+header.site-header {
+  border-bottom: 1px solid var(--c-rule);
+  padding: 1rem 1.25rem;
+}
+header.site-header .wrap {
+  max-width: var(--maxw-wide);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+header.site-header .brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--c-text);
+}
+header.site-header .brand .tagline {
+  display: block;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--c-muted);
+  margin-top: 0.1rem;
+}
+nav.site-nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+nav.site-nav a {
+  color: var(--c-text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+nav.site-nav a:hover,
+nav.site-nav a.is-current {
+  border-bottom-color: var(--c-accent);
+  color: var(--c-accent);
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+main.wide { max-width: var(--maxw-wide); }
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0.5rem 0 0.25rem; }
+h2 { font-size: 1.4rem; line-height: 1.25; margin: 2rem 0 0.5rem; }
+h3 { font-size: 1.15rem; margin: 1.5rem 0 0.4rem; }
+p { margin: 0.7rem 0; }
+
+a { color: var(--c-accent); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration: none; }
+
+.subtitle { color: var(--c-muted); font-style: italic; margin-top: 0; }
+
+.banner {
+  background: var(--c-accent-soft);
+  border-left: 4px solid var(--c-accent);
+  padding: 0.6rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+}
+.banner .label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-accent);
+  margin-right: 0.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.card {
+  border: 1px solid var(--c-rule);
+  padding: 1rem 1.1rem;
+  background: #fff;
+}
+.card h3 { margin-top: 0; }
+.card p { font-size: 0.95rem; color: var(--c-text); }
+
+footer.site-footer {
+  border-top: 1px solid var(--c-rule);
+  padding: 1.5rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--c-muted);
+  text-align: center;
+}
+footer.site-footer a { color: var(--c-muted); }
+
+/* Embed-frames voor tijdlijn / interconnecties */
+.embed-frame {
+  width: 100%;
+  height: 80vh;
+  min-height: 540px;
+  border: 1px solid var(--c-rule);
+  background: #fff;
+}
+
+/* 404 */
+.notfound {
+  text-align: center;
+  padding: 4rem 0;
+}
+.notfound h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+
+@media (max-width: 540px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.2rem; }
+  main { padding: 1.25rem 1rem 3rem; }
+}

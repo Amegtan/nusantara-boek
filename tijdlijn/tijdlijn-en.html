@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indonesia — A Timeline of 212 Pivotal Events up to G30S</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9922A;
+    --gold-light: #E8B84B;
+    --gold-pale: #F5D98B;
+    --crimson: #8B1A1A;
+    --deep-red: #5C0F0F;
+    --brown: #3D1E0A;
+    --cream: #F7EDD8;
+    --parchment: #EFE0BE;
+    --dark: #1A0E06;
+    --shadow: rgba(0,0,0,0.5);
+    --text: #2A1606;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--dark);
+    color: var(--cream);
+    font-family: 'Crimson Pro', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 20%, rgba(201,146,42,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(139,26,26,0.1) 0%, transparent 60%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 20 L55 40 L30 55 L5 40 L5 20 Z' fill='none' stroke='rgba(201,146,42,0.04)' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='rgba(201,146,42,0.03)' stroke-width='1'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  header {
+    position: relative;
+    text-align: center;
+    padding: 80px 40px 60px;
+    z-index: 1;
+    border-bottom: 1px solid rgba(201,146,42,0.3);
+    background: linear-gradient(180deg, rgba(92,15,15,0.4) 0%, transparent 100%);
+  }
+
+  .header-ornament {
+    font-size: 28px;
+    color: var(--gold);
+    letter-spacing: 20px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+
+  header h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(28px, 5vw, 58px);
+    font-weight: 700;
+    color: var(--gold-light);
+    text-shadow: 0 0 40px rgba(201,146,42,0.4), 0 2px 4px rgba(0,0,0,0.8);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+
+  header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold-pale);
+    opacity: 0.75;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+  }
+
+  .header-sub {
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+    color: var(--parchment);
+    opacity: 0.6;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .era-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: rgba(26,14,6,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,146,42,0.2);
+  }
+
+  .era-btn {
+    padding: 6px 16px;
+    border: 1px solid rgba(201,146,42,0.35);
+    background: transparent;
+    color: var(--gold-pale);
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.25s;
+    text-transform: uppercase;
+  }
+  .cat-btn {
+    padding: 6px 16px;
+    border: 1px solid rgba(201,146,42,0.35);
+    background: transparent;
+    color: var(--gold-pale);
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.25s;
+    text-transform: uppercase;
+  }
+  .vl-btn {
+    padding: 6px 16px;
+    border: 1px solid rgba(201,146,42,0.35);
+    background: transparent;
+    color: var(--gold-pale);
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.25s;
+    text-transform: uppercase;
+  }
+  .cat-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+  .vl-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+
+  .era-btn:hover, .era-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 18px 20px 6px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .search-bar input {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,146,42,0.3);
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    font-size: 15px;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-bar input:focus {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.07);
+  }
+
+  .search-bar input::placeholder { color: rgba(247,237,216,0.35); }
+
+  .stats {
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    color: rgba(247,237,216,0.45);
+    letter-spacing: 1px;
+    font-family: 'Crimson Pro', serif;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding: 0 20px 80px;
+    z-index: 1;
+  }
+
+  .timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(201,146,42,0.6) 3%,
+      rgba(201,146,42,0.6) 97%,
+      transparent 100%);
+    transform: translateX(-50%);
+  }
+
+  .era-section { margin-bottom: 10px; }
+
+  .era-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 50px 0 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .era-label::before, .era-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,146,42,0.5));
+  }
+
+  .era-label::after {
+    background: linear-gradient(270deg, transparent, rgba(201,146,42,0.5));
+  }
+
+  .era-label-text {
+    background: var(--dark);
+    padding: 8px 24px;
+    border: 1px solid rgba(201,146,42,0.5);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .event {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    position: relative;
+    animation: fadeSlide 0.5s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .event::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    transform: translateX(-50%);
+    z-index: 3;
+    box-shadow: 0 0 8px rgba(201,146,42,0.6);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .event:hover::after {
+    transform: translateX(-50%) scale(1.6);
+    box-shadow: 0 0 16px rgba(201,146,42,0.9);
+  }
+
+  .event.left {
+    flex-direction: row;
+    padding-right: calc(50% + 30px);
+    justify-content: flex-end;
+  }
+
+  .event.right {
+    flex-direction: row-reverse;
+    padding-left: calc(50% + 30px);
+    justify-content: flex-end;
+  }
+
+  .event-card {
+    background: linear-gradient(135deg, rgba(61,30,10,0.85) 0%, rgba(26,14,6,0.9) 100%);
+    border: 1px solid rgba(201,146,42,0.22);
+    padding: 14px 18px;
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    transition: all 0.25s;
+    cursor: default;
+  }
+
+  .event-card:hover {
+    border-color: rgba(201,146,42,0.6);
+    background: linear-gradient(135deg, rgba(80,40,12,0.95) 0%, rgba(40,20,8,0.98) 100%);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.6), inset 0 0 20px rgba(201,146,42,0.04);
+    transform: translateY(-2px);
+  }
+
+  .event.left .event-card::after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 22px;
+    width: 30px;
+    height: 1px;
+    background: rgba(201,146,42,0.35);
+  }
+
+  .event.right .event-card::after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 22px;
+    width: 30px;
+    height: 1px;
+    background: rgba(201,146,42,0.35);
+  }
+
+  .event-card-new {
+    border-left: 3px solid var(--gold) !important;
+  }
+  .event-number-new {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important;
+    color: var(--dark) !important;
+    font-style: italic;
+  }
+  
+  .event-number {
+    position: absolute;
+    top: -10px;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 10px;
+    color: var(--gold);
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+
+  .event.left .event-number { right: 14px; }
+  .event.right .event-number { left: 14px; }
+
+  .event-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .event-category-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .event-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .event-desc {
+    font-size: 13.5px;
+    color: rgba(247,237,216,0.72);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  .event-tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 2px 8px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 1px;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 600;
+  }
+
+  .cat-politiek    { background: rgba(139,26,26,0.3); color: #e88; border: 1px solid rgba(139,26,26,0.5); }
+  .cat-cultuur     { background: rgba(42,100,42,0.3); color: #8d8; border: 1px solid rgba(42,100,42,0.5); }
+  .cat-religie     { background: rgba(80,60,120,0.3); color: #aaf; border: 1px solid rgba(80,60,120,0.5); }
+  .cat-economie    { background: rgba(120,100,20,0.3); color: #ee8; border: 1px solid rgba(120,100,20,0.5); }
+  .cat-militair    { background: rgba(100,60,20,0.3); color: #db9; border: 1px solid rgba(100,60,20,0.5); }
+  .cat-wetenschap  { background: rgba(20,80,120,0.3); color: #8cf; border: 1px solid rgba(20,80,120,0.5); }
+  .cat-sociaal     { background: rgba(120,50,80,0.3); color: #f9b; border: 1px solid rgba(120,50,80,0.5); }
+  .cat-diplomatiek { background: rgba(20,100,100,0.3); color: #8ee; border: 1px solid rgba(20,100,100,0.5); }
+
+  .dot-staatsvorming { background: #e88; }
+  .dot-maritiem    { background: #46b; }
+  .dot-cultuur     { background: #8d8; }
+  .dot-religie     { background: #aaf; }
+  .dot-economie    { background: #ee8; }
+  .dot-militair    { background: #db9; }
+  .dot-wetenschap  { background: #8cf; }
+  .dot-sociaal     { background: #f9b; }
+  .dot-diplomatiek { background: #8ee; }
+
+  .event.hidden { display: none; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(201,146,42,0.15);
+    border-bottom: 1px solid rgba(201,146,42,0.15);
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(247,237,216,0.6);
+    font-family: 'Crimson Pro', serif;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+
+  .legend-item:hover { background: rgba(255,255,255,0.05); }
+
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  @media (max-width: 680px) {
+    .timeline-wrapper::before { left: 18px; }
+    .event.left, .event.right {
+      flex-direction: column;
+      padding-left: 46px;
+      padding-right: 0;
+    }
+    .event::after { left: 14px; transform: none; }
+    .event:hover::after { transform: scale(1.6); }
+    .event.left .event-card::after,
+    .event.right .event-card::after { display: none; }
+    .event-card { max-width: 100%; }
+  }
+
+  #no-results {
+    text-align: center;
+    padding: 60px;
+    color: rgba(247,237,216,0.35);
+    font-style: italic;
+    font-size: 18px;
+    display: none;
+  }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(201,146,42,0.5);
+    background: rgba(26,14,6,0.9);
+    color: var(--gold);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 0.2s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .scroll-top.visible { opacity: 1; pointer-events: all; }
+  .scroll-top:hover { background: var(--gold); color: var(--dark); }
+
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+    color: rgba(247,237,216,0.3);
+    letter-spacing: 2px;
+    font-family: 'Crimson Pro', serif;
+    border-top: 1px solid rgba(201,146,42,0.15);
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-ornament">✦ ✦ ✦</div>
+  <h1>Nusantara</h1>
+  <h2>A Chronicle of the Indonesian Archipelago</h2>
+  <div class="header-sub">212 Pivotal Events · Roots of Civilisation to G30S and Aftermath (1966)</div>
+</header>
+
+<div class="legend" id="legend">
+  <div class="legend-item" onclick="filterCat('staatsvorming')"><div class="legend-dot dot-staatsvorming"></div> State-building</div>
+  <div class="legend-item" onclick="filterCat('militair')"><div class="legend-dot dot-militair"></div> Military</div>
+  <div class="legend-item" onclick="filterCat('maritiem')"><div class="legend-dot dot-maritiem"></div> Maritime</div>
+  <div class="legend-item" onclick="filterCat('religie')"><div class="legend-dot dot-religie"></div> Religion</div>
+  <div class="legend-item" onclick="filterCat('cultuur')"><div class="legend-dot dot-cultuur"></div> Culture</div>
+  <div class="legend-item" onclick="filterCat('economie')"><div class="legend-dot dot-economie"></div> Economy</div>
+  <div class="legend-item" onclick="filterCat('diplomatiek')"><div class="legend-dot dot-diplomatiek"></div> Diplomatic</div>
+  <div class="legend-item" onclick="filterCat('wetenschap')"><div class="legend-dot dot-wetenschap"></div> Science</div>
+  <div class="legend-item" onclick="filterCat('sociaal')"><div class="legend-dot dot-sociaal"></div> Social</div>
+  <div class="legend-item" onclick="filterCat(null)" style="border: 1px solid rgba(201,146,42,0.3); color: var(--gold-pale);">✕ Clear filter</div>
+</div>
+
+<nav class="era-nav" id="era-nav">
+  <button class="era-btn active" onclick="filterEra('all')">All Eras</button>
+  <button class="era-btn" onclick="filterEra('prehistorie')">Roots of Civilisation</button>
+  <button class="era-btn" onclick="filterEra('oud')">Ancient Kingdoms</button>
+  <button class="era-btn" onclick="filterEra('klassiek')">Classical Era</button>
+  <button class="era-btn" onclick="filterEra('islamitisch')">Islamic Sultanates</button>
+  <button class="era-btn" onclick="filterEra('vroeg-koloniaal')">Early Colonial</button>
+  <button class="era-btn" onclick="filterEra('nederlands-koloniaal')">Dutch Colonial</button>
+  <button class="era-btn" onclick="filterEra('nationalisme')">Nationalism</button>
+  <button class="era-btn" onclick="filterEra('revolutie')">Revolution</button>
+  <button class="era-btn" onclick="filterEra('republiek')">Early Republic</button>
+  </nav>
+
+<nav class="cat-nav" id="cat-nav" style="position:sticky; top:60px; z-index:99; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:14px 20px; background:rgba(20,8,4,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(201,146,42,0.18);">
+  <span style="color:var(--gold-pale); font-size:11px; letter-spacing:2px; text-transform:uppercase; align-self:center; opacity:0.6; margin-right:6px;">Category:</span>
+  <button class="cat-btn active" onclick="filterCat('all')">All</button>
+  <button class="cat-btn" onclick="filterCat('staatsvorming')">State-formation</button>
+  <button class="cat-btn" onclick="filterCat('militair')">Military</button>
+  <button class="cat-btn" onclick="filterCat('maritiem')">Maritime</button>
+  <button class="cat-btn" onclick="filterCat('religie')">Religion</button>
+  <button class="cat-btn" onclick="filterCat('cultuur')">Culture</button>
+  <button class="cat-btn" onclick="filterCat('economie')">Economy</button>
+  <button class="cat-btn" onclick="filterCat('diplomatiek')">Diplomatic</button>
+  <button class="cat-btn" onclick="filterCat('wetenschap')">Science</button>
+  <button class="cat-btn" onclick="filterCat('sociaal')">Social</button>
+</nav>
+
+<nav class="vl-nav" id="vl-nav" style="position:sticky; top:120px; z-index:98; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:14px 20px; background:rgba(20,8,4,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(201,146,42,0.18);">
+  <span style="color:var(--gold-pale); font-size:11px; letter-spacing:2px; text-transform:uppercase; align-self:center; opacity:0.6; margin-right:6px;">Storyline:</span>
+  <button class="vl-btn active" onclick="filterVL('all')">All</button>
+  <button class="vl-btn" onclick="filterVL('VL01')">Discovery</button>
+  <button class="vl-btn" onclick="filterVL('VL02')">Spice Trade</button>
+  <button class="vl-btn" onclick="filterVL('VL03')">Forced Labour</button>
+  <button class="vl-btn" onclick="filterVL('VL04')">Religion</button>
+  <button class="vl-btn" onclick="filterVL('VL05')">Mandala Empires</button>
+  <button class="vl-btn" onclick="filterVL('VL06')">Dutch Presence</button>
+  <button class="vl-btn" onclick="filterVL('VL07')">Nationalism</button>
+  <button class="vl-btn" onclick="filterVL('VL08')">Revolution</button>
+  <button class="vl-btn" onclick="filterVL('VL09')">1965/New Order</button>
+  <button class="vl-btn" onclick="filterVL('VL10')">Culinary</button>
+  <button class="vl-btn" onclick="filterVL('VL11')">Chinese Diaspora</button>
+  <button class="vl-btn" onclick="filterVL('VL12')">Women-actors</button>
+  <button class="vl-btn" onclick="filterVL('VL13')">Japan</button>
+</nav>
+
+<div class="search-bar">
+  <input type="text" id="search" placeholder="Search by event, year, keyword…" oninput="doSearch()">
+</div>
+
+<div class="stats" id="stats">191 of 191 events</div>
+
+<div class="timeline-wrapper" id="timeline"></div>
+<div id="no-results">No events found.</div>
+
+<button class="scroll-top" id="scrollBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>✦ &nbsp; Compiled as a historical reference work &nbsp; ✦ &nbsp; Indonesia: from the roots of civilisation to the 30 September 1965 Movement and its immediate aftermath (Supersemar, 1966) &nbsp; ✦</footer>
+
+<script>
+const EVENTS = [
+  // ══ ROOTS OF CIVILISATION ══
+  { n:"0101", jaar:"~1,700,000 BCE", era:"prehistorie", titel:"Java Man (Homo erectus) Inhabits the Archipelago", omschr:"Fossils of Pithecanthropus erectus (Java Man), discovered near Trinil in East Java, represent one of the earliest known hominid species in Southeast Asia.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0102", jaar:"~800,000 BCE", era:"prehistorie", titel:"Homo erectus at Sangiran", omschr:"The Sangiran site, later designated a UNESCO World Heritage Site, yields the world's densest concentration of Homo erectus fossils.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0103", jaar:"~500,000 BCE", era:"prehistorie", titel:"Use of Fire and Stone Tools", omschr:"Archaeological evidence from Java shows early hominids using Acheulean stone tools and fire — a major cognitive and technological breakthrough.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0106", jaar:"~43,900 BCE", era:"prehistorie", titel:"Leang Bulu' Sipong 4: World's Oldest Narrative Hunting Scene", omschr:"A figurative hunting scene in the Leang Bulu' Sipong 4 cave on Sulawesi has been dated to at least 43,900 years old — older than Europe's famous Altamira and Chauvet caves. The scene depicts therianthropic figures (human-animal hybrids) hunting wild pigs and anoa cattle. The find confirms Nusantara as an early centre of cognitive and symbolic culture, restoring the archipelago's rightful place in the world history of earliest art.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0104", jaar:"~40,000 BCE", era:"prehistorie", titel:"Homo sapiens Reaches the Archipelago", omschr:"Modern humans migrate from mainland Southeast Asia into the Indonesian archipelago, gradually replacing earlier hominid populations.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0105", jaar:"~35,000 BCE", era:"prehistorie", titel:"Sulawesi Cave Paintings", omschr:"The Leang Bulu' Sipong 4 cave on Sulawesi contains figurative cave paintings among the oldest in the world: hunting scenes featuring therianthropic figures.", cat:"cultuur", vl:["VL01"] },
+  { n:"0107", jaar:"~10,000 BCE", era:"prehistorie", titel:"Austronesian Migration Begins", omschr:"Proto-Austronesian peoples begin migrating southward from Taiwan and eventually settle throughout the Indonesian archipelago, fundamentally shaping its ethnolinguistic character.", cat:"maritiem", vl:["VL01"] },
+  { n:"0108", jaar:"~4,000 BCE", era:"prehistorie", titel:"Austronesian Settlement Completed", omschr:"Austronesian-speaking farmers and seafarers complete their settlement of the archipelago, bringing rice cultivation, domesticated animals and the outrigger canoe.", cat:"maritiem", vl:["VL01"] },
+  { n:"0109", jaar:"~3,000 BCE", era:"prehistorie", titel:"Influence of the Dong Son Bronze Age Culture", omschr:"The Dong Son bronze-drum culture from mainland Asia spreads to the archipelago, attested by ceremonial bronze drums found across Sumatra, Java and Bali.", cat:"cultuur", vl:["VL01", "VL11"] },
+  { n:"0110", jaar:"~2,000 BCE", era:"prehistorie", titel:"Wet-Rice Agriculture Established", omschr:"Wet-rice cultivation becomes widespread on Java and Bali, generating food surpluses that lay the foundation for future state formation.", cat:"economie", vl:["VL10"] },
+  { n:"0111", jaar:"~600 BCE", era:"prehistorie", titel:"Iron Technology Introduced", omschr:"Ironworking enters the archipelago and transforms agriculture, warfare and trade.", cat:"wetenschap", vl:["VL01"] },
+  // ══ ANCIENT KINGDOMS ══
+  { n:"0201", jaar:"~100", era:"oud", titel:"Indianisation of the Archipelago Begins", omschr:"Sanskrit inscriptions, Hindu-Buddhist rituals and Indian court culture enter the archipelago through trade contacts, fundamentally reshaping political and religious life.", cat:"religie", vl:["VL04"] },
+  { n:"0202", jaar:"~130", era:"oud", titel:"Ptolemy Mentions the Islands", omschr:"The Greek geographer Ptolemy names 'Iabadiu' (Java) and 'Saba' (Sumatra) in his Geographia — the earliest known Western written reference to the archipelago.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0203", jaar:"~400", era:"oud", titel:"Kingdom of Tarumanagara Founded", omschr:"The earliest known Indianised kingdom on Java is established in West Java. Carved stone pillars refer to King Purnawarman and his public works.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0204", jaar:"~450", era:"oud", titel:"Kingdom of Kutai in Kalimantan", omschr:"The Kutai kingdom in East Kalimantan produces Indonesia's earliest Sanskrit stone inscriptions, describing the Hindu rituals of King Mulawarman.", cat:"staatsvorming", vl:["VL04", "VL05"] },
+  { n:"0204b", jaar:"~400", era:"oud", titel:"Yupa stones of Mulawarman (Kutai)", omschr:"Seven Sanskrit inscriptions on sacrificial pillars of King Mulawarman in Kutai, East Kalimantan: oldest written self-articulation of an Indonesian polity. Boechari 1979 and Slamet Muljana 1981 read them as Indonesian self-discourse; Coedès 1948 as Indianisation framework.", cat:"religie", vl:["VL04"] },
+  { n:"0205", jaar:"~600", era:"oud", titel:"Rise of the Sailendra Dynasty", omschr:"The Sailendra dynasty ('Lords of the Mountain') emerges in Central Java and becomes an ardent patron of Mahayana Buddhism and monumental stone architecture.", cat:"staatsvorming", vl:["VL04", "VL05"] },
+  { n:"0206", jaar:"~625", era:"oud", titel:"I Ching Visits Srivijaya", omschr:"The Chinese Buddhist monk I Ching stops at Srivijaya (Palembang) and records it as a thriving centre of Buddhist learning, which he recommends to other pilgrims.", cat:"religie", vl:["VL04", "VL05", "VL11"] },
+  { n:"0207", jaar:"~671", era:"oud", titel:"Rise of the Srivijaya Empire", omschr:"The maritime empire of Srivijaya, centred at Palembang in Sumatra, develops into the dominant power controlling the Strait of Malacca and the trans-oceanic Buddhist trade routes.", cat:"maritiem", vl:["VL04", "VL05"] },
+  { n:"0208", jaar:"~700", era:"oud", titel:"Srivijaya Dominates Maritime Trade", omschr:"Srivijaya consolidates its control of crucial sea passages between the Indian Ocean and the South China Sea, becoming the dominant economic and maritime power in Southeast Asia.", cat:"maritiem", vl:["VL05", "VL11"] },
+  { n:"0209", jaar:"~730", era:"oud", titel:"Construction of Borobudur Begins", omschr:"The Sailendra dynasty begins building Borobudur in Central Java, which becomes the largest Buddhist temple in the world — a cosmological mandala in stone.", cat:"cultuur", vl:["VL04"] },
+  { n:"0210", jaar:"~760", era:"oud", titel:"Prambanan Temple Complex Begun", omschr:"Construction of the Hindu Prambanan temple complex in Central Java begins, reflecting the resurgent power of the Hindu Sanjaya dynasty.", cat:"cultuur", vl:["VL04"] },
+  { n:"0211", jaar:"~800", era:"oud", titel:"Borobudur Completed", omschr:"The magnificent Borobudur temple is finished: a nine-tiered mandala with 2,672 relief panels and 504 Buddha statues — the pinnacle of Buddhist art in Southeast Asia.", cat:"cultuur", vl:["VL04"] },
+  { n:"0212", jaar:"~832", era:"oud", titel:"Srivijaya Sends Embassy to Tang China", omschr:"Srivijaya establishes formal tributary relations with the Tang dynasty, securing trade privileges and diplomatic recognition.", cat:"diplomatiek", vl:["VL05", "VL11"] },
+  { n:"0213", jaar:"~850", era:"oud", titel:"Sanjaya Dynasty Reunifies Central Java", omschr:"The Hindu Sanjaya dynasty regains hegemony in Central Java and absorbs the Buddhist Sailendra kingdom, fusing Shaivism and Buddhism in Javanese court culture.", cat:"staatsvorming", vl:["VL04", "VL05"] },
+  { n:"0214", jaar:"~856", era:"oud", titel:"Prambanan Complex Completed", omschr:"The Prambanan temple complex is finished, crowned by the impressive 47-metre Shiva tower — the tallest Hindu temple in Southeast Asia.", cat:"cultuur", vl:["VL04"] },
+  { n:"0215", jaar:"683", era:"oud", titel:"Kedukan Bukit Inscription", omschr:"The oldest text in Old Malay, erected under Srivijayan authority, describes the triumphal journey of Dapunta Hyang Sri Jayanasa. It is the first document in which the archipelago names itself in its own language — a shift from history written about the archipelago to history written from within it.", cat:"cultuur", vl:["VL05"] },
+  { n:"0215b", jaar:"~686", era:"oud", titel:"Talang Tuwo + Srivijayan curse inscriptions", omschr:"Cluster of Old-Malay curse inscriptions (Talang Tuwo 684, Kota Kapur 686, Karang Brahi and Palas Pasemah ~686) — administrative-ritual articulation of Srivijayan mandala sovereignty (Wolters 1967, Boechari 1979).", cat:"religie", vl:["VL04", "VL05"] },
+  // ══ CLASSICAL KINGDOMS ══
+  { n:"0301", jaar:"~900", era:"klassiek", titel:"Mataram Kingdom at its Height", omschr:"The classical Mataram kingdom reaches its zenith as patron of Sanskrit literature and visual arts; the great Kakawin Ramayana is composed in Old Javanese.", cat:"cultuur", vl:["VL04", "VL05"] },
+  { n:"0302", jaar:"~929", era:"klassiek", titel:"Mataram Capital Shifts to East Java", omschr:"Following volcanic eruptions and political instability, the Mataram capital relocates eastward to the Brantas valley, inaugurating the East Java era of classical civilisation.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0303", jaar:"~990", era:"klassiek", titel:"King Dharmawangsa Attacks Srivijaya", omschr:"East Javanese king Dharmawangsa mounts a bold but ultimately unsuccessful assault on Srivijaya to break its monopoly on maritime trade.", cat:"militair", vl:["VL05"] },
+  { n:"0304", jaar:"1006", era:"klassiek", titel:"Fall of Dharmawangsa's Kingdom", omschr:"A Srivijayan counterattack destroys the East Javanese court and kills Dharmawangsa; the sole survivor, a young prince, flees into exile and would later found the Airlangga line.", cat:"militair", vl:["VL05"] },
+  { n:"0305", jaar:"1025", era:"klassiek", titel:"Chola Empire Attacks Srivijaya", omschr:"The powerful Chola empire of South India launches devastating naval raids on Srivijayan port cities, permanently weakening Srivijaya's maritime supremacy.", cat:"militair", vl:["VL05"] },
+  { n:"0306", jaar:"1049", era:"klassiek", titel:"Airlangga Divides His Kingdom", omschr:"King Airlangga partitions his reunited East Javanese realm between his two sons, creating the rival kingdoms of Kediri and Janggala.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0307", jaar:"~1100", era:"klassiek", titel:"Kediri Kingdom Flourishes", omschr:"The Kediri kingdom on the Brantas River becomes a great centre of Old Javanese literature and Hindu statecraft; the kakawin epics Arjunawiwaha and Bharatayuddha are composed.", cat:"cultuur", vl:["VL04", "VL05"] },
+  { n:"0308", jaar:"~1150", era:"klassiek", titel:"Final Decline of Srivijaya", omschr:"Srivijaya's political power wanes irreversibly after the Chola attacks, internal revolts and the rise of rival Javanese kingdoms.", cat:"maritiem", vl:["VL05"] },
+  { n:"0319", jaar:"~1175", era:"klassiek", titel:"Rise of Kediri's Maritime Trade", omschr:"The Kediri kingdom expands its maritime reach, dispatching ships to China and India while acting as middleman in the pepper and sandalwood trade.", cat:"maritiem", vl:["VL02", "VL05", "VL11"] },
+  { n:"0309", jaar:"1222", era:"klassiek", titel:"Rise of the Singhasari Kingdom", omschr:"Ken Arok defeats the Kediri king and founds the Singhasari dynasty, which reunites East Java through aggressive expansion; he is remembered as a commoner who became a god-king.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0310", jaar:"1275", era:"klassiek", titel:"Singhasari Conquers Sumatra", omschr:"King Kertanegara of Singhasari leads the Pamalayu expedition, bringing Malay Sumatra under Javanese suzerainty and further weakening Srivijayan remnants.", cat:"militair", vl:["VL05"] },
+  { n:"0311", jaar:"1289", era:"klassiek", titel:"Kertanegara Rebuffs Kublai Khan", omschr:"Singhasari king Kertanegara mutilates Kublai Khan's envoy demanding submission — one of history's most audacious acts of defiance, provoking a Mongol invasion.", cat:"diplomatiek", vl:["VL05", "VL11"] },
+  { n:"0312", jaar:"1292", era:"klassiek", titel:"Mongol Invasion of Java", omschr:"A massive Mongol fleet arrives to punish Java; the new Majapahit ruler Vijaya cleverly uses the Mongols to defeat a rival, then expels them.", cat:"militair", vl:["VL05"] },
+  { n:"0313", jaar:"1293", era:"klassiek", titel:"Founding of the Majapahit Empire", omschr:"Raden Vijaya founds the Majapahit empire in the Brantas delta of East Java — the largest and most celebrated empire in Indonesian history.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0314", jaar:"1334", era:"klassiek", titel:"Gajah Mada Becomes Chief Minister", omschr:"Gajah Mada is appointed Mahapatih (prime minister) of Majapahit and swears the Palapa oath: he will know no earthly pleasures until Nusantara is united under Majapahit. PP5 §B.4 (Policy 18) reads this oath as a pre-figuration of Sumpah Pemuda 1928 [TL-0712] in an long-line reading in Indonesian historiography, without retrojection of modern state-territoriality; for the textual articulation via Pararaton see [TL-0322].", cat:"staatsvorming", vl:["VL01", "VL05", "VL07"] },
+  { n:"0322", jaar:"1334", era:"klassiek", titel:"Sumpah Palapa via Pararaton", omschr:"Textual articulation of Gajah Mada's Palapa Oath in the Pararaton chronicle (composed 15th–16th century); long-line source in Indonesian historiography for Policy 18 (pre-figuration of Sumpah Pemuda 1928).", cat:"cultuur", vl:["VL01", "VL05", "VL07"] },
+  { n:"0320", jaar:"1337", era:"klassiek", titel:"Majapahit Subjugates Sunda and Madura", omschr:"Under Gajah Mada, Majapahit brings Sunda (West Java) and Madura into its sphere of influence, consolidating control of rice-surplus regions and the trade routes of the East Java Sea.", cat:"militair", vl:["VL05"] },
+  { n:"0315", jaar:"1343", era:"klassiek", titel:"Majapahit Conquers Bali", omschr:"Gajah Mada leads the conquest of Bali, which is absorbed into Majapahit; the Javanese Hindu-Buddhist court culture survives there long after Java's Islamisation.", cat:"militair", vl:["VL04", "VL05"] },
+  { n:"0316", jaar:"1365", era:"klassiek", titel:"Nagarakretagama Composed", omschr:"Court poet Prapanca composes the Nagarakretagama, a masterpiece of Old Javanese literature describing Majapahit's vast tributary network.", cat:"cultuur", vl:["VL05"] },
+  { n:"0321", jaar:"~1380", era:"klassiek", titel:"Majapahit Reaches its Greatest Territorial Extent", omschr:"At its zenith, Majapahit's realm encompasses much of the modern Indonesian archipelago, plus parts of the Malay Peninsula, the Philippines and New Guinea.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0317", jaar:"1389", era:"klassiek", titel:"Death of Hayam Wuruk — Majapahit's Decline Begins", omschr:"The death of Hayam Wuruk, Majapahit's greatest king, triggers succession conflicts and civil war (the Paregreg War), setting the empire on a slow path of disintegration.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0318", jaar:"~1400", era:"klassiek", titel:"Majapahit's Trade Network at its Peak", omschr:"Majapahit's trading links extend from Madagascar to the Philippines; Javanese merchants dominate the spice trade and build a commercial network that outlives the empire itself.", cat:"maritiem", vl:["VL02", "VL05"] },
+  { n:"0216", jaar:"1365", era:"klassiek", titel:"Sutasoma (Mpu Tantular)", omschr:"Old-Javanese kakawin by Mpu Tantular during the reign of Hayam Wuruk; source of Bhinneka Tunggal Ika (canto 139.5) and longue-durée foundation of linguistic-ethnic plurality (Slamet Muljana 1965, Pigeaud 1960–63).", cat:"cultuur", vl:["VL04", "VL05"] },
+  // ══ ISLAMIC SULTANATES ══
+  { n:"0401", jaar:"~1200", era:"islamitisch", titel:"Islam Arrives via Gujarati Traders", omschr:"Arab and Gujarati Muslim traders bring Islam to the port cities of North Sumatra; local rulers convert, drawn by the faith's egalitarian ethic and commercial advantages.", cat:"religie", vl:["VL04"] },
+  { n:"0402", jaar:"1292", era:"islamitisch", titel:"Marco Polo Records Muslim Communities in Sumatra", omschr:"Passing through North Sumatra, Marco Polo notes Muslim towns in Perlak and elsewhere — one of the earliest Western confirmations of Islam's early presence in the archipelago.", cat:"religie", vl:["VL01", "VL04"] },
+  { n:"0403", jaar:"~1300", era:"islamitisch", titel:"Sultanate of Samudera-Pasai Founded", omschr:"Samudera-Pasai in North Sumatra becomes the first Islamic sultanate in the archipelago, establishing a model of Islamic governance that would spread across the region.", cat:"staatsvorming", vl:["VL04", "VL05", "VL12"] },
+  { n:"0404", jaar:"~1380", era:"islamitisch", titel:"Islam Spreads Along the Spice Trade Routes", omschr:"Muslim traders and Sufi missionaries use the spice-trade networks to systematically spread Islam to the coastal cities of Java, Maluku and Kalimantan.", cat:"religie", vl:["VL02", "VL04"] },
+  { n:"0405", jaar:"~1400", era:"islamitisch", titel:"Founding of the Sultanate of Malacca", omschr:"The Sultanate of Malacca is founded by a prince of Majapahit descent who converts to Islam; it becomes the region's largest emporium and the centre of Malay-Islamic civilisation.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0406", jaar:"~1440", era:"islamitisch", titel:"Wali Songo Begin Java's Islamisation", omschr:"The nine Islamic saints (Wali Songo), including Sunan Kalijaga and Sunan Giri, begin systematically converting Javanese society, blending Islam with local Javanese culture and art.", cat:"religie", vl:["VL04"] },
+  { n:"0419", jaar:"~1450", era:"islamitisch", titel:"Islam Spreads to Maluku (the Spice Islands)", omschr:"Through Javanese and Malay Muslim traders, Islam reaches the Maluku Islands, converts local rulers and establishes Islamic sultanates on Ternate and Tidore.", cat:"religie", vl:["VL02", "VL04", "VL12"] },
+  { n:"0407", jaar:"~1475", era:"islamitisch", titel:"Sultanate of Demak Founded on Java's North Coast", omschr:"The Sultanate of Demak is founded as the first Islamic sultanate on Java and the political base from which Islam spreads across the island.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0408", jaar:"1478", era:"islamitisch", titel:"Fall of the Hindu-Buddhist Majapahit Empire", omschr:"Majapahit's capital is sacked by Demak forces; the empire collapses, ending five centuries of Hindu-Buddhist civilisation on Java; the royal court flees to Bali.", cat:"militair", vl:["VL04", "VL05"] },
+  { n:"0409", jaar:"1511", era:"islamitisch", titel:"Portuguese Capture Malacca", omschr:"Portuguese forces under Afonso de Albuquerque seize Malacca, shattering the Islamic trading empire and sending Malay culture into flight along the archipelago's coasts.", cat:"militair", vl:["VL05"] },
+  { n:"0410", jaar:"1512", era:"islamitisch", titel:"Portuguese Reach Maluku — the Spice Islands", omschr:"Portuguese ships reach the Banda Islands and Maluku, establishing direct European contact with the source of nutmeg, mace and clove that drove world trade for centuries.", cat:"maritiem", vl:["VL02"] },
+  { n:"0411", jaar:"~1520", era:"islamitisch", titel:"Sultanate of Aceh Founded", omschr:"The Sultanate of Aceh rises in North Sumatra as a new Islamic centre of power after Malacca's fall, becoming a fierce anti-Portuguese force and a beacon of Islamic scholarship.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0412", jaar:"1521", era:"islamitisch", titel:"Magellan's Expedition Reaches Maluku", omschr:"The remnants of Magellan's voyage reach Tidore in Maluku, completing the first European circumnavigation of the earth and underscoring the archipelago's global importance.", cat:"maritiem", vl:["VL01", "VL02", "VL05"] },
+  { n:"0413", jaar:"~1527", era:"islamitisch", titel:"Sunda Kelapa Renamed Jayakarta", omschr:"Muslim warlord Fatahillah defeats the Portuguese at Sunda Kelapa and renames the port Jayakarta ('City of Victory') — the future site of Jakarta.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0414", jaar:"~1530", era:"islamitisch", titel:"Sultanate of Mataram Rises on Java", omschr:"The Islamic Sultanate of Mataram develops into Java's dominant power, blending Islamic faith with Javanese mysticism and court culture into a distinctive Javanese synthesis.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0415", jaar:"1569", era:"islamitisch", titel:"Aceh Attacks Portuguese Malacca", omschr:"The Sultanate of Aceh launches a major naval attack on Portuguese Malacca, establishing itself as the region's leading anti-colonial Islamic power.", cat:"militair", vl:["VL05", "VL06", "VL12"] },
+  { n:"0416", jaar:"~1600", era:"islamitisch", titel:"Makassar Becomes a Great Trading Port", omschr:"The Sultanate of Gowa-Tallo (Makassar) in South Sulawesi grows into one of Asia's largest and most cosmopolitan ports, welcoming traders of all faiths.", cat:"maritiem", vl:["VL05", "VL12"] },
+  { n:"0417", jaar:"1613", era:"islamitisch", titel:"Sultan Agung Ascends the Throne of Mataram", omschr:"Sultan Agung takes the Mataram throne and begins a reign that will bring Mataram its greatest territorial extent and cultural flowering.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0418", jaar:"1628", era:"islamitisch", titel:"Sultan Agung Besieges Batavia", omschr:"Sultan Agung mounts a massive but ultimately failed siege of VOC-held Batavia — the most serious indigenous challenge to the VOC presence on Java.", cat:"militair", vl:["VL06"] },
+  { n:"0420", jaar:"~1450", era:"islamitisch", titel:"Shahbandar system in Malacca", omschr:"The Sultanate of Malacca establishes a juridical apparatus for its multi-ethnic trading city: four shahbandars (harbour masters), each responsible for a distinct community — Gujaratis, other Indians and Burmese, Javanese and Malays, Chinese and Japanese — who settle disputes according to their own customary law under the authority of the bendahara. A mature form of conflict of laws, four centuries before Westphalia.", cat:"diplomatiek", vl:["VL02", "VL05", "VL12"] },
+  { n:"0421", jaar:"1512", era:"islamitisch", titel:"Tomé Pires Documents Malacca", omschr:"Portuguese apothecary Tomé Pires spends three years in newly-conquered Malacca and writes the Suma Oriental — the most detailed European eye-witness account of the late pre-colonial trading system, with eighty-four languages and four shahbandars in a single city.", cat:"wetenschap", vl:["VL02", "VL06"] },
+  { n:"0422", jaar:"1607", era:"islamitisch", titel:"Sultan Iskandar Muda Ascends the Throne in Aceh", omschr:"Under his reign (1607–1636), the Sultanate of Aceh reaches its greatest extent and military power. Iskandar Muda attacks Portuguese Malacca four times and receives Ottoman military support — gunners and foundry masters — from Sultan Selim II. Aceh acts as the southeastern flank of the Ottoman-Portuguese world struggle over the spice route.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0423", jaar:"1596", era:"islamitisch", titel:"Linschoten's Itinerario Appears in Amsterdam", omschr:"Jan Huygen van Linschoten publishes, through Cornelis Claesz, the Portuguese navigational secrets he had copied at Goa between 1583 and 1589. The Portuguese information monopoly, protected for a century under penalty of death by the Casa da Índia, is wiped out within a single book printing. Cornelis de Houtman departs that same year with Linschoten's charts on board.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0424", jaar:"~1612", era:"islamitisch", titel:"Sulalatus Salatin / Sejarah Melayu", omschr:"Malay court chronicle compiled for Bendahara Tun Sri Lanang (Johor); shared Malay-Indonesian source, foundational for Malaysian historiography (Andaya & Andaya 2017, Liaw Yock Fang 1976).", cat:"cultuur", vl:["VL05"] },
+  // ══ EARLY COLONIAL ERA ══
+  { n:"0514", jaar:"1512", era:"vroeg-koloniaal", titel:"Alliance of the Sultanate of Ternate with Portugal", omschr:"The Sultan of Ternate signs a trade treaty with the Portuguese, exchanging clove-monopoly rights for military protection — the first major European treaty in the archipelago.", cat:"diplomatiek", vl:["VL02", "VL05", "VL06", "VL12"] },
+  { n:"0515", jaar:"1575", era:"vroeg-koloniaal", titel:"Baab Ullah of Ternate Expels the Portuguese", omschr:"After a four-year siege, Sultan Baab Ullah of Ternate expels the Portuguese and temporarily restores indigenous control of the Maluku spice trade.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0501", jaar:"1596", era:"vroeg-koloniaal", titel:"First Dutch Expedition Reaches the Archipelago", omschr:"Cornelis de Houtman leads the first Dutch trading fleet to Banten, Java, establishing contact with the spice trade and kindling Dutch commercial interest in the East. PP5 §B.4 (Policy 4) frames the first Dutch expedition as the opening of a T5-phase in which the Netherlands gradually transforms from external trader into a functional sovereign as the acting core within the archipelago within the archipelago; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"maritiem", vl:["VL02", "VL06"] },
+  { n:"0516", jaar:"1598", era:"vroeg-koloniaal", titel:"Dutch-Ternate Alliance Concluded", omschr:"The Dutch and the Sultanate of Ternate forge an alliance against the Portuguese and Spanish, initiating the Dutch penetration of the Maluku spice trade.", cat:"diplomatiek", vl:["VL02", "VL05", "VL06", "VL12"] },
+  { n:"0502", jaar:"1602", era:"vroeg-koloniaal", titel:"VOC (Dutch East India Company) Founded", omschr:"The VOC is chartered by the States-General as the world's first multinational corporation, wielding quasi-sovereign powers over trade and warfare. PP5 §B.4 (Policy 4) reads the founding of the VOC not as an external externally dominant actor but as a juridical instrument through which the Netherlands begins to operate as a functional sovereign as the acting core within the archipelago within the Mandala-rings during T5–T7; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"economie", vl:["VL06"] },
+  { n:"0503", jaar:"1605", era:"vroeg-koloniaal", titel:"VOC Takes Ambon from the Portuguese", omschr:"The VOC seizes Ambon in Maluku — its first significant territorial conquest — and begins to displace the Portuguese from the spice trade. PP5 §B.4 (Policy 4) places the conquest of Ambon in T5 as an act as core area — the Netherlands as an acting core within the archipelago — not as an external externally dominant actor; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0504", jaar:"1609", era:"vroeg-koloniaal", titel:"VOC Establishes Permanent Headquarters in Maluku", omschr:"The VOC builds a permanent foothold on Ambon and begins systematically acquiring a monopoly on clove and nutmeg by controlling production at the source. PP5 §B.4 (Policy 4) reads the establishment of the permanent VOC headquarters in Maluku as institutional consolidation of the Dutch position as the acting core in T5, not as external externally dominant actor; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"economie", vl:["VL02", "VL06"] },
+  { n:"0505", jaar:"1619", era:"vroeg-koloniaal", titel:"Jan Pieterszoon Coen Founds Batavia", omschr:"VOC Governor-General Jan Pieterszoon Coen razes Jayakarta and builds Batavia on the ruins — the colonial capital that would dominate the archipelago for 350 years. PP5 §B.4 (Policy 4) places the founding of Batavia as an institutional hinge (cf. Annex B Stream 0 §0.6) by which the Netherlands becomes functionally sovereign as the acting core within the archipelago in T5; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0506", jaar:"1621", era:"vroeg-koloniaal", titel:"Banda Islands Massacre", omschr:"Coen orders the near-total extermination of the indigenous Bandanese population to enforce the VOC monopoly on nutmeg — one of the earliest colonial genocides. PP5 §B.4 (Policy 4) reads the Banda genocide as sovereign exercise of power from within — the Netherlands as an acting core within the archipelago — not as an external externally dominant actor; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework. Cf. Bijlage A.M for the historiographical bedding. PP5 v7.3 §B.4 adds Policy 21 as secondary attribution: Japanese executioners in VOC service carried out the actual beheading of the Bandanese orang kaya according to Coen's own report of 8 August 1621 (Clulow 2014; Blussé 2008 [TL-M028]); militarily-functional R3 involvement in Dutch-colonial violence in the archipelago.", cat:"militair", vl:["VL02", "VL03", "VL06", "VL13"] },
+  { n:"0508", jaar:"1641", era:"vroeg-koloniaal", titel:"VOC Captures Malacca", omschr:"The VOC defeats the Portuguese and takes Malacca, gaining control of the vital Strait of Malacca and wresting the spice trade from Portugal. PP5 §B.4 (Policy 4) places the conquest of Malacca in T5 as sovereign consolidation from within of the Dutch position in the archipelago, not as external externally dominant actor; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0507", jaar:"1642", era:"vroeg-koloniaal", titel:"Statutes of Batavia: Legal Codification of Slavery", omschr:"The 1642 VOC legal codification — the Statutes of Batavia — set out the legal foundations of slavery in VOC territories: detailed rules on ownership, pledging, inheritance and manumission of the enslaved. It was no ad-hoc practice but a carefully codified system designed by jurists. The Statutes made slavery an institutional pillar of the colonial economic system, from Batavia to the Cape Colony. PP5 §B.4 (Policy 4) reads the Statutes of Batavia as juridical core-codification within the Dutch position as acting core in T5 — an act of the functional core-area, not of an external externally dominant actor; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"sociaal", vl:["VL03", "VL06"] },
+  { n:"0509", jaar:"1645", era:"vroeg-koloniaal", titel:"Mataram-VOC Peace Treaty", omschr:"Sultan Agung's successor Amangkurat I signs a humiliating peace accord with the VOC, marking the start of Mataram's dependence on Dutch military backing.", cat:"diplomatiek", vl:["VL05", "VL06"] },
+  { n:"0513", jaar:"c. 1650–1700", era:"vroeg-koloniaal", titel:"Haramain Networks: Ulema Linking Mecca to Nusantara", omschr:"During the seventeenth century, trans-regional scholarly networks intensified between the Haramain (Mecca and Medina) and the Nusantara archipelago. Prominent ulema such as Yusuf Al-Makasari (South Sulawesi), Al-Sinkili (Aceh), Al-Palimbani (Palembang) and Al-Banjari (South Kalimantan) studied in the holy cities and returned as bearers of Islamic scholarship and reformist thought. Nusantara's Islamisation was thus an internal Asian intellectual process driven by its own scholars — not merely a by-product of Arab or Indian trading contacts.", cat:"religie", vl:["VL04", "VL05", "VL06"] },
+  { n:"0512", jaar:"c. 1660–1800", era:"vroeg-koloniaal", titel:"Deportation to the Cape: Origin of the Cape Malays", omschr:"The VOC deported Indonesian political prisoners, enslaved persons and exiles to the Cape Colony. They came from Java, Bali, Sulawesi, Maluku and elsewhere in the archipelago. At the Cape, they formed the Muslim community known to this day as the Cape Malays — one of the most tangible expressions of Nusantara's maritime diaspora. Their descendants sometimes still bear surnames such as Van Bengalen, Van Java, Van Bali. They preserve Malay-Islamic heritage 14,000 kilometres from their place of origin.", cat:"sociaal", vl:["VL02", "VL06"] },
+  { n:"0510", jaar:"1667", era:"vroeg-koloniaal", titel:"Dutch Capture Makassar", omschr:"The VOC defeats the Sultanate of Gowa-Tallo; the Treaty of Bongaya ends Makassar as an independent trading port and transforms it — ironically — into the largest slave market of the VOC empire. Bugis and Makassarese seafarers, deprived of their independent trade, specialise in slave trading: between 1660 and 1800 an estimated 100,000–200,000 Sulawesi enslaved people leave the island via Makassar (Sutherland 2021). Pivot to phase 2 of Vink\\\\'s (2003) two-phase model: shift from Indian to Archipelago origin in VOC slave trade.", cat:"militair", vl:["VL05", "VL06", "VL12"] },
+  { n:"0511", jaar:"1670", era:"vroeg-koloniaal", titel:"Trunojoyo Revolt on Java", omschr:"Prince Trunojoyo of Madura leads a major revolt against Mataram and the VOC, briefly capturing the Javanese royal capital and exposing the fragility of the Dutch-Mataram alliance.", cat:"militair", vl:["VL05", "VL06"] },
+  { n:"0517", jaar:"1616", era:"vroeg-koloniaal", titel:"Brouwer Route Made Compulsory", omschr:"The VOC makes the 38°S 'roaring forties' route mandatory: ships from the Cape of Good Hope sail east first, then north to the Sunda Strait. Travel time to the Indies falls from fourteen to six or eight months — at the cost of a series of shipwrecks off the West Australian coast. The route makes the VOC's trading model economically viable.", cat:"maritiem", vl:["VL06"] },
+  { n:"0518", jaar:"1619", era:"vroeg-koloniaal", titel:"VOC Hydrographic Office", omschr:"The VOC establishes a Hydrographic Office in Amsterdam as the institutional centre for systematic knowledge accumulation. Every returning ship must hand in its journals and charts; master charts are centrally managed. The innovation gives the VOC a three-century cartographic lead over its Portuguese and Spanish rivals.", cat:"wetenschap", vl:["VL06"] },
+  { n:"0519", jaar:"~1622", era:"vroeg-koloniaal", titel:"Perkeniers System on Banda", omschr:"After the 1621 genocide, the Banda Islands are divided into perken — plantations assigned to Dutch free burghers (perkeniers), worked by enslaved people from Sulawesi, Timor and Aru. It is the first European plantation ownership structure in Asia and the prototype of later colonial plantation capitalism.", cat:"economie", vl:["VL02", "VL03", "VL06"] },
+  { n:"0520", jaar:"1623", era:"vroeg-koloniaal", titel:"Amboyna Executions", omschr:"Ten English factors, nine Japanese and one Portuguese are executed by the VOC at Ambon on charges of conspiracy. The executions end the English presence in the Moluccas; the English East India Company shifts its centre of gravity to India, with consequences lasting into the nineteenth century.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0521", jaar:"~1625", era:"vroeg-koloniaal", titel:"Hongi expeditions codified", omschr:"The VOC institutionalises annual hongi fleets sailing through the Moluccas to cut down every clove tree outside the designated production area. It becomes a pre-modern form of stock control — destruction of overproduction as a fixed feature of the colonial system, carried out by rowed vessels with Ambonese crews.", cat:"economie", vl:["VL02", "VL06"] },
+  { n:"0522", jaar:"1641", era:"vroeg-koloniaal", titel:"Four Sultanas Rule Aceh (1641–1699)", omschr:"After the death of Iskandar Thani, Aceh is ruled for nearly six decades by four successive female sovereigns — Safiatuddin, Naqiatuddin, Zaqiatuddin and Kamalatuddin. The dynasty represents a rare instance of female rule in the Islamic world and corrects the assumption of universal pre-colonial gender roles.", cat:"staatsvorming", vl:["VL05", "VL06", "VL12"] },
+  { n:"0523", jaar:"~1670", era:"vroeg-koloniaal", titel:"Culmination of the Age of Commerce Crisis", omschr:"The era of open port cities — Malacca, Aceh, Banten, Gowa — that had begun around 1450 comes to a structural close. VOC monopolisation, the Little Ice Age and epidemic disease combine to shrink it; cosmopolitan trading cities give way to defensive, agrarian-oriented polities (Reid 1993).", cat:"economie", vl:["VL05", "VL06"] },
+  { n:"0524", jaar:"1684", era:"vroeg-koloniaal", titel:"VOC Captures Banten", omschr:"After an exhausting war (1682–1684), the Sultanate of Banten — the last great independent sultanate of West Java — falls under VOC control. On paper, the VOC now reaches the zenith of its territorial dominance over Java. PP5 §B.4 (Policy 4) reads the conquest of Banten as sovereign completion from within of the Dutch power-position on Java in T5, not as external externally dominant actor; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"militair", vl:["VL05", "VL06", "VL12"] },
+  { n:"0525", jaar:"c. 1650–1906", era:"vroeg-koloniaal", titel:"Macassan Trepang Trade with Marege", omschr:"Makassarese and Bugis praus sail each year with the northwest monsoon to Arnhem Land (which they call Marege) to harvest trepang — sea cucumber — for the Chinese market. The trade operates for two and a half centuries outside the VOC, leaving behind a dense entanglement with the Yolngu Aboriginals: loanwords (balanda, rupiah), planted tamarind trees, songs and rituals. In 1906, it ends with the Australian Customs Tariff.", cat:"maritiem", vl:["VL06", "VL11"] },
+  // ══ DUTCH COLONIAL RULE ══
+  { n:"0601", jaar:"1700", era:"nederlands-koloniaal", titel:"VOC at its Financial Peak", omschr:"The VOC reaches its greatest profitability, running the world's most valuable spice trade; it pays extraordinary dividends while its monopoly system distorts archipelago economies.", cat:"economie", vl:["VL02", "VL06"] },
+  { n:"0602", jaar:"1704", era:"nederlands-koloniaal", titel:"First Javanese War of Succession", omschr:"A succession dispute within the Mataram royal family draws in the VOC; the Company exploits the conflict to wring further territorial concessions, deepening Dutch control of Java.", cat:"militair", vl:["VL05", "VL06"] },
+  { n:"0603", jaar:"1740", era:"nederlands-koloniaal", titel:"Chinese massacre in Batavia (Angke massacre)", omschr:"VOC troops and Javanese allies massacre an estimated 5,000 to 10,000 ethnic Chinese in Batavia following an alleged uprising — a traumatic event known as the Angke massacre. PP5 §B.4 (Policy 12) places this event explicitly within a long-line Chinese-Indonesian relationship (Wang Gungwu 1991, Liu Hong 2011), as one of two marked moments of acute friction within the archipelago with China — alongside the anti-Chinese component of the 1965–66 mass killings [TL-0925]. The Tosen Fusetsu-gaki (Ishii ed. 1998 [TL-M029]) contain detailed Hokkien refugee reports on this massacre, transmitted to the Tokugawa authorities in Nagasaki — VL13 secondary resonance via the junk-trade information stream.", cat:"militair", vl:["VL06", "VL11", "VL13"] },
+  { n:"0604", jaar:"1755", era:"nederlands-koloniaal", titel:"Mataram Divided by the Treaty of Giyanti", omschr:"The VOC engineers the Treaty of Giyanti, splitting Mataram into the rival courts of Yogyakarta and Surakarta, definitively foreclosing any chance of Javanese political reunification.", cat:"staatsvorming", vl:["VL05", "VL06"] },
+  { n:"0624", jaar:"1755", era:"nederlands-koloniaal", titel:"Yogyakarta Kraton Built", omschr:"Sultan Hamengkubuwono I begins construction of the Yogyakarta Palace (Kraton), which becomes the cultural heart of Javanese court civilisation — still in use today as a royal residence.", cat:"cultuur", vl:["VL06"] },
+  { n:"0605", jaar:"1757", era:"nederlands-koloniaal", titel:"Surakarta Divided Again — Mangkunegaran Founded", omschr:"A further partition creates the Mangkunegaran principality beside Surakarta, leaving four courts competing for symbolic authority under Dutch suzerainty.", cat:"staatsvorming", vl:["VL05", "VL06"] },
+  { n:"0606", jaar:"1799", era:"nederlands-koloniaal", titel:"VOC Dissolved — Dutch State Takes Over", omschr:"The bankrupt VOC is wound up and the Dutch state directly assumes control of its possessions, shifting the relationship from corporate to imperial colonial rule. PP5 §B.4 (Policy 4) places the takeover of VOC possessions by the Dutch state as institutional continuation of the position as the acting core — not as transition to 'external imperial' rule, but as juridical reorganisation of sovereign trading power; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0607", jaar:"1808", era:"nederlands-koloniaal", titel:"Daendels' Reforms Begin", omschr:"Marshal Daendels, appointed by Napoleon's brother, modernises the colonial administration, builds the Great Post Road across Java and imposes harsh new labour regimes. PP5 §B.4 (Policy 4) reads the Daendels reforms as modernisation within the archipelago within the Dutch sovereign position in T6, not as external externally dominant intervention; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0608", jaar:"1811", era:"nederlands-koloniaal", titel:"British Occupy Java Temporarily", omschr:"British forces under Lord Minto take Java from the French-aligned Dutch; Thomas Stamford Raffles becomes Lieutenant-Governor and introduces a land-rent reform.", cat:"militair", vl:["VL06"] },
+  { n:"0609", jaar:"1815", era:"nederlands-koloniaal", titel:"Eruption of Tambora", omschr:"The cataclysmic eruption of Tambora on Sumbawa is the most powerful volcanic eruption in recorded history; over 70,000 die in the archipelago and worldwide it causes the 'Year Without a Summer'.", cat:"wetenschap", vl:["VL06"] },
+  { n:"0610", jaar:"1816", era:"nederlands-koloniaal", titel:"Dutch Colonial Rule Restored", omschr:"After Napoleon's defeat, the Dutch restore their colonial authority over the archipelago, beginning a more intense phase of direct imperial rule. PP5 §B.4 (Policy 4) places the restoration of Dutch colonial rule in 1816 as a resumption of the sovereign as the acting core within the archipelago position — the Netherlands as an acting core within the archipelago — not as external externally dominant actor; Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0625", jaar:"1819", era:"nederlands-koloniaal", titel:"Raffles Founds Singapore", omschr:"Raffles' founding of Singapore has direct consequences for the archipelago: it creates a free port that undermines the Dutch trade monopoly and permanently reshapes regional commerce.", cat:"maritiem", vl:["VL06"] },
+  { n:"0611", jaar:"1825", era:"nederlands-koloniaal", titel:"Java War Begins — Diponegoro's Revolt", omschr:"Prince Diponegoro of Yogyakarta unleashes the Java War, the largest and most devastating conflict in Indonesian colonial history, triggered by Dutch land reforms and contempt for Javanese sovereignty.", cat:"militair", vl:["VL06"] },
+  { n:"0612", jaar:"1830", era:"nederlands-koloniaal", titel:"Java War Ends — Diponegoro Exiled", omschr:"After five years of war with 200,000 casualties, Diponegoro is captured under a flag of truce and exiled to Makassar; he becomes a national hero and symbol of anti-colonial resistance. The Tosen Fusetsu-gaki (Ishii ed. 1998 [TL-M029]) contain Chinese-trader reports on the Java War 1825–1830, transmitted to the Tokugawa authorities in Nagasaki — VL13 secondary resonance via the junk-trade information stream (pre-Perry layer).", cat:"militair", vl:["VL06", "VL13"] },
+  { n:"0613", jaar:"1830", era:"nederlands-koloniaal", titel:"Cultivation System introduced", omschr:"Governor-General Van den Bosch imposes the Cultivation System, requiring Javanese farmers to dedicate 20% of their land to export crops for the Dutch state — generating enormous wealth for the Netherlands at the expense of the Javanese. PP5 §B.4 (Policy 4 + Policy 6) reads the Cultivation System as an sovereign economic measure from within within the Dutch position in T6, with Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework; for the exploitative dimension see Policy 6.", cat:"economie", vl:["VL03", "VL06", "VL10"] },
+  { n:"0626", jaar:"1849", era:"nederlands-koloniaal", titel:"James Brooke Becomes the 'White Raja' of Sarawak", omschr:"British adventurer James Brooke consolidates Sarawak; the gradual British takeover of northern Borneo permanently separates it from Dutch-controlled Kalimantan.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0614", jaar:"1856", era:"nederlands-koloniaal", titel:"Eduard Douwes Dekker Witnesses Javanese Exploitation", omschr:"Dutch colonial official Eduard Douwes Dekker (later 'Multatuli') witnesses in Lebak, Banten the brutal forced-cultivation system — an experience that would transform Dutch public debate.", cat:"sociaal", vl:["VL06"] },
+  { n:"0615", jaar:"1860", era:"nederlands-koloniaal", titel:"Max Havelaar Published", omschr:"Multatuli's Max Havelaar, a blistering indictment of colonial exploitation, appears in the Netherlands, igniting public debate and eventually contributing to reform of the Cultivation System. PP5 §B.4 (Policy 6) places Multatuli's Max Havelaar as internal Dutch self-indictment within the exploitative colonial regime of T6, with Furnivall's plural-economy as analytical raster (not as apology) and Limpach 2016 [TL-M019] + KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"cultuur", vl:["VL03", "VL06"] },
+  { n:"0616", jaar:"1870", era:"nederlands-koloniaal", titel:"Agrarian Law Opens the Indies to Private Capital", omschr:"The Dutch Agrarian Law ends state monopolies and opens the archipelago to European plantation capital, transforming Java and Sumatra into plantation economies. PP5 §B.4 (Policy 6) reads the Agrarian Law as a juridical instrument through which private capital was embedded in the exploitative colonial regime of T6 — not as ethical correction but as systemic consolidation — with Furnivall's plural-economy as analytical raster and Limpach 2016 [TL-M019] + KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"economie", vl:["VL06"] },
+  { n:"0627", jaar:"1870", era:"nederlands-koloniaal", titel:"Tobacco Boom Transforms East-Coast Sumatra", omschr:"Dutch and British planters transform the sparsely populated east coast of Sumatra into a tobacco-plantation zone; hundreds of thousands of contract labourers are brought in from Java and China.", cat:"economie", vl:["VL06", "VL11"] },
+  { n:"0617", jaar:"1873", era:"nederlands-koloniaal", titel:"Aceh War begins", omschr:"The Dutch begin a military campaign against the Sultanate of Aceh — a brutal war that lasts more than 30 years and costs hundreds of thousands of lives. PP5 §B.4 (Policy 4) places the Aceh War as sovereign territorial consolidation from within at the northern edge of the archipelago in T7 — the Netherlands as an acting core, not as external externally dominant actor — with Limpach 2016 [TL-M019] and KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"militair", vl:["VL06"] },
+  { n:"0618", jaar:"1883", era:"nederlands-koloniaal", titel:"Krakatoa Erupts", omschr:"The volcanic island of Krakatoa erupts catastrophically, generating tsunamis that kill more than 36,000 people and triggering global climate effects — one of the deadliest natural disasters in history.", cat:"wetenschap", vl:["VL06"] },
+  { n:"0619", jaar:"1890", era:"nederlands-koloniaal", titel:"Debate over the Ethical Policy Grows", omschr:"Concerned Dutch voices, including Conrad van Deventer, argue that the Netherlands owes the Indies a 'debt of honour' and must invest in education, irrigation and migration.", cat:"sociaal", vl:["VL06"] },
+  { n:"0620", jaar:"1899", era:"nederlands-koloniaal", titel:"Ethical Policy Proclaimed", omschr:"Queen Wilhelmina announces the Ethical Policy, shifting colonial policy toward welfare, education and Javanese self-rule — though implementation remains limited.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0621", jaar:"1901", era:"nederlands-koloniaal", titel:"Aceh War Ends in Dutch Victory", omschr:"After nearly 30 years of fierce guerrilla warfare, the Dutch army under Van Heutsz establishes effective control of Aceh, though pockets of resistance persist for years.", cat:"militair", vl:["VL06"] },
+  { n:"0622", jaar:"1905", era:"nederlands-koloniaal", titel:"'Pacification' of the Outer Islands Completed", omschr:"The Dutch complete the military conquest of the entire archipelago, from Aceh to New Guinea, ending centuries of independent indigenous sovereignty and creating a unified colonial territory.", cat:"militair", vl:["VL06"] },
+  { n:"0623", jaar:"1906", era:"nederlands-koloniaal", titel:"Puputan Badung — Balinese Mass Suicide", omschr:"Facing Dutch conquest, the royal courts of Badung and Klungkung choose puputan — ritual mass suicide — rather than surrender, shocking Dutch and international public opinion.", cat:"militair", vl:["VL06"] },
+  { n:"0628", jaar:"1741", era:"nederlands-koloniaal", titel:"Chinese War (1741–1743)", omschr:"After the Chinese massacre of 1740, thousands of Chinese fled into the Javanese hinterland. They joined Javanese rebels against the VOC — the first war on Java in which Chinese and Javanese fought the Company together. The VOC had to make substantial territorial concessions to survive.", cat:"militair", vl:["VL06", "VL11"] },
+  { n:"0629", jaar:"1746", era:"nederlands-koloniaal", titel:"Third Javanese War of Succession (1746–1755)", omschr:"The VOC becomes entangled in a nine-year succession struggle that culminates in the Treaty of Giyanti (1755). Ricklefs shows that the VOC partitioned Mataram not out of strength but out of weakness: what began in 1740 with Chinese labourers ended in a treaty that institutionalised the Company's inability to administer the archipelago alone.", cat:"militair", vl:["VL05", "VL06", "VL11"] },
+  // ══ NATIONAL AWAKENING ══
+  { n:"0701", jaar:"1908", era:"nationalisme", titel:"Budi Utomo Founded — Beginning of the National Awakening", omschr:"The first modern Indonesian organisation, Budi Utomo, is founded by Javanese students at the STOVIA medical school in Batavia — the start of the Kebangkitan Nasional (National Awakening). PP5 §B.4 (Policy 9) reads the founding of Budi Utomo as an autonomous articulation of Indonesian nationalism in T7 — not as a reactive response to Dutch presence — with Anderson & McVey 1971 [TL-M007], Onghokham 2003 and Asvi Warman Adam 2007 [TL-M018] as Indonesian-Western consensus sources.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0702", jaar:"1911", era:"nationalisme", titel:"Sarekat Islam Founded", omschr:"Sarekat Islam is founded as a cooperative of Muslim merchants and rapidly grows into a mass movement with millions of members — the first truly popular nationalist movement in the Indies. PP5 §B.4 (Policy 9) places Sarekat Islam as an autonomous articulation of Indonesian nationalism with Islamic-mercantile base in T7, not as reactive response to Dutch founding; Anderson & McVey 1971 [TL-M007], Onghokham 2003 and Asvi Warman Adam 2007 [TL-M018] as Indonesian-Western consensus sources.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0703", jaar:"1912", era:"nationalisme", titel:"Indische Partij Founded", omschr:"Douwes Dekker, Cipto Mangunkusumo and Ki Hajar Dewantara found the Indische Partij — the first openly political organisation to demand equal rights for all inhabitants of the Indies.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0704", jaar:"1914", era:"nationalisme", titel:"Precursor of the Indonesian Communist Party (PKI) Founded", omschr:"The Indies Social-Democratic Association (ISDV), precursor of the PKI, is founded and introduces Marxist ideology into nationalist politics.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0705", jaar:"1916", era:"nationalisme", titel:"Volksraad Established", omschr:"The Dutch establish the Volksraad as an advisory council for the Indies, with limited powers and a majority of Dutch members; nationalists use it as a platform for their demands.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0706", jaar:"1920", era:"nationalisme", titel:"PKI (Partai Komunis Indonesia) Formally Founded", omschr:"The PKI is formally founded as the first communist party in Asia outside the Soviet Union — a radical alternative vision for Indonesian independence.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0707", jaar:"1921", era:"nationalisme", titel:"Tan Malaka Emerges as a Radical Leader", omschr:"Tan Malaka, philosopher and revolutionary, becomes a leading figure of Asian communism and an uncompromising advocate of Indonesian independence, developing the concept of 'Madilog'.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0708", jaar:"1924", era:"nationalisme", titel:"Taman Siswa Schools Founded", omschr:"Ki Hajar Dewantara founds the Taman Siswa school system, providing indigenous education outside the colonial framework and articulating a Javanese-rooted nationalist pedagogy.", cat:"sociaal", vl:["VL06"] },
+  { n:"0709", jaar:"1926", era:"nationalisme", titel:"PKI Communist Uprising Fails", omschr:"A poorly coordinated PKI uprising on Java and West Sumatra is crushed by the Dutch; thousands are arrested and the PKI banned, removing it from the scene for two decades.", cat:"militair", vl:["VL06"] },
+  { n:"0710", jaar:"1927", era:"nationalisme", titel:"Sukarno Founds the PNI", omschr:"The young engineer Sukarno founds the Partai Nasional Indonesia (PNI) and preaches a synthesis of nationalism, Islam and Marxism (Nasakom) to unite the fragmented independence movement. PP5 §B.4 (Policy 9) reads the founding of the PNI by Soekarno as autonomous articulation of Indonesian nationalism — continuation of the autonomous line from Budi Utomo and Sarekat Islam — with Anderson & McVey 1971 [TL-M007], Onghokham 2003 and Asvi Warman Adam 2007 [TL-M018] as Indonesian-Western consensus sources.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0711", jaar:"1928", era:"nationalisme", titel:"Youth Pledge (Sumpah Pemuda)", omschr:"The Second Youth Congress adopts the Youth Pledge: one homeland (Indonesia), one nation (the Indonesian), one language (Bahasa Indonesia) — the founding declaration of Indonesian national identity. PP5 §B.4 (Policy 9) marks Sumpah Pemuda as the apex of the autonomous articulation of Indonesian nationalism in T7 — one language, one people, one homeland as self-definition, not as reactive response — with Anderson & McVey 1971 [TL-M007], Onghokham 2003 and Asvi Warman Adam 2007 [TL-M018] as Indonesian-Western consensus sources.", cat:"sociaal", vl:["VL01", "VL05", "VL06", "VL07"] },
+  { n:"0712", jaar:"1929", era:"nationalisme", titel:"Sukarno Arrested by the Dutch", omschr:"The Dutch authorities arrest Sukarno; his masterful defence speech 'Indonesia Menggugat' (Indonesia Accuses) becomes a landmark of nationalist rhetoric.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0713", jaar:"1930", era:"nationalisme", titel:"Indonesian Language Standardised", omschr:"Malay-based Bahasa Indonesia is officially adopted as the national language, chosen for its neutrality among ethnic groups and its history as a regional trading lingua franca.", cat:"cultuur", vl:["VL06"] },
+  { n:"0714", jaar:"1932", era:"nationalisme", titel:"Mohammad Hatta Returns from Europe", omschr:"Mohammad Hatta, economist and independence activist, returns from his studies in the Netherlands and becomes Sukarno's indispensable partner and future 'Proklamator' of independence.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0715", jaar:"1934", era:"nationalisme", titel:"Sukarno Exiled to Flores", omschr:"After further political activity, Sukarno is exiled to Ende on Flores, and later to Bengkulu — a period of internal exile that deepens his thinking on Islam and nationalism.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0716", jaar:"1936", era:"nationalisme", titel:"Soetardjo Petition Submitted", omschr:"The moderate nationalist Soetardjo submits a petition to the Volksraad requesting dominion status within the Kingdom of the Netherlands — rejected by the Dutch but an important barometer.", cat:"staatsvorming", vl:["VL05", "VL06", "VL07"] },
+  { n:"0718", jaar:"1938", era:"nationalisme", titel:"Federation Proposal Rejected by the Netherlands", omschr:"The revised federation proposal of nationalist leader Soetardjo is firmly rejected by the Dutch government; the refusal accelerates the radicalisation of the independence movement.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0719", jaar:"1924", era:"nationalisme", titel:"Fabricius publishes De scheepsjongens van Bontekoe", omschr:"The twenty-five-year-old Johan Fabricius (born 1899 in Bandung, Indo-European) publishes with Leopold in The Hague De scheepsjongens van Bontekoe — a coming-of-age novel about three fictional boys (Hajo, Rolf, Padde) on the Nieuw Hoorn of 1618 [TL-0520]. More than fifty editions during his lifetime; standard reading in Dutch primary schools into the 1980s; filmed twice (Dudok van Heel 1946, De Jong 2007). For generations of Dutch people the pedagogical standard image of Indonesia as setting for a Dutch boys' adventure. After 1945 untenable, breeding ground for the Indisch silence (Van Leeuwen 2008) and bitter-sweet remembrance (Pattynama 2014). PP5 §B.4 (Policy 7) places Fabricius's publication as Dutch contemporary reflection within the broader ring-shift that begins in T7 and culminates in T8 in the Japanese from peripheral to directly controlling position position, with Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] and Akashi 2008 [TL-M025] as Asian-revisionist sources for the period.", cat:"cultuur", vl:["VL10"] },
+  { n:"0717", jaar:"1940", era:"nationalisme", titel:"The Netherlands Falls to Nazi Germany", omschr:"Nazi Germany occupies the Netherlands, producing an immediate authority crisis in the Dutch East Indies and strengthening advocates of independence in their conviction that colonialism is doomed.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  // ══ OCCUPATION & REVOLUTION ══
+  { n:"0801", jaar:"1942", era:"revolutie", titel:"Japanese Forces Occupy the Archipelago", omschr:"Japanese forces defeat the Dutch colonial troops in little more than a week, ending 350 years of Dutch rule; the slogan 'Asia for the Asians' initially wins Indonesian sympathy for the Japanese 'liberators'. PP5 §B.4 (Policy 7) marks the Japanese occupation explicitly in the shift from peripheral to directly controlling position — Japan from peripheral to directly controlling position in T7–T8 — with Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] and Akashi 2008 [TL-M025] as Asian-revisionist sources against the pre-1980 self-justifying Japanese reading. [PP: PP_Japan_in_Nusantara]", cat:"militair", vl:["VL06", "VL08", "VL13"] },
+  { n:"0802", jaar:"1942", era:"revolutie", titel:"Sukarno and Hatta Cooperate with Japan", omschr:"Sukarno and Hatta decide to cooperate with the Japanese occupation — a controversial choice by which they seize the opportunity to build nationalist infrastructure and mass organisations. [PP: PP_Japan_in_Nusantara]", cat:"staatsvorming", vl:["VL07", "VL08", "VL13"] },
+  { n:"0806", jaar:"1942–1945", era:"revolutie", titel:"Japanese Administrative Restructuring: Indonesians Take Over Governance", omschr:"Japan dismantled the Dutch colonial administrative apparatus and placed Indonesians in administrative positions at every level — from village government to provincial administration. This was no voluntary decolonisation but a military necessity: Japan lacked the personnel. Yet the result was historically significant: a generation of Indonesians acquired administrative experience they would never have gained under the Dutch regime. That experience became, after 1945, the institutional backbone of the young republic. Japan unintentionally created the governing capacity for independence. PP5 §B.4 (Policy 7) reads the Japanese administrative restructuring as core instrument of the from peripheral to directly controlling position shift in T8 (Indonesians introduced into lower administration to support the Japanese externally dominant position), with Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] and Akashi 2008 [TL-M025] as Asian-revisionist sources. [PP: PP_Japan_in_Nusantara]", cat:"staatsvorming", vl:["VL06", "VL08", "VL13"] },
+  { n:"0803", jaar:"1943", era:"revolutie", titel:"PETA (Defender of the Homeland) Founded", omschr:"Japan creates PETA (Pembela Tanah Air) as an indigenous militia and trains tens of thousands of Indonesian soldiers who would become the backbone of the independence struggle. [PP: PP_Japan_in_Nusantara]", cat:"militair", vl:["VL08", "VL13"] },
+  { n:"0824", jaar:"1943", era:"revolutie", titel:"Romusha Forced Labour Under Japan", omschr:"Japan mobilises millions of Indonesian romusha (forced labourers) for construction projects across the archipelago and the region; hundreds of thousands die of hunger, disease and exhaustion. PP5 §B.4 (Policy 7) explicitly marks romusha forced labour as core expression of the Japanese from peripheral to directly controlling position position in T8 (mobilisation of archipelago labour for goals of an externally dominant power), with Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] and Akashi 2008 [TL-M025] as Asian-revisionist sources against the pre-1980 self-justifying Japanese reading. [PP: PP_Japan_in_Nusantara]", cat:"sociaal", vl:["VL03", "VL08", "VL13"] },
+  { n:"0804", jaar:"1944", era:"revolutie", titel:"Japan Promises Indonesian Independence", omschr:"As Allied forces advance, Japan promises independence to Indonesia to retain cooperation; the promise accelerates nationalist preparations and raises popular expectations.", cat:"staatsvorming", vl:["VL08"] },
+  { n:"0805", jaar:"1944–1945", era:"revolutie", titel:"Java Famine: ~2.4 Million Deaths from Japanese Food Mobilisation", omschr:"In the final phase of the Japanese occupation, a catastrophic famine broke out on Java. The Japanese military authority had requisitioned rice, livestock and agricultural land for the war effort. Historians estimate the death toll at 1.5 to 2.5 million. The famine, scarcely mentioned in the official Japanese or the early Indonesian historiography, was one of the greatest humanitarian disasters of twentieth-century Indonesian history and a direct consequence of the extractive logic of the occupation. PP5 §B.4 (Policy 7) places the famine on Java within the shift from peripheral to directly controlling position: a product of the Japanese externally dominant position and the corresponding food-mobilisation in T8, with Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] and Akashi 2008 [TL-M025] as Asian-revisionist sources. [PP: PP_Japan_in_Nusantara]", cat:"sociaal", vl:["VL08", "VL10", "VL13"] },
+  { n:"0807", jaar:"1945", era:"revolutie", titel:"Investigating Committee for Preparatory Work for Independence (BPUPKI) Formed", omschr:"The BPUPKI is formed to draft an independence constitution and becomes the arena for defining Indonesia's founding ideology, in particular the role of Islam versus secular nationalism. [PP: PP_Japan_in_Nusantara]", cat:"staatsvorming", vl:["VL07", "VL08", "VL13"] },
+  { n:"0808", jaar:"1945", era:"revolutie", titel:"Sukarno Delivers the Pancasila Speech", omschr:"On 1 June 1945, Sukarno delivers his speech 'Birth of the Pancasila', formulating the five founding principles — belief in God, humanity, unity, democracy, social justice — that will define Indonesia.", cat:"staatsvorming", vl:["VL07", "VL08"] },
+  { n:"0810", jaar:"1945", era:"revolutie", titel:"1945 Constitution Adopted", omschr:"The Preparatory Committee adopts Indonesia's first constitution, establishing a presidential republic; the Preamble contains the Pancasila and the Jakarta Charter debate is settled in favour of secular nationalism.", cat:"staatsvorming", vl:["VL07", "VL08"] },
+  { n:"0811", jaar:"1945", era:"revolutie", titel:"Battle of Surabaya — tripartite conflict", omschr:"The bloody Battle of Surabaya (October–November 1945) against British-Indian troops becomes a defining moment of the revolution; Brigadier Mallaby is killed and 10 November is commemorated as Heroes' Day. PP5 §B.4 (Policy 8) reads Surabaya 1945 explicitly as a tripartite conflict (Republic, British, Dutch) — not as bilateral NL-Indonesian — under the overarching British occupation [TL-0816]; sources McMillan 2005, Bayly & Harper 2004.", cat:"militair", vl:["VL06", "VL08"] },
+  { n:"0812", jaar:"1945", era:"revolutie", titel:"Hatta Becomes Vice President", omschr:"Mohammad Hatta is appointed Indonesia's first Vice President, giving shape to the founding duumvirate that personifies the founding generation of the republic.", cat:"staatsvorming", vl:["VL08"] },
+  { n:"0821", jaar:"1945–1946", era:"revolutie", titel:"Social Revolutions in Sumatra: Popular Movements Drive Out Pro-Dutch Elites", omschr:"The August 1945 declaration of independence unleashed more than a national liberation struggle in Sumatra: it also released deep-rooted social tensions. In North and East Sumatra, armed popular groups expelled pro-Dutch sultans, Javanese administrators who had served under the Japanese, and local aristocratic elites. In some cases, the expulsions turned violent. The social revolutions showed that the Indonesian revolution was not purely a national military enterprise but also a struggle over class, power and local autonomy. This aspect of the revolution was long underexposed in nationalist historiography.", cat:"sociaal", vl:["VL06", "VL08"] },
+  { n:"0822", jaar:"1945–1946", era:"revolutie", titel:"Bersiap: violence in the transition period after the Japanese capitulation", omschr:"In the chaotic weeks following the Japanese capitulation and the Proklamasi (August 1945), violence erupted in parts of Java and Sumatra in which Indonesian armed groups carried out attacks on European and Indo-European civilians. The direct trigger was news that Dutch troops were returning to restore colonial order. The violence was not systematic and was openly condemned by Sukarno, Hatta and Sjahrir. The term Bersiap is primarily established in Dutch historiography; in Indonesian historiography it counts as part of the revolutionary chaos. PP5 §B.4 (Policy 8) places Bersiap within the tripartite framework of the British occupation [TL-0816] (McMillan 2005), not as a bilateral NL-Indonesian incident.", cat:"sociaal", vl:["VL06", "VL07", "VL08"] },
+  { n:"0823", jaar:"1945–1949", era:"revolutie", titel:"Women in the Independence Struggle: Laskar Wanita Indonesia", omschr:"Women played an active and multifaceted role in the Indonesian revolution. The Laskar Wanita Indonesia (LWI) was an organised women's combat unit that took part in armed resistance. Women were also indispensable in logistical roles: feeding fighters, providing medical care, running courier and communications networks, and hiding weapons and documents. Nurses became training instructors; women broadcasters disseminated news about the Republic. Early nationalist historiography largely kept women's contribution outside the official narrative. The Indonesian national synthesis project views women's history as one of the central gaps that a revised historiography must close.", cat:"sociaal", vl:["VL08", "VL10", "VL12"] },
+  { n:"0809", jaar:"17 Aug 1945", era:"revolutie", titel:"Proclamation of Indonesian Independence", omschr:"At 10 a.m., Sukarno and Hatta proclaim Indonesian independence at Pegangsaan Timur in Jakarta — the founding moment of the Republic of Indonesia, two days after Japan's surrender.", cat:"staatsvorming", vl:["VL07", "VL08"] },
+  { n:"0813", jaar:"1946", era:"revolutie", titel:"Negotiations on the Linggarjati Agreement begin", omschr:"Dutch and Indonesian negotiators conclude under British mediation the Linggarjati Agreement, recognising the de facto authority of the Republic over Java, Madura and Sumatra — though the Dutch later breach it. PP5 §B.4 (Policy 10) places Linggarjati within the broader frame of UN mediation, Marshall pressure and bloc-formation as constitutive factors of the first modern decolonisation war (Gouda & Brocades Zaalberg 2002, KITLV-NIOD-NIMH 2022).", cat:"diplomatiek", vl:["VL06", "VL08"] },
+  { n:"0814", jaar:"1947", era:"revolutie", titel:"First Dutch 'Police Action'", omschr:"The Dutch launch 'Operation Product', their first military assault on the Republic, capturing rich agricultural areas; international protest leads to UN mediation. PP5 §B.4 (Policy 10) places the first 'police action' within the framing of the Indonesian Revolution as the first modern decolonisation war, with UN mediation, Marshall pressure and bloc-formation as constitutive factors; KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist reference framework.", cat:"militair", vl:["VL05", "VL06", "VL08"] },
+  { n:"0815", jaar:"Jan 1948", era:"revolutie", titel:"Renville Agreement: Diplomatic Compromise Aboard a US Naval Ship", omschr:"Following the first Dutch police action (July 1947), the United States and a UN commission brokered a ceasefire. Negotiations took place aboard the US naval vessel USS Renville, anchored in the Java Sea. The January 1948 agreement froze military positions but forced the Republic to accept Dutch military gains. Nationalist leader Hatta called it a 'bitter pill'. The Renville accords were regarded by both sides as temporary; they led directly to the second Dutch police action in December 1948. PP5 §B.4 (Policy 10) reads the Renville Agreement as a direct outcome of UN mediation within the framing of the Indonesian Revolution as the first modern decolonisation war — including the symbolism of the American naval ship — with Marshall pressure and bloc-formation as constitutive factors; KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist reference framework.", cat:"diplomatiek", vl:["VL06", "VL08"] },
+  { n:"0816", jaar:"1948", era:"revolutie", titel:"Communist Madiun Affair", omschr:"PKI leader Musso and troops rebel against the Republican government at Madiun; Sukarno's decisive response in crushing the revolt enhances the Republic's credibility in Western eyes.", cat:"militair", vl:["VL07", "VL08"] },
+  { n:"0817", jaar:"1948", era:"revolutie", titel:"Second Dutch 'Police Action' — Sukarno Captured", omschr:"Dutch forces launch a second military offensive; Sukarno, Hatta and other Republican leaders are captured, while guerrilla resistance continues under General Sudirman. PP5 §B.4 (Policy 10) places the second 'police action' as the tipping-point at which UN mediation, Marshall pressure and bloc-formation turn against Dutch conduct — the core framing of the Indonesian Revolution as first modern decolonisation war — with KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist reference framework.", cat:"militair", vl:["VL06", "VL07", "VL08"] },
+  { n:"0818", jaar:"1949", era:"revolutie", titel:"Yogyakarta Retaken in the General Offensive", omschr:"On 1 March 1949, Republican forces under Colonel Suharto retake Yogyakarta for six hours in a general offensive, demonstrating military viability and boosting international support.", cat:"militair", vl:["VL08"] },
+  { n:"0819", jaar:"1949", era:"revolutie", titel:"Roem-Van Roijen Agreement", omschr:"International pressure forces the Dutch to negotiate; the Roem-Van Roijen Agreement leads to the release of Republican leaders and a ceasefire, clearing the path to full independence. PP5 §B.4 (Policy 10) reads the Roem–Van Roijen Agreement as the diplomatic phase in which UN mediation, Marshall pressure and bloc-formation as constitutive factors determine the outcome of the Indonesian Revolution; KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist reference framework.", cat:"diplomatiek", vl:["VL06", "VL08"] },
+  { n:"0820", jaar:"27 Dec 1949", era:"revolutie", titel:"The Netherlands transfers sovereignty", omschr:"In a ceremony in Amsterdam, the Netherlands formally transfers sovereignty over its former East Indies possessions to the Republic of the United States of Indonesia, ending the colonial era. PP5 §B.4 (Policy 10) places the transfer of sovereignty as the closing act of the Indonesian Revolution as the first modern decolonisation war, with UN mediation, Marshall pressure and bloc-formation as constitutive factors; KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist reference framework.", cat:"diplomatiek", vl:["VL06", "VL08"] },
+  { n:"0825", jaar:"1945-1946", era:"revolutie", titel:"British occupation of Java and Sumatra", omschr:"South-East Asia Command (SEAC) under Mountbatten with British-Indian troops occupies Java and Sumatra (Sept 1945 – Nov 1946); crucial tripartite framework for Surabaya, Bersiap and the Dutch return (McMillan 2005, Bayly & Harper 2004).", cat:"militair", vl:["VL08"] },
+  // ══ EARLY REPUBLIC & G30S AFTERMATH ══
+  { n:"0901", jaar:"1950", era:"republiek", titel:"Unitary State Proclaimed", omschr:"The federal Republic of the United States of Indonesia is dissolved and replaced by the unitary Republic of Indonesia; the 1945 Constitution is restored after a brief federal period.", cat:"staatsvorming", vl:["VL08", "VL09"] },
+  { n:"0902", jaar:"1950", era:"republiek", titel:"Republic of South Maluku (RMS) Proclaimed and Crushed", omschr:"Separatists declare the Republic of the South Moluccas (RMS); Indonesian forces crush the revolt, though some RMS members flee to the Netherlands, creating a lingering diaspora dispute.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0903", jaar:"1950", era:"republiek", titel:"Indonesia Joins the United Nations", omschr:"Indonesia becomes the 60th member of the UN, gaining international recognition and a forum to advocate decolonisation in Asia and Africa.", cat:"diplomatiek", vl:["VL09"] },
+  { n:"0923", jaar:"1950", era:"republiek", titel:"Unitary state reaffirmed", omschr:"Indonesian leaders reaffirm their commitment to the unitary state form by overcoming the federal pressure initiated by the Dutch; the decision shapes all later constitutional arrangements.", cat:"staatsvorming", vl:["VL06", "VL07", "VL09"] },
+  { n:"0904", jaar:"1951", era:"republiek", titel:"Darul Islam Rebellion Intensifies", omschr:"The Darul Islam revolt under S.M. Kartosuwirjo intensifies in West Java, demanding an Islamic state; the rebellion lasts until 1962 and inspires later Islamist movements.", cat:"militair", vl:["VL09"] },
+  { n:"0905", jaar:"1952", era:"republiek", titel:"17 October Affair — Army–Parliament Confrontation", omschr:"Army officers demand parliament's dissolution; Sukarno defuses the crisis, but the event exposes fundamental tensions between military and civilian institutions.", cat:"staatsvorming", vl:["VL07"] },
+  { n:"0906", jaar:"1953", era:"republiek", titel:"Bank Indonesia Established", omschr:"Indonesia founds its own central bank, Bank Indonesia, and begins nationalising the financial system previously dominated by Dutch institutions.", cat:"economie", vl:["VL06"] },
+  { n:"0907", jaar:"1955", era:"republiek", titel:"Indonesia Hosts the Bandung Conference", omschr:"Indonesia hosts the Asian-African Conference at Bandung, attended by 29 nations; the conference gives birth to the Non-Aligned Movement and establishes Indonesia as a leader of the Third World.", cat:"diplomatiek", vl:["VL09"] },
+  { n:"0908", jaar:"1955", era:"republiek", titel:"Indonesia's First General Elections", omschr:"Indonesia holds its first democratic general elections, with a near-equal four-party result (PNI, Masyumi, NU, PKI) reflecting the nation's ideological complexity.", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0909", jaar:"1956", era:"republiek", titel:"Hatta Resigns as Vice President", omschr:"Mohammad Hatta resigns over irreconcilable differences with Sukarno on democracy and regional autonomy; the loss of the 'Dwi Tunggal' (duumvirate) is seen as a turning point.", cat:"staatsvorming", vl:["VL07"] },
+  { n:"0910", jaar:"1957", era:"republiek", titel:"Regional Revolts Break Out (PRRI/Permesta)", omschr:"Army-backed regional revolts erupt in Sumatra (PRRI) and Sulawesi (Permesta), fuelled by grievances over Javanisation and resource sharing; the US covertly backs the rebels.", cat:"militair", vl:["VL09"] },
+  { n:"0911", jaar:"1957", era:"republiek", titel:"Sukarno Declares Martial Law", omschr:"Sukarno declares a state of war and martial law and begins his transition to 'Guided Democracy', expanding presidential power at the expense of parliament and parties.", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0912", jaar:"1957", era:"republiek", titel:"Dutch Businesses Nationalised", omschr:"After the failure of the UN resolution on New Guinea, Indonesia nationalises Dutch plantations and companies; more than 46,000 Dutch citizens depart, fundamentally altering the economy's ownership structure.", cat:"economie", vl:["VL06"] },
+  { n:"0913", jaar:"1959", era:"republiek", titel:"Sukarno Declares 'Guided Democracy'", omschr:"Sukarno dissolves the Constituent Assembly and restores the 1945 Constitution by decree, formally inaugurating 'Guided Democracy' — a system of authoritarian presidential rule backed by the military.", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0914", jaar:"1960", era:"republiek", titel:"Parliament Dissolved — DPR-GR Appointed", omschr:"Sukarno dissolves the elected parliament and replaces it with an appointed body; the shift marks the effective end of the liberal democratic experiment in Indonesia.", cat:"staatsvorming", vl:["VL07"] },
+  { n:"0915", jaar:"1961", era:"republiek", titel:"Confrontation with the Dutch over West New Guinea Begins", omschr:"Sukarno launches a military and diplomatic campaign (Trikora) to wrest West New Guinea (Irian Jaya) from the Dutch, drawing Soviet military aid and American diplomatic pressure.", cat:"militair", vl:["VL06", "VL07"] },
+  { n:"0924", jaar:"1961", era:"republiek", titel:"Non-Aligned Movement Summit — Indonesia at the Fore", omschr:"Indonesia plays a leading role at the Belgrade summit of the Non-Aligned Movement, championing the cause of newly decolonised nations and casting Sukarno as a Third World statesman.", cat:"diplomatiek", vl:["VL07", "VL09"] },
+  { n:"0916", jaar:"1962", era:"republiek", titel:"New York Agreement — West New Guinea Transferred", omschr:"Under intense American mediation, the Dutch agree to transfer West New Guinea to a temporary UN administration and then to Indonesia — widely seen as Sukarno's greatest foreign-policy success.", cat:"diplomatiek", vl:["VL06", "VL07"] },
+  { n:"0917", jaar:"1963", era:"republiek", titel:"Konfrontasi with Malaysia Begins", omschr:"Sukarno launches the armed Konfrontasi (Confrontation) against the newly-formed Federation of Malaysia, which he denounces as a British neo-colonial project.", cat:"militair", vl:["VL06", "VL07", "VL09"] },
+  { n:"0918", jaar:"1963", era:"republiek", titel:"Indonesia Nationalises Foreign Oil Companies", omschr:"The government nationalises the major oil companies and founds Pertamina as the state oil company, which would become the dominant force in the Indonesian economy.", cat:"economie", vl:["VL09"] },
+  { n:"0925", jaar:"1963", era:"republiek", titel:"Sukarno Declared President for Life", omschr:"The MPRS proclaims Sukarno President for Life — the apex of his personal power and the formal abolition of constitutional democracy under Guided Democracy.", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0919", jaar:"1964", era:"republiek", titel:"Indonesia Leaves the United Nations", omschr:"In protest against Malaysia's election to the UN Security Council, Sukarno withdraws from the UN — a dramatic gesture that isolates the country internationally.", cat:"diplomatiek", vl:["VL07"] },
+  { n:"0920", jaar:"1965", era:"republiek", titel:"September 30 Movement (G30S) — Coup Attempt", omschr:"A midnight coup attempt kills six senior generals; the army, led by Major-General Suharto, suppresses the coup within hours and blames the PKI, triggering a massive political crisis. PP5 §B.4 (Policy 11) reads G30S within a revisionist framing: archival evidence (Roosa 2006, Robinson 2018, Bevins 2020) and post-1998 Indonesian-historiographical confirmation (Hermawan Sulistyo 2000, Asvi Warman Adam 2007) point to a CIA-facilitating role — see [TL-0927].", cat:"militair", vl:["VL09"] },
+  { n:"0921", jaar:"1965-66", era:"republiek", titel:"Anti-communist mass killings", omschr:"Mass killings led by the army kill an estimated 500,000 to 1,000,000 alleged PKI members and sympathisers throughout Indonesia — one of the worst mass atrocities of the twentieth century. PP5 §B.4 (Policy 11, 12) places the mass killings in a revisionist CIA-facilitated framework (Roosa 2006, Bevins 2020, Robinson 2018) and marks the specific anti-Chinese component separately as [TL-0925]; for the CIA role itself see [TL-0927].", cat:"militair", vl:["VL09"] },
+  { n:"0921c", jaar:"1965-1966", era:"republiek", titel:"Anti-Chinese component of the mass killings", omschr:"Specific violence against Chinese-Indonesian communities within the 1965–66 mass killings; long-line Chinese-Indonesian friction (Wang Gungwu 1991, Liu Hong 2011, Coppel 1983). PP5 §B.4 (Policy 11 + 12) reads the anti-Chinese component of the 1965–66 mass killings as a specific expression within the revisionist CIA-facilitated framing (Roosa 2006 [TL-M017], Robinson 2018 [TL-M020], Bevins 2020 [TL-M021]) and within the long-line Chinese-Indonesian relationship (Wang Gungwu 1991 / Liu Hong 2011 [TL-M027]).", cat:"sociaal", vl:["VL09", "VL11"] },
+  { n:"0922", jaar:"1966", era:"republiek", titel:"Supersemar — transfer of power to Suharto", omschr:"Sukarno signs the Supersemar order, granting Suharto sweeping powers; Suharto uses it to dismantle Guided Democracy and consolidate his own rule. PP5 §B.4 (Policy 11) places Supersemar in the consolidation phase of the New Order regime, which came about partly through the CIA-facilitating role at G30S [TL-0927] (Roosa 2006, Robinson 2018, Bevins 2020).", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0526", jaar:"1646", era:"vroeg-koloniaal", titel:"Bontekoe publishes the Iournael", omschr:"Willem IJsbrantszoon Bontekoe publishes in Hoorn (printed by Jan Jansz Deutel) his Iournael ofte gedenckwaerdige beschrijvinghe vande Oost-Indische reyse — twenty-eight years after the explosion of the Nieuw Hoorn in the Sunda Strait (1619). Calvinist providential narrative as framing of a disaster in which 134 of the 206 on board perished. The journal becomes one of the longest-selling sea-narratives in Dutch literature (more than seventy editions to the present), and turns Bontekoe into a household name. Cf. Bijlage A.M for the historiographical bedding. PP_Japan v2.0 Part I situates Bontekoe within the Dutch archipelago empiricism that was rangaku-receptive — the Japanese Hollandic-studies tradition absorbed Western (incl. Batavian) knowledge from 1720 onward via Dutch teachers on Deshima.", cat:"cultuur", vl:["VL01", "VL10", "VL13"] },
+  { n:"0527", jaar:"1667", era:"vroeg-koloniaal", titel:"Peace of Breda — uti possidetis confirms English Manhattan and English cession of Run", omschr:"On 31 July 1667 the Dutch Republic signs with England (and France + Denmark as secondary parties) the treaty ending the Second Anglo-Dutch War (1665-1667). Negotiated at Breda from 27 May to 31 July 1667, under pressure of De Ruyter's Raid on the Medway (June 1667). Uti possidetis: parties retain what they actually hold. England keeps New Netherland (Manhattan, in English hands since 8 September 1664), the Republic keeps Suriname (Crijnssen's conquest of February 1667), and England formally cedes Run to the Republic — an island that has been under de facto VOC control since Courthope's capitulation in October 1620. The popular 'Manhattan-for-Run swap' narrative obscures three details: there was no quid-pro-quo but confirmation of existing positions; in 1673–1674 Cornelis Evertsen briefly retook New Netherland (nine months as New Orange); only the Peace of Westminster (February 1674) sealed the definitive transfer to England.", cat:"diplomatiek", vl:["VL01", "VL06"] },
+  { n:"0530", jaar:"1782", era:"vroeg-koloniaal", titel:"Mercury mutiny — Balinese slaves on a VOC ship", omschr:"During the Fourth Anglo-Dutch War (1780–1784) the VOC experiments with Balinese slaves as sailors. On 6 September 1782 the VOC ship Mercury lies at Edam (Onrust archipelago) ready for return: 13 European and 26 Javanese sailors plus 79 Balinese slaves. On 11 September in the Sunda Strait: mutiny — an event that lays bare the plantation economy.", cat:"militair", vl:["VL06"] },
+  { n:"0531", jaar:"~1607-1636", era:"vroeg-koloniaal", titel:"Hikayat Aceh", omschr:"Malay-Acehnese court chronicle on Sultan Iskandar Muda; Acehnese self-historiography alongside Dutch VOC archives (Hasymi 1981, Reid 2005, Lombard 1967).", cat:"cultuur", vl:["VL05", "VL06"] },
+  { n:"0532", jaar:"17e eeuw", era:"vroeg-koloniaal", titel:"Babad Tanah Jawi", omschr:"Javanese court chronicle linking the Mataram dynasty with Majapahit and the Wali Songo; Policy 3 source for organic Islamisation and Indonesian self-historiography (Ricklefs 1998, Pigeaud 1959, Reid 1988–93).", cat:"cultuur", vl:["VL04", "VL05", "VL06"] },
+  { n:"0614b", jaar:"1860", era:"nederlands-koloniaal", titel:"Law abolishing slavery in the Dutch East Indies", omschr:"On 1 January 1860 the Law on the Abolition of Slavery in the Dutch East Indies enters into force (Lower House 21 July 1859, 48 votes against 10). Directly freed: only 4,739 persons — exclusively on Java, Madura and the Banda Islands. Compensation to owners: 30–60 guilders per person. Outer regions and coolie ordinances remained out of view.", cat:"staatsvorming", vl:["VL02", "VL03", "VL06"] },
+  { n:"0616b", jaar:"1871", era:"nederlands-koloniaal", titel:"Sumatra Treaty: Gold Coast sold, free hand in Aceh", omschr:"Anglo-Dutch Treaties (1870–1871). Ratified 25 February 1871 for the Gold Coast portion: the Netherlands sells all factories to the British and gains a free hand in Aceh. The treaty repeals the Aceh-independence article from the Treaty of London 1824 — the direct cause of the Aceh War of 1873 [TL-0626]. PP5 §B.4 (Policy 6) places the Sumatra Treaty as the external diplomatic precondition for the expansion of the exploitative colonial regime in T6, with Furnivall's plural-economy as analytical raster and Limpach 2016 [TL-M019] + KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"diplomatiek", vl:["VL06"] },
+  { n:"0617b", jaar:"1880", era:"nederlands-koloniaal", titel:"General Coolie Ordinance with penal sanction", omschr:"On 22 July 1880 Governor-General sJacob issues the General Coolie Ordinance for Sumatra's East Coast (Stb. 1880 no. 133). Central element: the penal sanction. The employer can prosecute breaches of contract (lateness, running away, complaining) himself. For half a century the legal foundation of the plantation economy. PP5 §B.4 (Policy 6) reads the General Coolie Ordinance with penal sanction as the juridical core instance of the exploitative colonial regime in T6 — a layered regime of plantation unfreedom — with Furnivall's plural-economy as analytical raster and Limpach 2016 [TL-M019] + KITLV-NIOD-NIMH 2022 [TL-M022] as revisionist background framework.", cat:"staatsvorming", vl:["VL03", "VL06"] },
+  { n:"0621b", jaar:"1904", era:"nederlands-koloniaal", titel:"Rhemrev report documents Deli abuses", omschr:"Procurator-General J.L.T. Rhemrev is sent in 1903 to Sumatra's East Coast following publication of Van den Brand, De miljoenen uit Deli (1902). The 1904 report confirms systematic abuse and mortality rates of 10–20% per year among contract coolies. Not published; only discovered and edited by Breman in 1987.", cat:"staatsvorming", vl:["VL03", "VL06"] },
+  { n:"0630", jaar:"1721-1911", era:"nederlands-koloniaal", titel:"Riau-Lingga Sultanate", omschr:"Bugis-Malay successor to the Johor sultanate; cultural hinge between Sumatra, the Malay peninsula and Java; vehicle for classical Malay court culture until 1911 (Andaya 1975, Trocki 1979).", cat:"staatsvorming", vl:["VL05", "VL06", "VL12"] },
+  { n:"0710b", jaar:"1931", era:"nationalisme", titel:"Penal sanction abolished under American trade pressure", omschr:"In 1929–1930 the United States announces that from 1932 it will ban imports of products produced with forced labour — targeted at Sumatran tobacco. Under that threat the planters voluntarily abolish their use in 1930; in 1931 it is formally removed from the Coolie Ordinance. Not a Dutch political or moral decision, but export protection.", cat:"staatsvorming", vl:["VL03", "VL07"] },
+  { n:"0710c", jaar:"1929-1942", era:"nationalisme", titel:"Marshall pressure pre-phase", omschr:"American trade associations (Java Sugar Trade Association, Standard Vacuum) apply pressure on Dutch East Indies colonial policy via consulates and the US State Department; precondition for the 1948 Marshall pressure (Stoler 1985, Cribb 2017).", cat:"diplomatiek", vl:["VL06"] },
+  { n:"0921b", jaar:"1965–1979", era:"republiek", titel:"Buru Island: labour camp for political prisoners", omschr:"Following the mass killings of 1965–1966 [TL-0924], Suharto's New Order detains more than 10,000 political prisoners — suspected of links to the PKI — without trial in a labour camp on Buru Island in the Moluccas. Among them from 1969 the writer Pramoedya Ananta Toer, who would remain there until 1979. Prisoners wrote Pramoedya's Buru quartet in remembrance.", cat:"cultureel", vl:["VL03", "VL09"] },
+  { n:"0926", jaar:"1965-1966", era:"republiek", titel:"CIA involvement in G30S", omschr:"Facilitative role of the CIA Jakarta station (Hugh Tovar, Mary Vance Trent), name lists and logistical support within the Cold War framework; revisionistically acknowledged (Roosa 2006, Robinson 2018, Bevins 2020). PP5 §B.4 (Policy 11) explicitly marks the CIA involvement at G30S within the revisionist CIA-facilitated framework, with Roosa 2006 [TL-M017], Robinson 2018 [TL-M020] and Bevins 2020 [TL-M021] as background framework and Asvi Warman Adam 2007 [TL-M018] + Hermawan Sulistyo 2000 [TL-M011] as post-1998 Indonesian consolidation.", cat:"diplomatiek", vl:["VL09"] },
+];
+
+
+const ERA_NAMES = {
+  prehistorie:          "Roots of Civilisation",
+  oud:                  "Ancient Kingdoms (400–1200)",
+  klassiek:             "Classical Kingdoms (1200–1400)",
+  islamitisch:          "Islamic Sultanates (1300–1600)",
+  "vroeg-koloniaal":    "Early Colonial Era (1596–1700)",
+  "nederlands-koloniaal":"Dutch Colonial Rule (1700–1908)",
+  nationalisme:         "National Awakening (1908–1942)",
+  revolutie:            "Japanese Occupation & Revolution (1942–1949)",
+  republiek:            "Early Republic & G30S Aftermath (1950–1966)"
+}
+
+const VL_NAMES = {
+  VL01: "Discovery and Mapping",
+  VL02: "Spice Trade",
+  VL03: "Forced Labour",
+  VL04: "Indianisation and Islamisation",
+  VL05: "Mandala Empires",
+  VL06: "Dutch Presence",
+  VL07: "Indonesian Nationalism",
+  VL08: "Indonesian Revolution",
+  VL09: "1965 and the New Order",
+  VL10: "Culinary Cross-Pollination",
+  VL11: "Chinese Diaspora Long-Line",
+  VL12: "Women as Nameless Actors",
+  VL13: "Japan in Indonesian History"
+};
+
+const CAT_COLORS = {
+  staatsvorming:'#e88', militair:'#db9', maritiem:'#46b', religie:'#aaf', cultuur:'#8d8',
+  economie:'#ee8', diplomatiek:'#8ee', wetenschap:'#8cf', sociaal:'#f9b'
+};
+const CAT_LABELS = {
+  staatsvorming:'state-building', militair:'military', maritiem:'maritime',
+  religie:'religion', cultuur:'culture', economie:'economy',
+  diplomatiek:'diplomatic', wetenschap:'science', sociaal:'social'
+};
+
+let currentEra = 'all', currentCat = null, currentQuery = '';
+
+function buildTimeline() {
+  const container = document.getElementById('timeline');
+  container.innerHTML = '';
+  let prevEra = null;
+  let counter = 0;
+
+  EVENTS.forEach((ev) => {
+    const matchEra  = (currentEra === 'all' || ev.era === currentEra);
+    const matchCat  = (!currentCat || ev.cat === currentCat);
+    const q = currentQuery.toLowerCase();
+    const matchQ = !q || ev.titel.toLowerCase().includes(q) ||
+                      ev.omschr.toLowerCase().includes(q) ||
+                      ev.jaar.toLowerCase().includes(q) ||
+                      ev.cat.toLowerCase().includes(q);
+
+    if (!matchEra || !matchCat || !matchQ) return;
+
+    if (ev.era !== prevEra) {
+      const lbl = document.createElement('div');
+      lbl.className = 'era-label';
+      lbl.innerHTML = `<span class="era-label-text">${ERA_NAMES[ev.era] || ev.era}</span>`;
+      container.appendChild(lbl);
+      prevEra = ev.era;
+    }
+
+    const side = (counter % 2 === 0) ? 'left' : 'right';
+    const div = document.createElement('div');
+    const isNew = typeof ev.n === 'string' && ev.n.startsWith('N');
+    div.className = `event ${side}`;
+    div.style.animationDelay = `${(counter % 20) * 0.04}s`;
+
+    div.innerHTML = `
+      <div class="event-card${isNew ? ' event-card-new' : ''}">
+        <span class="event-number${isNew ? ' event-number-new' : ''}">TL-${ev.n}</span>
+        <div class="event-year">
+          <span class="event-category-dot dot-${ev.cat}" style="background:${CAT_COLORS[ev.cat]}"></span>
+          ${ev.jaar}
+        </div>
+        <div class="event-title">${ev.titel}</div>
+        <div class="event-desc">${ev.omschr}</div>
+        <span class="event-tag cat-${ev.cat}">${CAT_LABELS[ev.cat] || ev.cat}</span>
+      </div>`;
+    container.appendChild(div);
+    counter++;
+  });
+
+  document.getElementById('stats').textContent =
+    `${counter} of ${EVENTS.length} events shown`;
+  document.getElementById('no-results').style.display = counter === 0 ? 'block' : 'none';
+}
+
+function filterEra(era) {
+  currentEra = era;
+  document.querySelectorAll('.era-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  buildTimeline();
+  if (era !== 'all') {
+    const first = document.querySelector('.event');
+    if (first) first.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function filterCat(cat) {
+  currentCat = cat;
+  buildTimeline();
+}
+
+function doSearch() {
+  currentQuery = document.getElementById('search').value;
+  buildTimeline();
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('scrollBtn').classList.toggle('visible', window.scrollY > 600);
+});
+
+buildTimeline();
+</script>
+</body>
+</html>

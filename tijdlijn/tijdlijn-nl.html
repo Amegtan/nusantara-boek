@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indonesië — Een Tijdlijn van 212 Sleutelmomenten tot G30S</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9922A;
+    --gold-light: #E8B84B;
+    --gold-pale: #F5D98B;
+    --crimson: #8B1A1A;
+    --deep-red: #5C0F0F;
+    --brown: #3D1E0A;
+    --cream: #F7EDD8;
+    --parchment: #EFE0BE;
+    --dark: #1A0E06;
+    --shadow: rgba(0,0,0,0.5);
+    --text: #2A1606;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--dark);
+    color: var(--cream);
+    font-family: 'Crimson Pro', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 20%, rgba(201,146,42,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(139,26,26,0.1) 0%, transparent 60%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 20 L55 40 L30 55 L5 40 L5 20 Z' fill='none' stroke='rgba(201,146,42,0.04)' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='rgba(201,146,42,0.03)' stroke-width='1'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  header {
+    position: relative;
+    text-align: center;
+    padding: 80px 40px 60px;
+    z-index: 1;
+    border-bottom: 1px solid rgba(201,146,42,0.3);
+    background: linear-gradient(180deg, rgba(92,15,15,0.4) 0%, transparent 100%);
+  }
+
+  .header-ornament {
+    font-size: 28px;
+    color: var(--gold);
+    letter-spacing: 20px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+
+  header h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(28px, 5vw, 58px);
+    font-weight: 700;
+    color: var(--gold-light);
+    text-shadow: 0 0 40px rgba(201,146,42,0.4), 0 2px 4px rgba(0,0,0,0.8);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+
+  header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold-pale);
+    opacity: 0.75;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+  }
+
+  .header-sub {
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+    color: var(--parchment);
+    opacity: 0.6;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .era-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: rgba(26,14,6,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,146,42,0.2);
+  }
+
+  .era-btn {
+    padding: 6px 16px;
+    border: 1px solid rgba(201,146,42,0.35);
+    background: transparent;
+    color: var(--gold-pale);
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.25s;
+    text-transform: uppercase;
+  }
+  .cat-btn {
+    padding: 6px 16px;
+    border: 1px solid rgba(201,146,42,0.35);
+    background: transparent;
+    color: var(--gold-pale);
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.25s;
+    text-transform: uppercase;
+  }
+  .vl-btn {
+    padding: 6px 16px;
+    border: 1px solid rgba(201,146,42,0.35);
+    background: transparent;
+    color: var(--gold-pale);
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.25s;
+    text-transform: uppercase;
+  }
+  .cat-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+  .vl-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+  .era-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+  .era-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+  .era-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: rgba(26,14,6,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,146,42,0.2);
+  }
+  .era-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: rgba(26,14,6,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,146,42,0.2);
+  }
+  .cat-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: rgba(26,14,6,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,146,42,0.2);
+  }
+  .vl-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: rgba(26,14,6,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,146,42,0.2);
+  }
+
+  .era-btn:hover, .era-btn.active {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 18px 20px 6px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .search-bar input {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,146,42,0.3);
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    font-size: 15px;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-bar input:focus {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.07);
+  }
+
+  .search-bar input::placeholder { color: rgba(247,237,216,0.35); }
+
+  .stats {
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    color: rgba(247,237,216,0.45);
+    letter-spacing: 1px;
+    font-family: 'Crimson Pro', serif;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding: 0 20px 80px;
+    z-index: 1;
+  }
+
+  .timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(201,146,42,0.6) 3%,
+      rgba(201,146,42,0.6) 97%,
+      transparent 100%);
+    transform: translateX(-50%);
+  }
+
+  .era-section { margin-bottom: 10px; }
+
+  .era-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 50px 0 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .era-label::before, .era-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,146,42,0.5));
+  }
+
+  .era-label::after {
+    background: linear-gradient(270deg, transparent, rgba(201,146,42,0.5));
+  }
+
+  .era-label-text {
+    background: var(--dark);
+    padding: 8px 24px;
+    border: 1px solid rgba(201,146,42,0.5);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .event {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    position: relative;
+    animation: fadeSlide 0.5s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .event::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    transform: translateX(-50%);
+    z-index: 3;
+    box-shadow: 0 0 8px rgba(201,146,42,0.6);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .event:hover::after {
+    transform: translateX(-50%) scale(1.6);
+    box-shadow: 0 0 16px rgba(201,146,42,0.9);
+  }
+
+  .event.left {
+    flex-direction: row;
+    padding-right: calc(50% + 30px);
+    justify-content: flex-end;
+  }
+
+  .event.right {
+    flex-direction: row-reverse;
+    padding-left: calc(50% + 30px);
+    justify-content: flex-end;
+  }
+
+  .event-card {
+    background: linear-gradient(135deg, rgba(61,30,10,0.85) 0%, rgba(26,14,6,0.9) 100%);
+    border: 1px solid rgba(201,146,42,0.22);
+    padding: 14px 18px;
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    transition: all 0.25s;
+    cursor: default;
+  }
+
+  .event-card:hover {
+    border-color: rgba(201,146,42,0.6);
+    background: linear-gradient(135deg, rgba(80,40,12,0.95) 0%, rgba(40,20,8,0.98) 100%);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.6), inset 0 0 20px rgba(201,146,42,0.04);
+    transform: translateY(-2px);
+  }
+
+  .event.left .event-card::after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 22px;
+    width: 30px;
+    height: 1px;
+    background: rgba(201,146,42,0.35);
+  }
+
+  .event.right .event-card::after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 22px;
+    width: 30px;
+    height: 1px;
+    background: rgba(201,146,42,0.35);
+  }
+
+  .event-card-new {
+    border-left: 3px solid var(--gold) !important;
+  }
+  .event-number-new {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important;
+    color: var(--dark) !important;
+    font-style: italic;
+  }
+  
+  .event-number {
+    position: absolute;
+    top: -10px;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 10px;
+    color: var(--gold);
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+
+  .event.left .event-number { right: 14px; }
+  .event.right .event-number { left: 14px; }
+
+  .event-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .event-category-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .event-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .event-desc {
+    font-size: 13.5px;
+    color: rgba(247,237,216,0.72);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  .event-tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 2px 8px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 1px;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 600;
+  }
+
+  .cat-politiek    { background: rgba(139,26,26,0.3); color: #e88; border: 1px solid rgba(139,26,26,0.5); }
+  .cat-cultuur     { background: rgba(42,100,42,0.3); color: #8d8; border: 1px solid rgba(42,100,42,0.5); }
+  .cat-religie     { background: rgba(80,60,120,0.3); color: #aaf; border: 1px solid rgba(80,60,120,0.5); }
+  .cat-economie    { background: rgba(120,100,20,0.3); color: #ee8; border: 1px solid rgba(120,100,20,0.5); }
+  .cat-militair    { background: rgba(100,60,20,0.3); color: #db9; border: 1px solid rgba(100,60,20,0.5); }
+  .cat-wetenschap  { background: rgba(20,80,120,0.3); color: #8cf; border: 1px solid rgba(20,80,120,0.5); }
+  .cat-sociaal     { background: rgba(120,50,80,0.3); color: #f9b; border: 1px solid rgba(120,50,80,0.5); }
+  .cat-diplomatiek { background: rgba(20,100,100,0.3); color: #8ee; border: 1px solid rgba(20,100,100,0.5); }
+
+  .dot-staatsvorming { background: #e88; }
+  .dot-maritiem    { background: #46b; }
+  .dot-cultuur     { background: #8d8; }
+  .dot-religie     { background: #aaf; }
+  .dot-economie    { background: #ee8; }
+  .dot-militair    { background: #db9; }
+  .dot-wetenschap  { background: #8cf; }
+  .dot-sociaal     { background: #f9b; }
+  .dot-diplomatiek { background: #8ee; }
+
+  .event.hidden { display: none; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(201,146,42,0.15);
+    border-bottom: 1px solid rgba(201,146,42,0.15);
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(247,237,216,0.6);
+    font-family: 'Crimson Pro', serif;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+
+  .legend-item:hover { background: rgba(255,255,255,0.05); }
+
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  @media (max-width: 680px) {
+    .timeline-wrapper::before { left: 18px; }
+    .event.left, .event.right {
+      flex-direction: column;
+      padding-left: 46px;
+      padding-right: 0;
+    }
+    .event::after { left: 14px; transform: none; }
+    .event:hover::after { transform: scale(1.6); }
+    .event.left .event-card::after,
+    .event.right .event-card::after { display: none; }
+    .event-card { max-width: 100%; }
+  }
+
+  #no-results {
+    text-align: center;
+    padding: 60px;
+    color: rgba(247,237,216,0.35);
+    font-style: italic;
+    font-size: 18px;
+    display: none;
+  }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(201,146,42,0.5);
+    background: rgba(26,14,6,0.9);
+    color: var(--gold);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 0.2s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .scroll-top.visible { opacity: 1; pointer-events: all; }
+  .scroll-top:hover { background: var(--gold); color: var(--dark); }
+
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+    color: rgba(247,237,216,0.3);
+    letter-spacing: 2px;
+    font-family: 'Crimson Pro', serif;
+    border-top: 1px solid rgba(201,146,42,0.15);
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-ornament">✦ ✦ ✦</div>
+  <h1>Nusantara</h1>
+  <h2>Een Kroniek van de Indonesische Archipel</h2>
+  <div class="header-sub">212 Sleutelmomenten · Wortels van de Beschaving tot G30S en nasleep (1966)</div>
+</header>
+
+<div class="legend" id="legend">
+  <div class="legend-item" onclick="filterCat('staatsvorming')"><div class="legend-dot dot-staatsvorming"></div> Staatsvorming</div>
+  <div class="legend-item" onclick="filterCat('militair')"><div class="legend-dot dot-militair"></div> Militair</div>
+  <div class="legend-item" onclick="filterCat('maritiem')"><div class="legend-dot dot-maritiem"></div> Maritiem</div>
+  <div class="legend-item" onclick="filterCat('religie')"><div class="legend-dot dot-religie"></div> Religie</div>
+  <div class="legend-item" onclick="filterCat('cultuur')"><div class="legend-dot dot-cultuur"></div> Cultuur</div>
+  <div class="legend-item" onclick="filterCat('economie')"><div class="legend-dot dot-economie"></div> Economie</div>
+  <div class="legend-item" onclick="filterCat('diplomatiek')"><div class="legend-dot dot-diplomatiek"></div> Diplomatiek</div>
+  <div class="legend-item" onclick="filterCat('wetenschap')"><div class="legend-dot dot-wetenschap"></div> Wetenschap</div>
+  <div class="legend-item" onclick="filterCat('sociaal')"><div class="legend-dot dot-sociaal"></div> Sociaal</div>
+  <div class="legend-item" onclick="filterCat(null)" style="border: 1px solid rgba(201,146,42,0.3); color: var(--gold-pale);">✕ Wis filter</div>
+</div>
+
+<nav class="era-nav" id="era-nav">
+  <button class="era-btn active" onclick="filterEra('all')">Alle Tijdperken</button>
+  <button class="era-btn" onclick="filterEra('prehistorie')">Wortels van de Beschaving</button>
+  <button class="era-btn" onclick="filterEra('oud')">Oude Koninkrijken</button>
+  <button class="era-btn" onclick="filterEra('klassiek')">Klassiek Tijdperk</button>
+  <button class="era-btn" onclick="filterEra('islamitisch')">Islamitische Rijken</button>
+  <button class="era-btn" onclick="filterEra('vroeg-koloniaal')">Vroeg Koloniaal</button>
+  <button class="era-btn" onclick="filterEra('nederlands-koloniaal')">Nederlands Koloniaal</button>
+  <button class="era-btn" onclick="filterEra('nationalisme')">Nationalisme</button>
+  <button class="era-btn" onclick="filterEra('revolutie')">Revolutie</button>
+  <button class="era-btn" onclick="filterEra('republiek')">Vroege Republiek</button>
+  </nav>
+
+<nav class="cat-nav" id="cat-nav" style="position:sticky; top:60px; z-index:99; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:14px 20px; background:rgba(20,8,4,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(201,146,42,0.18);">
+  <span style="color:var(--gold-pale); font-size:11px; letter-spacing:2px; text-transform:uppercase; align-self:center; opacity:0.6; margin-right:6px;">Categorie:</span>
+  <button class="cat-btn active" onclick="filterCat('all')">Alle</button>
+  <button class="cat-btn" onclick="filterCat('staatsvorming')">Staatsvorming</button>
+  <button class="cat-btn" onclick="filterCat('militair')">Militair</button>
+  <button class="cat-btn" onclick="filterCat('maritiem')">Maritiem</button>
+  <button class="cat-btn" onclick="filterCat('religie')">Religie</button>
+  <button class="cat-btn" onclick="filterCat('cultuur')">Cultuur</button>
+  <button class="cat-btn" onclick="filterCat('economie')">Economie</button>
+  <button class="cat-btn" onclick="filterCat('diplomatiek')">Diplomatiek</button>
+  <button class="cat-btn" onclick="filterCat('wetenschap')">Wetenschap</button>
+  <button class="cat-btn" onclick="filterCat('sociaal')">Sociaal</button>
+</nav>
+
+<nav class="vl-nav" id="vl-nav" style="position:sticky; top:120px; z-index:98; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:14px 20px; background:rgba(20,8,4,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(201,146,42,0.18);">
+  <span style="color:var(--gold-pale); font-size:11px; letter-spacing:2px; text-transform:uppercase; align-self:center; opacity:0.6; margin-right:6px;">Verhaallijn:</span>
+  <button class="vl-btn active" onclick="filterVL('all')">Alle</button>
+  <button class="vl-btn" onclick="filterVL('VL01')">Ontdekking</button>
+  <button class="vl-btn" onclick="filterVL('VL02')">Specerijen</button>
+  <button class="vl-btn" onclick="filterVL('VL03')">Gedwongen arbeid</button>
+  <button class="vl-btn" onclick="filterVL('VL04')">Religie</button>
+  <button class="vl-btn" onclick="filterVL('VL05')">Mandala-imperia</button>
+  <button class="vl-btn" onclick="filterVL('VL06')">Nederlandse aanwezigheid</button>
+  <button class="vl-btn" onclick="filterVL('VL07')">Nationalisme</button>
+  <button class="vl-btn" onclick="filterVL('VL08')">Revolutie</button>
+  <button class="vl-btn" onclick="filterVL('VL09')">1965/Nieuwe Orde</button>
+  <button class="vl-btn" onclick="filterVL('VL10')">Culinair</button>
+  <button class="vl-btn" onclick="filterVL('VL11')">Chinese diaspora</button>
+  <button class="vl-btn" onclick="filterVL('VL12')">Vrouwen-actoren</button>
+  <button class="vl-btn" onclick="filterVL('VL13')">Japan</button>
+</nav>
+
+<div class="search-bar">
+  <input type="text" id="search" placeholder="Zoek op gebeurtenis, jaar, trefwoord…" oninput="doSearch()">
+</div>
+
+<div class="stats" id="stats">191 van de 191 gebeurtenissen</div>
+
+<div class="timeline-wrapper" id="timeline"></div>
+<div id="no-results">Geen gebeurtenissen gevonden.</div>
+
+<button class="scroll-top" id="scrollBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>✦ &nbsp; Samengesteld als historisch naslagwerk &nbsp; ✦ &nbsp; Indonesië: van de wortels van de beschaving tot de Beweging van 30 september 1965 en haar directe nasleep (Supersemar, 1966) &nbsp; ✦</footer>
+
+<script>
+const EVENTS = [
+  // ══ WORTELS VAN DE BESCHAVING ══
+  { n:"0101", jaar:"~1.700.000 v.Chr.", era:"prehistorie", titel:"Java-mens (Homo erectus) bewoont de archipel", omschr:"Fossielen van Pithecanthropus erectus (Java-mens), gevonden nabij Trinil in Oost-Java, vertegenwoordigen een van de vroegst bekende mensachtigen in Zuidoost-Azië.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0102", jaar:"~800.000 v.Chr.", era:"prehistorie", titel:"Homo erectus bij Sangiran", omschr:"De vindplaats Sangiran, later aangewezen als UNESCO Werelderfgoed, levert de dichtstbevolkte concentratie Homo erectus-fossielen ter wereld op.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0103", jaar:"~500.000 v.Chr.", era:"prehistorie", titel:"Gebruik van vuur en stenen werktuigen", omschr:"Archeologisch bewijs uit Java toont aan dat vroege mensachtigen Acheulische stenen werktuigen en vuur gebruikten — een grote cognitieve en technologische doorbraak.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0106", jaar:"~43.900 v.Chr.", era:"prehistorie", titel:"Leang Bulu' Sipong 4: oudste verhalende jachtscène ter wereld", omschr:"In de Leang Bulu' Sipong 4-grot op Sulawesi werd een figuratieve jachtscène aangetroffen die is gedateerd op minstens 43.900 jaar oud — ouder dan de beroemde grotten van Altamira en Chauvet in Europa. De scène toont theriantropische figuren (mens-dier-hybriden) die wilde zwijnen en anoatrunderen jagen. De vondst bevestigt Nusantara als vroeg centrum van cognitieve en symbolische cultuur, en geeft de archipel haar rechtmatige plaats in de wereldgeschiedenis van de vroegste kunst.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0104", jaar:"~40.000 v.Chr.", era:"prehistorie", titel:"Homo sapiens bereikt de archipel", omschr:"Moderne mensen trekken vanuit het vasteland van Zuidoost-Azië de Indonesische archipel in en verdringen geleidelijk eerdere mensachtige bevolkingen.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0105", jaar:"~35.000 v.Chr.", era:"prehistorie", titel:"Grotschilderingen van Sulawesi", omschr:"De Leang Bulu' Sipong 4-grot op Sulawesi bevat figuratieve grotschilderingen die tot de oudste ter wereld behoren: jachttaferelen met theriantropische figuren.", cat:"cultuur", vl:["VL01"] },
+  { n:"0107", jaar:"~10.000 v.Chr.", era:"prehistorie", titel:"Begin van de Austronesische migratie", omschr:"Proto-Austronesische volken beginnen zuidwaarts te trekken vanuit Taiwan en vestigen zich uiteindelijk door de gehele Indonesische archipel, waardoor zij het etnolinguïstische karakter fundamenteel bepalen.", cat:"maritiem", vl:["VL01"] },
+  { n:"0108", jaar:"~4.000 v.Chr.", era:"prehistorie", titel:"Austronesische nederzetting voltooid", omschr:"Austronesisch sprekende boeren en zeevaarders voltooien hun vestiging in de archipel en brengen rijstteelt, gedomesticeerde dieren en de uitriggerkano mee.", cat:"maritiem", vl:["VL01"] },
+  { n:"0109", jaar:"~3.000 v.Chr.", era:"prehistorie", titel:"Invloed van de Dong Son-bronstijdcultuur", omschr:"De Dong Son-bronstrommelcultuur van het Aziatische vasteland verspreidt zich naar de archipel, getuige de ceremoniële bronzen trommels die op Sumatra, Java en Bali zijn aangetroffen.", cat:"cultuur", vl:["VL01", "VL11"] },
+  { n:"0110", jaar:"~2.000 v.Chr.", era:"prehistorie", titel:"Natte rijstlandbouw gevestigd", omschr:"Natte rijstteelt wordt op Java en Bali gemeengoed, waardoor voedselsurplussen ontstaan die de basis leggen voor toekomstige staatsvorming.", cat:"economie", vl:["VL10"] },
+  { n:"0111", jaar:"~600 v.Chr.", era:"prehistorie", titel:"IJzertechnologie geïntroduceerd", omschr:"IJzerbewerking doet zijn intrede in de archipel en transformeert landbouw, oorlogvoering en handel.", cat:"wetenschap", vl:["VL01"] },
+
+  // ══ OUDE KONINKRIJKEN — INDIANISERING EN SRIVIJAYA ══
+  { n:"0201", jaar:"~100", era:"oud", titel:"Indianisering van de archipel begint", omschr:"Sanskriet-inscripties, hindoe-boeddhistische rituelen en Indiase hofcultuur dringen via handelscontacten de archipel binnen en hervormen het politieke en religieuze leven fundamenteel.", cat:"religie", vl:["VL04"] },
+  { n:"0202", jaar:"~130", era:"oud", titel:"Ptolemaeus vermeldt de eilanden", omschr:"De Griekse geograaf Ptolemaeus noemt 'Iabadiu' (Java) en 'Saba' (Sumatra) in zijn Geographia — de vroegst bekende westerse schriftelijke verwijzing naar de archipel.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0203", jaar:"~400", era:"oud", titel:"Koninkrijk Tarumanagara gesticht", omschr:"Het vroegst bekende geïndianiseerde koninkrijk op Java wordt in West-Java gesticht. Gebeeldhouwde stenen pilaren verwijzen naar koning Purnawarman en zijn openbare werken.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0204", jaar:"~450", era:"oud", titel:"Koninkrijk Kutai in Kalimantan", omschr:"Het Kutai-koninkrijk in Oost-Kalimantan produceert Indonesië's vroegste Sanskriet-stenen inscripties, waarin de hindoeïstische rituelen van koning Mulawarman worden beschreven.", cat:"staatsvorming", vl:["VL04", "VL05"] },
+  { n:"0204b", jaar:"~400", era:"oud", titel:"Yupa-stenen Mulawarman (Kutai)", omschr:"Zeven Sanskriet-inscripties op offer-palen van koning Mulawarman in Kutai, Oost-Kalimantan: oudste schriftelijke zelf-articulatie van een Indonesische polity. Boechari 1979 en Slamet Muljana 1981 lezen ze als Indonesisch zelf-discours; Coedès 1948 als Indianiserings-kader.", cat:"religie", vl:["VL04"] },
+  { n:"0205", jaar:"~600", era:"oud", titel:"Opkomst van de Sailendra-dynastie", omschr:"De Sailendra-dynastie ('Heren van de Berg') rijst op in Midden-Java en wordt een fervent mecenas van het Mahayana-boeddhisme en monumentale steenarchitectuur.", cat:"staatsvorming", vl:["VL04", "VL05"] },
+  { n:"0206", jaar:"~625", era:"oud", titel:"I Ching bezoekt Srivijaya", omschr:"De Chinese boeddhistische monnik I Ching doet Srivijaya (Palembang) aan en noteert het als een bloeiend centrum van boeddhistisch onderwijs, dat hij aanbeveelt bij andere pelgrims.", cat:"religie", vl:["VL04", "VL05", "VL11"] },
+  { n:"0207", jaar:"~671", era:"oud", titel:"Srivijaya-rijk rijst op", omschr:"Het maritieme rijk Srivijaya, gecentreerd in Palembang, Sumatra, ontwikkelt zich tot de dominante macht die de Straat van Malakka en de trans-oceanische boeddhistische handelsroutes beheerst.", cat:"maritiem", vl:["VL04", "VL05"] },
+  { n:"0208", jaar:"~700", era:"oud", titel:"Srivijaya domineert de maritieme handel", omschr:"Srivijaya consolideert zijn controle over cruciale zeestraten tussen de Indische Oceaan en de Zuid-Chinese Zee en wordt de dominante economische en maritieme macht in Zuidoost-Azië.", cat:"maritiem", vl:["VL05", "VL11"] },
+  { n:"0209", jaar:"~730", era:"oud", titel:"Bouw van Borobudur begint", omschr:"De Sailendra-dynastie begint met de bouw van Borobudur in Midden-Java, dat uitgroeit tot de grootste boeddhistische tempel ter wereld — een kosmologische mandala in steen.", cat:"cultuur", vl:["VL04"] },
+  { n:"0210", jaar:"~760", era:"oud", titel:"Prambanan-tempelcomplex begonnen", omschr:"De bouw van het hindoeïstische Prambanan-tempelcomplex in Midden-Java begint, wat de herlevende macht van de hindoeïstische Sanjaya-dynastie weerspiegelt.", cat:"cultuur", vl:["VL04"] },
+  { n:"0211", jaar:"~800", era:"oud", titel:"Borobudur voltooid", omschr:"De prachtige Borobudur-tempel is gereed: een neentraps mandala met 2.672 reliëfpanelen en 504 boeddhabeelden — het hoogtepunt van boeddhistische kunst in Zuidoost-Azië.", cat:"cultuur", vl:["VL04"] },
+  { n:"0212", jaar:"~832", era:"oud", titel:"Srivijaya stuurt gezantschap naar Tang-China", omschr:"Srivijaya vestigt formele tributaire betrekkingen met de Tang-dynastie, waardoor handelsvoordelen en diplomatieke erkenning worden veiliggesteld.", cat:"diplomatiek", vl:["VL05", "VL11"] },
+  { n:"0213", jaar:"~850", era:"oud", titel:"Sanjaya-dynastie herverenigst Midden-Java", omschr:"De hindoeïstische Sanjaya-dynasty hervindt haar hegemonie in Midden-Java en absorbeert het boeddhistische Sailendra-koninkrijk, waardoor sjaïvisme en boeddhisme versmelten in de Javaanse hofcultuur.", cat:"staatsvorming", vl:["VL04", "VL05"] },
+  { n:"0214", jaar:"~856", era:"oud", titel:"Prambanan-complex voltooid", omschr:"Het Prambanan-tempelcomplex is gereed, met de indrukwekkende 47 meter hoge Shiva-toren — de hoogste hindoetempel in Zuidoost-Azië.", cat:"cultuur", vl:["VL04"] },
+  { n:"0215", jaar:"683", era:"oud", titel:"Kedukan Bukit-inscriptie", omschr:"De oudste tekst in het Oud-Maleis, opgericht onder Srivijayaans gezag, beschrijft de zegevierende reis van Dapunta Hyang Sri Jayanasa. Het is het eerste document waarin de archipel zichzelf in eigen taal benoemt — een overgang van geschiedschrijving over de archipel naar geschiedschrijving vanuit de archipel.", cat:"cultuur", vl:["VL05"] },
+  { n:"0215b", jaar:"~686", era:"oud", titel:"Talang Tuwo + Srivijayaanse vloek-inscripties", omschr:"Cluster van Oud-Maleise vloek-inscripties (Talang Tuwo 684, Kota Kapur 686, Karang Brahi en Palas Pasemah ~686) — bestuurlijk-rituele articulatie van Srivijayaanse mandala-soevereiniteit (Wolters 1967, Boechari 1979).", cat:"religie", vl:["VL04", "VL05"] },
+
+  // ══ KLASSIEK TIJDPERK: MAJAPAHIT ══
+  { n:"0301", jaar:"~900", era:"klassiek", titel:"Mataram-koninkrijk op zijn hoogtepunt", omschr:"Het klassieke Mataram-koninkrijk bereikt zijn hoogtepunt als mecenas van Sanskrietliteratuur en beeldende kunsten; de grote Kakawin Ramayana wordt in Oud-Javaans gecomponeerd.", cat:"cultuur", vl:["VL04", "VL05"] },
+  { n:"0302", jaar:"~929", era:"klassiek", titel:"Hoofdstad Mataram verschuift naar Oost-Java", omschr:"Na vulkaanuitbarstingen en politieke instabiliteit verplaatst de Mataram-hoofdstad zich oostwaarts naar het Brantas-dal, wat het Oost-Java-tijdperk van de klassieke beschaving inluidt.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0303", jaar:"~990", era:"klassiek", titel:"Koning Dharmawangsa valt Srivijaya aan", omschr:"De Oost-Javaanse koning Dharmawangsa onderneemt een gedurfde maar uiteindelijk mislukte aanval op Srivijaya om het monopolie op de maritieme handel te doorbreken.", cat:"militair", vl:["VL05"] },
+  { n:"0304", jaar:"1006", era:"klassiek", titel:"Val van Dharmawangsa's koninkrijk", omschr:"Een Srivijayaans tegenaanval vernietigt het Oost-Javaanse hof en doodt Dharmawangsa; de enige overlevende, een jonge prins, vlucht in ballingschap en zal later de Airlangga-lijn stichten.", cat:"militair", vl:["VL05"] },
+  { n:"0305", jaar:"1025", era:"klassiek", titel:"Chola-rijk valt Srivijaya aan", omschr:"Het machtige Chola-rijk uit Zuid-India onderneemt verwoestende zeerooftochten op Srivijayaanse havensteden en verzwakt de maritieme suprematie van Srivijaya permanent.", cat:"militair", vl:["VL05"] },
+  { n:"0306", jaar:"1049", era:"klassiek", titel:"Airlangga verdeelt zijn koninkrijk", omschr:"Koning Airlangga verdeelt zijn herenigd Oost-Javaans rijk tussen zijn twee zonen, waardoor de rivaliserende koninkrijken Kediri en Janggala ontstaan.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0307", jaar:"~1100", era:"klassiek", titel:"Kediri-koninkrijk bloeit op", omschr:"Het Kediri-koninkrijk aan de Brantas-rivier wordt een groot centrum van Oud-Javaanse literatuur en hindoestaatskunde; de kakawin-epen Arjunawiwaha en Bharatayuddha worden gecomponeerd.", cat:"cultuur", vl:["VL04", "VL05"] },
+  { n:"0308", jaar:"~1150", era:"klassiek", titel:"Definitieve neergang van Srivijaya", omschr:"Srivijaya's politieke macht kwijnt definitief na de Chola-aanvallen, interne opstanden en de opkomst van concurrerende Javaanse koninkrijken.", cat:"maritiem", vl:["VL05"] },
+  { n:"0319", jaar:"~1175", era:"klassiek", titel:"Opkomst van de maritieme handel van Kediri", omschr:"Het Kediri-koninkrijk breidt zijn maritiem bereik uit en stuurt schepen naar China en India, terwijl het als tussenpersoon fungeert in de peper- en sandelhouthandel.", cat:"maritiem", vl:["VL02", "VL05", "VL11"] },
+  { n:"0309", jaar:"1222", era:"klassiek", titel:"Opkomst van het Singhasari-koninkrijk", omschr:"Ken Arok verslaat de Kediri-koning en sticht de Singhasari-dynastie, die Oost-Java met agressieve expansie herverenigst; hij wordt herinnerd als een gewone man die godkoning werd.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0310", jaar:"1275", era:"klassiek", titel:"Singhasari verovert Sumatra", omschr:"Koning Kertanegara van Singhasari leidt de Pamalayu-expeditie en brengt Maleisisch Sumatra onder Javaanse suzereiniteit, waardoor Srivijayaanse resten verder worden verzwakt.", cat:"militair", vl:["VL05"] },
+  { n:"0311", jaar:"1289", era:"klassiek", titel:"Kertanegara weigert Kublai Khan", omschr:"De Singhasari-koning Kertanegara verminkt de gezant van Kublai Khan die onderwerping eist — een van de meest gedurfde daden van verzet uit de geschiedenis, die een Mongoolse invasie uitlokt.", cat:"diplomatiek", vl:["VL05", "VL11"] },
+  { n:"0312", jaar:"1292", era:"klassiek", titel:"Mongoolse invasie van Java", omschr:"Een enorme Mongoolse vloot arriveert om Java te straffen; de nieuwe Majapahit-heerser Vijaya gebruikt de Mongolen slim om een rivaal te verslaan en verdrijft hen daarna.", cat:"militair", vl:["VL05"] },
+  { n:"0313", jaar:"1293", era:"klassiek", titel:"Stichting van het Majapahit-rijk", omschr:"Raden Vijaya sticht het Majapahit-rijk in het Brantas-delta in Oost-Java — het grootste en meest gevierde rijk in de Indonesische geschiedenis.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0314", jaar:"1334", era:"klassiek", titel:"Gajah Mada wordt rijksminister — Sumpah Palapa", omschr:"Gajah Mada wordt aangesteld als Mahapatih (eerste minister) van Majapahit en zweert de Palapa-eed: hij zal geen aardse genoegens kennen totdat Nusantara onder Majapahit is verenigd. PP5 §B.4 (Beleid 18) leest deze eed als pre-figuratie van Sumpah Pemuda 1928 [TL-0712] in een lange-lijn-lezing in de Indonesische historiografie, zonder retro-projectie van moderne staatsterritorialiteit; voor de tekstuele articulatie via Pararaton zie [TL-0322].", cat:"staatsvorming", vl:["VL01", "VL05", "VL07"] },
+  { n:"0322", jaar:"1334", era:"klassiek", titel:"Sumpah Palapa via Pararaton", omschr:"Tekstuele articulatie van Gajah Mada's Palapa-eed in de Pararaton-kroniek (samenstelling 15e–16e eeuw); lange-lijn-bron in de Indonesische historiografie voor Beleid 18 (pre-figuratie Sumpah Pemuda 1928).", cat:"cultuur", vl:["VL01", "VL05", "VL07"] },
+  { n:"0320", jaar:"1337", era:"klassiek", titel:"Majapahit onderwerpt Soenda en Madoera", omschr:"Onder Gajah Mada brengt Majapahit Soenda (West-Java) en Madoera in zijn invloedssfeer en verstevigt de controle over de rijstoverschotgebieden en de handelsroutes in de Oost-Javazee.", cat:"militair", vl:["VL05"] },
+  { n:"0315", jaar:"1343", era:"klassiek", titel:"Majapahit verovert Bali", omschr:"Gajah Mada leidt de verovering van Bali, dat wordt opgenomen in Majapahit; de Javaanse hindoe-boeddhistische hofcultuur overleeft er lang na de islamisering van Java.", cat:"militair", vl:["VL04", "VL05"] },
+  { n:"0316", jaar:"1365", era:"klassiek", titel:"Nagarakretagama geschreven", omschr:"De hofpoëet Prapanca componeert de Nagarakretagama, een meesterwerk van de Oud-Javaanse literatuur dat het uitgestrekte tributaire netwerk van Majapahit beschrijft.", cat:"cultuur", vl:["VL05"] },
+  { n:"0321", jaar:"~1380", era:"klassiek", titel:"Majapahit bereikt zijn grootste territoriale omvang", omschr:"Op zijn grootste uitgestrektheid omvat Majapahits rijk een groot deel van de moderne Indonesische archipel, plus delen van het Maleis Schiereiland, de Filippijnen en Nieuw-Guinea.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0317", jaar:"1389", era:"klassiek", titel:"Dood van Hayam Wuruk — begin van Majapahits neergang", omschr:"De dood van Hayam Wuruk, Majapahits grootste koning, veroorzaakt successieconflicten en burgeroorlog (de Paregreg-oorlog), die het rijk op een weg van langzame desintegratie zet.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0318", jaar:"~1400", era:"klassiek", titel:"Majapahits handelsnetwerk op zijn hoogtepunt", omschr:"Majapahits handelsverbindingen strekken zich uit van Madagaskar tot de Filippijnen; Javaanse kooplieden domineren de specerijhandel en vestigen een commercieel netwerk dat het rijk zelf overleeft.", cat:"maritiem", vl:["VL02", "VL05"] },
+  { n:"0216", jaar:"1365", era:"klassiek", titel:"Sutasoma (Mpu Tantular)", omschr:"Oud-Javaans kakawin van Mpu Tantular ten tijde van Hayam Wuruk; bron voor Bhinneka Tunggal Ika (canto 139.5) en longue-durée-grondstructuur van talig-etnische pluraliteit (Slamet Muljana 1965, Pigeaud 1960–63).", cat:"cultuur", vl:["VL04", "VL05"] },
+
+  // ══ ISLAMITISCHE RIJKEN & EUROPESE AANKOMST ══
+  { n:"0401", jaar:"~1200", era:"islamitisch", titel:"Islam arriveert via Gujarati handelaren", omschr:"Arabische en Gujarati moslimhandelaren brengen de islam naar de Noord-Sumatraanse havensteden; lokale heersers bekeren zich, aangetrokken door de egalitaire ethiek en commerciële voordelen van het geloof.", cat:"religie", vl:["VL04"] },
+  { n:"0402", jaar:"1292", era:"islamitisch", titel:"Marco Polo noteert moslimgemeenschappen op Sumatra", omschr:"Marco Polo vermeldt op doortocht door Noord-Sumatra moslimsteden in Perlak e.o. — een van de vroegste westerse bevestigingen van de vroege islamitische aanwezigheid in de archipel.", cat:"religie", vl:["VL01", "VL04"] },
+  { n:"0403", jaar:"~1300", era:"islamitisch", titel:"Sultanaat Samudera-Pasai gesticht", omschr:"Samudera-Pasai in Noord-Sumatra wordt het eerste islamitische sultanaat in de archipel en stelt een model van islamitisch bestuur in dat zich over de gehele regio verspreidt.", cat:"staatsvorming", vl:["VL04", "VL05", "VL12"] },
+  { n:"0404", jaar:"~1380", era:"islamitisch", titel:"Islam verspreidt zich langs de specerijhandelroutes", omschr:"Moslimhandelaren en soefimissionarissen gebruiken de specerijnetwerken om de islam systematisch te verspreiden naar de kuststeden van Java, Maluku en Kalimantan.", cat:"religie", vl:["VL02", "VL04"] },
+  { n:"0405", jaar:"~1400", era:"islamitisch", titel:"Stichting van het Sultanaat Malakka", omschr:"Het Sultanaat Malakka wordt gesticht door een prins van Majapahit-afkomst die zich tot de islam bekeert; het wordt het grootste emporium van de regio en het centrum van Maleisisch-islamitische beschaving.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0406", jaar:"~1440", era:"islamitisch", titel:"Wali Songo beginnen de islamisering van Java", omschr:"De negen islamitische heiligen (Wali Songo), waaronder Sunan Kalijaga en Sunan Giri, beginnen systematisch de Javaanse samenleving te bekeren en vermengen de islam met lokale Javaanse cultuur en kunst.", cat:"religie", vl:["VL04"] },
+  { n:"0419", jaar:"~1450", era:"islamitisch", titel:"Islam verspreidt zich naar Maluku (de Specerijeilanden)", omschr:"De islam doordringt via Javaanse en Maleisische moslimhandelaren de Maluku-eilanden, bekeert lokale heersers en vestigt islamitische sultanaten op Ternate en Tidore.", cat:"religie", vl:["VL02", "VL04", "VL12"] },
+  { n:"0407", jaar:"~1475", era:"islamitisch", titel:"Sultanaat Demak gesticht aan Java's Noordkust", omschr:"Het Sultanaat Demak wordt gesticht als eerste islamitische sultanaat op Java en de politieke basis van waaruit de islam over het eiland wordt verspreid.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0408", jaar:"1478", era:"islamitisch", titel:"Val van het hindoe-boeddhistische Majapahit-rijk", omschr:"De hoofdstad van Majapahit wordt geplunderd door Demak-troepen; het rijk stort in, wat vijf eeuwen hindoe-boeddhistische beschaving op Java beëindigt; het koninklijk hof vlucht naar Bali.", cat:"militair", vl:["VL04", "VL05"] },
+  { n:"0409", jaar:"1511", era:"islamitisch", titel:"Portugezen veroveren Malakka", omschr:"Portugese troepen onder Afonso de Albuquerque nemen Malakka in, vernielen het islamitische handelskeizerrijk en sturen een vlucht van Maleis cultuur naar de kusten van de archipel.", cat:"militair", vl:["VL05"] },
+  { n:"0410", jaar:"1512", era:"islamitisch", titel:"Portugezen bereiken Maluku — de Specerijeilanden", omschr:"Portugese schepen bereiken de Banda-eilanden en Maluku en leggen direct Europees contact met de bron van nootmuskaat, foelie en kruidnagel die eeuwenlang de wereldhandel aandreven.", cat:"maritiem", vl:["VL02"] },
+  { n:"0411", jaar:"~1520", era:"islamitisch", titel:"Sultanaat Atjeh gesticht", omschr:"Het Sultanaat Atjeh rijst op in Noord-Sumatra als nieuw islamitisch machtscentrum na de val van Malakka en wordt een felle anti-Portugese kracht en een baken van islamitische geleerdheid.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0412", jaar:"1521", era:"islamitisch", titel:"Magellans expeditie bereikt Maluku", omschr:"De resten van Magellans wereldomzeiling bereiken Tidore in Maluku en voltooien de eerste Europese omvaart van de aarde, waarmee het globale belang van de archipel wordt bevestigd.", cat:"maritiem", vl:["VL01", "VL02", "VL05"] },
+  { n:"0413", jaar:"~1527", era:"islamitisch", titel:"Sunda Kelapa omgedoopt tot Jayakarta", omschr:"De moslimkrijgsheer Fatahillah verslaat de Portugezen bij Sunda Kelapa en hernoemt de haven tot Jayakarta ('Stad der Overwinning') — de locatie van het latere Jakarta.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0414", jaar:"~1530", era:"islamitisch", titel:"Mataram-sultanaat rijst op in Java", omschr:"Het islamitische Mataram-sultanaat ontwikkelt zich tot Java's dominante macht en vermengt islamitisch geloof met Javaanse mystiek en hofcultuur tot een kenmerkende Javaanse synthese.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0415", jaar:"1569", era:"islamitisch", titel:"Atjeh valt Portugees Malakka aan", omschr:"Het Sultanaat Atjeh onderneemt een grote zeëaanval op Portugees Malakka en vestigt zich als de voornaamste antikoloniale islamitische macht in de regio.", cat:"militair", vl:["VL05", "VL06", "VL12"] },
+  { n:"0416", jaar:"~1600", era:"islamitisch", titel:"Makassar wordt een grote handelshaven", omschr:"Het Sultanaat Gowa-Tallo (Makassar) in Zuid-Sulawesi groeit uit tot een van de grootste en meest kosmopolitische havens van Azië, waar handelaren van alle geloofsovertuigingen welkom zijn.", cat:"maritiem", vl:["VL05", "VL12"] },
+  { n:"0417", jaar:"1613", era:"islamitisch", titel:"Sultan Agung bestijgt de troon van Mataram", omschr:"Sultan Agung bestijgt de Mataram-troon en begint een regeringsperiode die Mataram de grootste territoriale omvang en culturele bloei ooit zal brengen.", cat:"staatsvorming", vl:["VL05"] },
+  { n:"0418", jaar:"1628", era:"islamitisch", titel:"Sultan Agung belegert Batavia", omschr:"Sultan Agung onderneemt een massaal maar uiteindelijk mislukt beleg van het door de VOC bezette Batavia — de zwaarste inheemse uitdaging aan de VOC-aanwezigheid op Java.", cat:"militair", vl:["VL06"] },
+  { n:"0420", jaar:"~1450", era:"islamitisch", titel:"Shahbandar-systeem in Malakka", omschr:"Het Sultanaat Malakka vestigt een juridisch apparaat voor zijn multi-etnische handelsstad: vier shahbandars (havenmeesters), elk verantwoordelijk voor een eigen gemeenschap — Gujarati’s, overige Indiërs en Birmezen, Javanen en Maleisiërs, Chinezen en Japanners — die geschillen beslechten volgens eigen gewoonterecht onder het gezag van de bendahara. Een mature vorm van conflict of laws, vier eeuwen vóór Westfalen.", cat:"diplomatiek", vl:["VL02", "VL05", "VL12"] },
+  { n:"0421", jaar:"1512", era:"islamitisch", titel:"Tomé Pires documenteert Malakka", omschr:"De Portugese apotheker Tomé Pires verblijft drie jaar in het net veroverde Malakka en schrijft de Suma Oriental — het gedetailleerdste Europese ooggetuigenverslag van het laat-prekoloniale handelsstelsel, met vierentachtig talen en vier shahbandars in één stad.", cat:"wetenschap", vl:["VL02", "VL06"] },
+  { n:"0422", jaar:"1607", era:"islamitisch", titel:"Sultan Iskandar Muda bestijgt de troon in Aceh", omschr:"Onder zijn regering (1607–1636) bereikt het Sultanaat Atjeh zijn grootste uitbreiding en militaire macht. Iskandar Muda valt Portugees Malakka viermaal aan en ontvangt Ottomaanse militaire steun — kanonniers en gieterijmeesters — van sultan Selim II. Aceh fungeert als zuidoostflank van de Ottomaans-Portugese wereldstrijd om de kruidenroute.", cat:"staatsvorming", vl:["VL05", "VL12"] },
+  { n:"0423", jaar:"1596", era:"islamitisch", titel:"Linschotens Itinerario verschijnt te Amsterdam", omschr:"Jan Huygen van Linschoten publiceert bij Cornelis Claesz de Portugese navigatiegeheimen die hij tussen 1583 en 1589 te Goa had gekopieerd. Het Portugese informatiemonopolie, een eeuw lang met de doodstraf beschermd via de Casa da Índia, is binnen één boekdrukker uitgewist. Cornelis de Houtman vertrekt hetzelfde jaar met Linschotens kaarten aan boord.", cat:"wetenschap", vl:["VL01"] },
+  { n:"0424", jaar:"~1612", era:"islamitisch", titel:"Sulalatus Salatin / Sejarah Melayu", omschr:"Maleis hofkroniek samengesteld in opdracht van Bendahara Tun Sri Lanang (Johor); gedeelde Maleis-Indonesische bron, fundament voor Maleisische historiografie (Andaya & Andaya 2017, Liaw Yock Fang 1976).", cat:"cultuur", vl:["VL05"] },
+
+  // ══ VROEG KOLONIAAL / VOC ══
+  { n:"0514", jaar:"1512", era:"vroeg-koloniaal", titel:"Alliantie van het Sultanaat Ternate met Portugal", omschr:"De Sultan van Ternate sluit een handelsverdrag met de Portugezen en ruilt kruidnagelmonopolierechten voor militaire bescherming — het eerste grote Europese verdrag in de archipel.", cat:"diplomatiek", vl:["VL02", "VL05", "VL06", "VL12"] },
+  { n:"0515", jaar:"1575", era:"vroeg-koloniaal", titel:"Baab Ullah van Ternate verdrijft de Portugezen", omschr:"Sultan Baab Ullah van Ternate verdrijft na een belegering van vier jaar de Portugezen en herstelt tijdelijk de inheemse controle over de Maluku-specerijhandel.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0501", jaar:"1596", era:"vroeg-koloniaal", titel:"Eerste Nederlandse expeditie bereikt de archipel", omschr:"Cornelis de Houtman leidt de eerste Nederlandse handelsvloot naar Bantam, Java, vestigt contact met de specerijhandel en wekt de Nederlandse commerciële interesse in de Oost.PP5 §B.4 (Beleid 4) plaatst de eerste Nederlandse expeditie als opening van een T5-fase waarin Nederland geleidelijk transformeert van externe handelaar naar functioneel soeverein van binnenuit binnen de archipel; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"maritiem", vl:["VL02", "VL06"] },
+  { n:"0516", jaar:"1598", era:"vroeg-koloniaal", titel:"Nederlands-Ternate-alliantie gesloten", omschr:"De Nederlanders en het Sultanaat Ternate sluiten een alliantie tegen de Portugezen en Spanjaarden en beginnen zo de Nederlandse doordringt van de Maluku-specerijhandel.", cat:"diplomatiek", vl:["VL02", "VL05", "VL06", "VL12"] },
+  { n:"0502", jaar:"1602", era:"vroeg-koloniaal", titel:"VOC (Vereenigde Oost-Indische Compagnie) opgericht", omschr:"De VOC wordt door de Staten-Generaal gecharterd als 's werelds eerste multinationale onderneming met quasi-soevereine bevoegdheden over handel en oorlogvoering.PP5 §B.4 (Beleid 4) leest de VOC-oprichting niet als externe extern dominante actor maar als juridisch instrument waarmee Nederland in T5–T7 als functioneel soeverein van binnenuit in de Mandalaringen begint te opereren; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"economie", vl:["VL06"] },
+  { n:"0503", jaar:"1605", era:"vroeg-koloniaal", titel:"VOC verovert Ambon van de Portugezen", omschr:"De VOC neemt Ambon in Maluku over — haar eerste significante territoriale verovering — en begint de Portugezen van de specerijhandel te verdringen.PP5 §B.4 (Beleid 4) plaatst de verovering van Ambon in T5 als handeling als kerngebied — Nederland als handelende kern in de archipel — niet als externe extern dominante actor; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0504", jaar:"1609", era:"vroeg-koloniaal", titel:"VOC vestigt permanent hoofdkwartier in Maluku", omschr:"De VOC vestigt een permanent steunpunt in Ambon en begint systematisch het monopolie op de kruidnagel- en nootmuskaathandel te verwerven door de productie aan de bron te controleren.PP5 §B.4 (Beleid 4) leest de vestiging van het permanent VOC-hoofdkwartier in Maluku als institutionele consolidatie van de positie als handelend kerngebied van Nederland in T5, niet als externe extern dominante actor; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"economie", vl:["VL02", "VL06"] },
+  { n:"0505", jaar:"1619", era:"vroeg-koloniaal", titel:"Jan Pieterszoon Coen sticht Batavia", omschr:"VOC-gouverneur-generaal Jan Pieterszoon Coen brandt Jayakarta plat en bouwt Batavia op de puinen — de koloniale hoofdstad die 350 jaar lang de archipel domineert.PP5 §B.4 (Beleid 4) plaatst de stichting van Batavia als institutionele scharnier (cf. Annex B Stroom 0 §0.6) waarmee Nederland in T5 functioneel soeverein van binnenuit wordt; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0506", jaar:"1621", era:"vroeg-koloniaal", titel:"Banda-eilandenslachting", omschr:"Coen beveelt de nagenoeg volledige uitroeiing van de inheemse Bandanese bevolking om het VOC-monopolie op nootmuskaat af te dwingen — een van de vroegste koloniale genociden.PP5 §B.4 (Beleid 4) leest de Banda-genocide als soevereine machtsuitoefening van binnenuit — Nederland als handelende kern in de archipel — en niet als externe extern dominante actor; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader. Cf. Bijlage A.M voor de historiografische bedding. PP5 v7.3 §B.4 voegt Beleid 21 toe als secundaire toewijzing: Japanse beulen in VOC-dienst voltrokken volgens Coens eigen rapport van 8 augustus 1621 de eigenlijke onthoofding van de Bandanese orang kaya (Clulow 2014; Blussé 2008 [TL-M028]); militair-functionele R3-betrokkenheid bij Hollands-koloniaal geweld in de archipel.", cat:"militair", vl:["VL02", "VL03", "VL06", "VL13"] },
+  { n:"0508", jaar:"1641", era:"vroeg-koloniaal", titel:"VOC verovert Malakka", omschr:"De VOC verslaat de Portugezen en neemt Malakka in, waarmee zij controle verkrijgt over de cruciale Straat van Malakka en de specerijhandel overneemt van Portugal.PP5 §B.4 (Beleid 4) plaatst de verovering van Malakka in T5 als soevereine consolidatie van binnenuit van de Nederlandse positie in de archipel, niet als externe extern dominante actor; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0507", jaar:"1642", era:"vroeg-koloniaal", titel:"Statuten van Batavia: juridische codificatie van de slavernij", omschr:"De VOC-rechtscodificatie van 1642 — de Statuten van Batavia — legde de juridische grondslagen van de slavernij in de VOC-gebieden vast: gedetailleerde regels over eigendom, verpanding, erfenis en vrijlating van slaven. Het was geen ad-hoc praktijk maar een zorgvuldig gecodificeerd systeem ontworpen door juristen. De Statuten maakten slavernij tot een institutionele pijler van het koloniale economische systeem, van Batavia tot de Kaapkolonie.PP5 §B.4 (Beleid 4) leest de Statuten van Batavia als juridische kern-codificatie binnen de Nederlandse positie als handelend kerngebied in T5 — een handeling van het functionele kerngebied, niet van een externe extern dominante actor; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"sociaal", vl:["VL03", "VL06"] },
+  { n:"0509", jaar:"1645", era:"vroeg-koloniaal", titel:"Mataram-VOC vredesverdrag", omschr:"Sultan Agung's opvolger Amangkurat I ondertekent een vernederend vredesakkoord met de VOC, waarmee Matarams afhankelijkheid van Nederlandse militaire steun begint.", cat:"diplomatiek", vl:["VL05", "VL06"] },
+  { n:"0513", jaar:"ca. 1650–1700", era:"vroeg-koloniaal", titel:"Haramain-netwerken: ulema verbinden Mekka met Nusantara", omschr:"In de zeventiende eeuw intensiveerden de transregionale geleerdennetwerken tussen de Haramain (Mekka en Medina) en de Nusantara-archipel. Prominente ulema als Yusuf Al-Makasari (Zuid-Sulawesi), Al-Sinkili (Aceh), Al-Palimbani (Palembang) en Al-Banjari (Kalimantan Selatan) studeerden in de heilige steden en keerden terug als dragers van islamitische geleerdheid en hervormingsdenken. De islamisering van Nusantara was daarmee een intern Aziatisch intellectueel proces, gedreven door eigen geleerden — niet louter een gevolg van Arabische of Indiase handelscontacten.", cat:"religie", vl:["VL04", "VL05", "VL06"] },
+  { n:"0512", jaar:"ca. 1660–1800", era:"vroeg-koloniaal", titel:"Deportatie naar de Kaap: oorsprong van de Kaapse Maleiers", omschr:"De VOC deporteerde Indonesische politieke gevangenen, slaven en ballingen naar de Kaapkolonie. Zij kwamen van Java, Bali, Sulawesi, de Molukken en elders in de archipel. In de Kaapkolonie vormden zij de moslimgemeenschap die tot op heden bekendstaat als de Kaapse Maleiers — een van de meest tastbare uitdrukkingen van de maritieme diaspora van Nusantara. Hun nakomelingen dragen soms nog altijd namen als Van Bengalen, Van Java, Van Bali. Zij bewaren Maleisisch-islamitisch erfgoed op 14.000 kilometer van hun herkomst.", cat:"sociaal", vl:["VL02", "VL06"] },
+  { n:"0510", jaar:"1667", era:"vroeg-koloniaal", titel:"Nederlanders veroveren Makassar", omschr:"De VOC verslaat het Sultanaat Gowa-Tallo; het Verdrag van Bongaya dwingt Zuid-Sulawesi in het Nederlandse commerciële systeem en beëindigt Makassars vrije-havenstatuut.PP5 §B.4 (Beleid 4) leest de verovering van Makassar en het Verdrag van Bongaya als soevereine van binnenuit handelende integratie van Zuid-Sulawesi in het door Nederland geleide commerciële systeem in de archipel — een handeling van binnenuit, niet een externe interventie; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"militair", vl:["VL05", "VL06", "VL12"] },
+  { n:"0511", jaar:"1670", era:"vroeg-koloniaal", titel:"Trunojoyo-opstand op Java", omschr:"Prins Trunojoyo van Madura leidt een grote opstand tegen Mataram en de VOC, verovert tijdelijk de Javaanse koninklijke hoofdstad en toont de broosheid van de Nederlands-Mataram-alliantie.", cat:"militair", vl:["VL05", "VL06"] },
+  { n:"0517", jaar:"1616", era:"vroeg-koloniaal", titel:"Verplichtstelling van de Brouwer-route", omschr:"De VOC maakt de route via 38°ZB en de roaring forties verplicht: van Kaap de Goede Hoop eerst oostwaarts koersen, dan opsturen naar Straat Soenda. De reistijd naar Indië halveert van veertien naar zes à acht maanden — ten koste van een reeks scheepsrampen op de West-Australische kust. De route maakt het VOC-handelsmodel economisch levensvatbaar.", cat:"maritiem", vl:["VL06"] },
+  { n:"0518", jaar:"1619", era:"vroeg-koloniaal", titel:"Hydrografisch Bureau van de VOC", omschr:"De VOC vestigt in Amsterdam een Hydrografisch Bureau: het institutionele centrum voor systematische kennisaccumulatie. Elk terugkerend schip moet zijn journalen en kaarten inleveren; de meesterkaarten worden centraal beheerd. Deze innovatie geeft de VOC drie eeuwen lang cartografische voorsprong op Portugese en Spaanse rivalen.", cat:"wetenschap", vl:["VL06"] },
+  { n:"0519", jaar:"~1622", era:"vroeg-koloniaal", titel:"Perkeniersstelsel op Banda", omschr:"Na de genocide van 1621 worden de Banda-eilanden in perken verdeeld — plantages toegewezen aan Nederlandse vrijburgers (perkeniers), bewerkt door slaven uit Sulawesi, Timor en Aru. Het is de eerste Europese plantage-eigendomsstructuur in Azië en het prototype van het latere koloniale plantagekapitalisme.", cat:"economie", vl:["VL02", "VL03", "VL06"] },
+  { n:"0520", jaar:"1623", era:"vroeg-koloniaal", titel:"Amboyna-executies", omschr:"Tien Engelse factoren, negen Japanners en een Portugees worden door de VOC in Ambon geëxecuteerd na beschuldigingen van samenzwering. De executies beëindigen de Engelse aanwezigheid in de Molukken; de Engelse East India Company verlegt haar zwaartepunt naar India, met gevolgen die tot in de negentiende eeuw doorwerken.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0521", jaar:"~1625", era:"vroeg-koloniaal", titel:"Hongi-tochten gecodificeerd", omschr:"De VOC institutionaliseert jaarlijkse hongi-vloten die door de Molukken varen om elke kruidnagelboom buiten het aangewezen productiegebied om te kappen. Het wordt een pre-moderne vorm van voorraadbeheer — overproductievernietiging als vast bestanddeel van het koloniaal bestel, uitgevoerd door geroeide vaartuigen met Ambonese bemanningen.", cat:"economie", vl:["VL02", "VL06"] },
+  { n:"0522", jaar:"1641", era:"vroeg-koloniaal", titel:"Vier sultana’s regeren Aceh (1641–1699)", omschr:"Na de dood van Iskandar Thani regeert Aceh bijna zes decennia lang onder vier opeenvolgende vrouwelijke vorsten — Safiatuddin, Naqiatuddin, Zaqiatuddin en Kamalatuddin. De dynastie vormt een zeldzame vrouwelijke heerschappij in de islamitische wereld en corrigeert de aanname van universele prekoloniale gender-rollen.", cat:"staatsvorming", vl:["VL05", "VL06", "VL12"] },
+  { n:"0523", jaar:"~1670", era:"vroeg-koloniaal", titel:"Culminatie van de Age of Commerce-crisis", omschr:"Het tijdperk van de open havensteden — Malakka, Aceh, Banten, Gowa — dat rond 1450 was begonnen, loopt structureel af. VOC-monopolisering, de Kleine IJstijd en epidemische ziekte werken samen aan de krimp; kosmopolitische handelssteden maken plaats voor defensieve, agrarisch-georiënteerde politieke entiteiten (Reid 1993).", cat:"economie", vl:["VL05", "VL06"] },
+  { n:"0524", jaar:"1684", era:"vroeg-koloniaal", titel:"VOC verovert Banten", omschr:"Na een uitputtende oorlog (1682–1684) valt het Sultanaat Banten — het laatste grote onafhankelijke sultanaat op West-Java — onder VOC-controle. Daarmee bereikt de VOC op papier het zenit van haar territoriale dominantie op Java.PP5 §B.4 (Beleid 4) leest de verovering van Banten als soevereine voltooiing van binnenuit van de Nederlandse machtspositie op Java in T5, niet als externe extern dominante actor; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"militair", vl:["VL05", "VL06", "VL12"] },
+  { n:"0525", jaar:"ca. 1650–1906", era:"vroeg-koloniaal", titel:"Macassan trepang-handel met Marege", omschr:"Makassaarse en Bugis-praos varen jaarlijks met de noordwestmoesson naar Arnhem Land (door hen Marege genoemd) om trepang — zeekomkommer — te oogsten voor de Chinese markt. De handel werkt tweeënhalve eeuw lang, buiten de VOC om, en laat een dichte verstrengeling na met de Yolngu-Aboriginals: leenwoorden (balanda, rupiah), aangeplante tamarindebomen, liederen en rituelen. In 1906 eindigt zij door de Australische Customs Tariff.", cat:"maritiem", vl:["VL06", "VL11"] },
+
+  // ══ NEDERLANDS KOLONIAAL BEWIND ══
+  { n:"0601", jaar:"1700", era:"nederlands-koloniaal", titel:"VOC op haar financiële hoogtepunt", omschr:"De VOC bereikt haar grootste winstgevendheid en beheert de kostbaarste specerijhandel ter wereld; zij keert buitengewone dividenden uit terwijl haar monopoliesysteem de economieën van de archipel verstoort.", cat:"economie", vl:["VL02", "VL06"] },
+  { n:"0602", jaar:"1704", era:"nederlands-koloniaal", titel:"Eerste Javaanse Successieoorlog", omschr:"Een successiegeschil binnen de Mataram-koninklijke familie trekt de VOC erin; zij benut het conflict om verdere territoriale concessies te verwerven, waardoor de Nederlandse controle over Java verdiept.", cat:"militair", vl:["VL05", "VL06"] },
+  { n:"0603", jaar:"1740", era:"nederlands-koloniaal", titel:"Chinese slachting in Batavia (Angke-slachting)", omschr:"VOC-troepen en Javaanse bondgenoten slachten naar schatting 5.000 tot 10.000 etnische Chinezen af in Batavia na een vermeende opstand — een traumatische gebeurtenis die bekendstaat als de Angke-slachting. PP5 §B.4 (Beleid 12) plaatst deze gebeurtenis expliciet in een lange-lijn-Chinees-Indonesische verhouding (Wang Gungwu 1991, Liu Hong 2011), als een van twee gemarkeerde momenten van acute frictie binnen de archipel met China — naast de anti-Chinese-component van de massamoorden 1965-66 [TL-0925]. De Tosen Fusetsu-gaki (Ishii red. 1998 [TL-M029]) bevatten gedetailleerde Hokkien-vluchtelingenrapporten over deze slachting, doorgegeven aan de Tokugawa-autoriteiten in Nagasaki — VL13-secundaire resonantie via de junkhandel-informatiestroom.", cat:"militair", vl:["VL06", "VL11", "VL13"] },
+  { n:"0604", jaar:"1755", era:"nederlands-koloniaal", titel:"Mataram verdeeld door het Verdrag van Giyanti", omschr:"De VOC regisseert het Verdrag van Giyanti, dat Mataram splitst in de rivaliserende hoven van Yogyakarta en Surakarta, waarmee iedere kans op Javaanse politieke hereniging definitief tenietgedaan wordt.", cat:"staatsvorming", vl:["VL05", "VL06"] },
+  { n:"0624", jaar:"1755", era:"nederlands-koloniaal", titel:"Jogjakarta Kraton gebouwd", omschr:"Sultan Hamengkubuwono I begint met de bouw van het Jogjakarta-paleis (Kraton), dat uitgroeit tot het culturele centrum van de Javaanse hofbeschaving — nog steeds in gebruik als koninklijke residentie.", cat:"cultuur", vl:["VL06"] },
+  { n:"0605", jaar:"1757", era:"nederlands-koloniaal", titel:"Surakarta nogmaals verdeeld — Mangkunegaran gesticht", omschr:"Een verdere splitsing schept het Mangkunegaran-vorstendom bij Surakarta, zodat vier hoven om symbolisch gezag strijden onder Nederlandse suzereiniteit.", cat:"staatsvorming", vl:["VL05", "VL06"] },
+  { n:"0606", jaar:"1799", era:"nederlands-koloniaal", titel:"VOC ontbonden — Nederlandse staat neemt over", omschr:"De failliete VOC wordt ontbonden en de Nederlandse staat neemt direct het beheer over haar bezittingen over, waardoor de relatie verandert van corporatief naar imperiaal koloniaal bestuur.PP5 §B.4 (Beleid 4) plaatst de overname van VOC-bezittingen door de Nederlandse staat als institutionele continuering van de positie als handelend kerngebied — niet als overgang naar 'extern imperiaal' bestuur, maar als juridische herinrichting van de soevereine handelsmacht; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0607", jaar:"1808", era:"nederlands-koloniaal", titel:"Hervormingen van Daendels beginnen", omschr:"Maarschalk Daendels, aangesteld door Napoleons broer, moderniseert het koloniale bestuur, legt de Grote Postweg dwars door Java aan en voert zware nieuwe arbeidsregimes in.PP5 §B.4 (Beleid 4) leest de Daendels-hervormingen als modernisering binnen de archipel binnen de Nederlandse soevereine positie in T6, niet als externe extern dominante interventie; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0608", jaar:"1811", era:"nederlands-koloniaal", titel:"Britten bezetten Java tijdelijk", omschr:"Britse troepen onder Lord Minto nemen Java over van de Frans-gezinde Nederlanders; Thomas Stamford Raffles wordt luitenant-gouverneur en voert een landrente-hervorming in.", cat:"militair", vl:["VL06"] },
+  { n:"0609", jaar:"1815", era:"nederlands-koloniaal", titel:"Uitbarsting van de Tambora", omschr:"De catastrofale uitbarsting van de Tambora op Sumbawa is de krachtigste vulkaanuitbarsting in de geregistreerde geschiedenis; meer dan 70.000 mensen sterven in de archipel en wereldwijd veroorzaakt zij het 'Jaar zonder zomer'.", cat:"wetenschap", vl:["VL06"] },
+  { n:"0610", jaar:"1816", era:"nederlands-koloniaal", titel:"Nederlands koloniaal bestuur hersteld", omschr:"Na Napoleons nederlaag herstellen de Nederlanders hun koloniale gezag over de archipel, waarmee een intensievere fase van direct imperiaal bestuur begint.PP5 §B.4 (Beleid 4) plaatst het herstel van het Nederlandse koloniale bestuur in 1816 als hervatting van de soevereine van binnenuit handelende positie — Nederland als handelende kern in de archipel — niet als externe extern dominante actor; Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0625", jaar:"1819", era:"nederlands-koloniaal", titel:"Raffles sticht Singapore", omschr:"Raffles' stichting van Singapore heeft directe gevolgen voor de archipel: het creëert een vrijhaven die het Nederlandse handelsmonopolie ondermijnt en de regionale handel voorgoed verandert.", cat:"maritiem", vl:["VL06"] },
+  { n:"0611", jaar:"1825", era:"nederlands-koloniaal", titel:"Java-oorlog begint — opstand van Diponegoro", omschr:"Prins Diponegoro van Yogyakarta ontketent de Java-oorlog, het grootste en meest verwoestende conflict in de Indonesische koloniale geschiedenis, ingegeven door Nederlandse landhervorming en minachting voor de Javaanse soevereiniteit.", cat:"militair", vl:["VL06"] },
+  { n:"0612", jaar:"1830", era:"nederlands-koloniaal", titel:"Java-oorlog eindigt — Diponegoro verbannen", omschr:"Na vijf jaar oorlog met 200.000 slachtoffers wordt Diponegoro gevangen genomen onder een parlementaire vlag en verbannen naar Makassar; hij wordt een nationaal held en symbool van antikoloniaal verzet. De Tosen Fusetsu-gaki (Ishii red. 1998 [TL-M029]) bevatten Chinees-handelsrapportages over de Java-oorlog 1825–1830, doorgegeven aan de Tokugawa-autoriteiten in Nagasaki — VL13-secundaire resonantie via de junkhandel-informatiestroom (pre-Perry-laag).", cat:"militair", vl:["VL06", "VL13"] },
+  { n:"0613", jaar:"1830", era:"nederlands-koloniaal", titel:"Cultuurstelsel ingevoerd", omschr:"Gouverneur-generaal Van den Bosch legt het Cultuurstelsel op, waarmee Javaanse boeren gedwongen worden 20% van hun land te wijden aan exportgewassen voor de Nederlandse staat — dit genereert enorme rijkdom voor Nederland ten koste van de Javanen.PP5 §B.4 (Beleid 4 + Beleid 6) leest het Cultuurstelsel als soevereine economische maatregel van binnenuit binnen de Nederlandse positie in T6, met Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader; voor de exploitatieve dimensie zie Beleid 6.", cat:"economie", vl:["VL03", "VL06", "VL10"] },
+  { n:"0626", jaar:"1849", era:"nederlands-koloniaal", titel:"James Brooke treedt op als 'Witte Raja' van Sarawak", omschr:"De Britse avonturier James Brooke consolideert Sarawak; de geleidelijke Britse overname van Noord-Borneo scheidt het permanent van het door de Nederlanden gecontroleerde Kalimantan.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0614", jaar:"1856", era:"nederlands-koloniaal", titel:"Eduard Douwes Dekker getuige van Javaanse uitbuiting", omschr:"De Nederlandse koloniale ambtenaar Eduard Douwes Dekker (later 'Multatuli') getuigt in Lebak, Bantam van het brute stelsel van gedwongen teelt — een ervaring die het Nederlandse publieke debat zal transformeren.", cat:"sociaal", vl:["VL06"] },
+  { n:"0615", jaar:"1860", era:"nederlands-koloniaal", titel:"Max Havelaar gepubliceerd", omschr:"Multatuli's Max Havelaar, een vernietigend pamflet over koloniale uitbuiting, verschijnt in Nederland, ontsteekt een publiek debat en draagt uiteindelijk bij aan hervorming van het Cultuurstelsel.PP5 §B.4 (Beleid 6) plaatst Multatuli's Max Havelaar als interne Nederlandse zelf-aanklacht binnen het exploitatieve koloniale bewind van T6, met Furnivalls plurale-economy als analytisch raster (niet als apologie) en Limpach 2016 [TL-M019] + KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"cultuur", vl:["VL03", "VL06"] },
+  { n:"0616", jaar:"1870", era:"nederlands-koloniaal", titel:"Agrarische Wet opent Indië voor particulier kapitaal", omschr:"De Nederlandse Agrarische Wet beëindigt staatsmonopolies en opent de archipel voor Europees plantagekapitaal, waardoor Java en Sumatra in plantage-economieën worden omgevormd.PP5 §B.4 (Beleid 6) leest de Agrarische Wet als juridisch instrument waarmee particulier kapitaal werd ingebed in het exploitatieve koloniale bewind van T6 — niet als ethische correctie maar als systeemconsolidatie — met Furnivalls plurale-economy als analytisch raster en Limpach 2016 [TL-M019] + KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"economie", vl:["VL06"] },
+  { n:"0627", jaar:"1870", era:"nederlands-koloniaal", titel:"Tabakscrisis transformeert de oostkust van Sumatra", omschr:"Nederlandse en Britse planters transformeren de dunbevolkte oostkust van Sumatra in een tabaksplantagezone; honderdduizenden contractarbeiders worden ingevlogen vanuit Java en China.", cat:"economie", vl:["VL06", "VL11"] },
+  { n:"0617", jaar:"1873", era:"nederlands-koloniaal", titel:"Atjeh-oorlog begint", omschr:"De Nederlanders beginnen een militaire campagne tegen het Sultanaat Atjeh — een wrede oorlog die meer dan 30 jaar duurt en honderdduizenden levens kost.PP5 §B.4 (Beleid 4) plaatst de Atjeh-oorlog als soevereine territoriale consolidatie van binnenuit aan de noordrand van de archipel in T7 — Nederland als handelende kern, niet als externe extern dominante actor — met Limpach 2016 [TL-M019] en KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"militair", vl:["VL06"] },
+  { n:"0618", jaar:"1883", era:"nederlands-koloniaal", titel:"Krakatau barst uit", omschr:"Het vulkanische eiland Krakatau barst catastrofaal uit en veroorzaakt tsunami's die meer dan 36.000 mensen doden en wereldwijde klimaateffecten teweegbrengen — een van de dodelijkste natuurrampen in de geschiedenis.", cat:"wetenschap", vl:["VL06"] },
+  { n:"0619", jaar:"1890", era:"nederlands-koloniaal", titel:"Debat over de Ethische Politiek groeit", omschr:"Bezorgde Nederlandse stemmen, waaronder Conrad van Deventer, betogen dat Nederland een 'eereschuld' heeft jegens Indië en moet investeren in onderwijs, irrigatie en migratie.", cat:"sociaal", vl:["VL06"] },
+  { n:"0620", jaar:"1899", era:"nederlands-koloniaal", titel:"Ethische Politiek afgekondigd", omschr:"Koningin Wilhelmina kondigt de Ethische Politiek aan, waarmee het koloniaal beleid verschuift naar welzijn, onderwijs en Javaans zelfbestuur — hoewel de uitvoering beperkt blijft.", cat:"staatsvorming", vl:["VL06"] },
+  { n:"0621", jaar:"1901", era:"nederlands-koloniaal", titel:"Atjeh-oorlog eindigt met Nederlandse overwinning", omschr:"Na bijna 30 jaar van felle guerrilla-oorlogvoering vestigt het Nederlandse leger onder Van Heutsz effectieve controle over Atjeh, hoewel pockets van verzet jaren aanhouden.", cat:"militair", vl:["VL06"] },
+  { n:"0622", jaar:"1905", era:"nederlands-koloniaal", titel:"'Pacificatie' van de Buitengewesten voltooid", omschr:"De Nederlanders voltooien de militaire verovering van de gehele archipel, van Atjeh tot Nieuw-Guinea, waardoor eeuwen van onafhankelijke inheemse soevereiniteit eindigen en een eengemaakt koloniaal territorium ontstaat.", cat:"militair", vl:["VL06"] },
+  { n:"0623", jaar:"1906", era:"nederlands-koloniaal", titel:"Puputan Badung — Balinees massasuïcide", omschr:"De vorstenhoven van Badung en Klungkung kiezen, geconfronteerd met de Nederlandse verovering, voor de puputan — rituele massasuïcide — in plaats van zich over te geven, wat de Nederlandse en internationale publieke opinie schokt.", cat:"militair", vl:["VL06"] },
+  { n:"0628", jaar:"1741", era:"nederlands-koloniaal", titel:"Chinezenoorlog (1741–1743)", omschr:"Na de Chinese slachting van 1740 vluchten duizenden Chinezen het Javaanse achterland in. Zij verbinden zich met Javaanse rebellen tegen de VOC — de eerste oorlog op Java waarin Chinezen en Javanen samen tegen de Compagnie vechten. De VOC moet substantiële territoriale concessies doen om te overleven.", cat:"militair", vl:["VL06", "VL11"] },
+  { n:"0629", jaar:"1746", era:"nederlands-koloniaal", titel:"Derde Javaanse Successieoorlog (1746–1755)", omschr:"De VOC raakt verwikkeld in een negen jaar durende successiestrijd die uitmondt in het Verdrag van Giyanti (1755). Ricklefs toont dat de VOC Mataram niet verdeelde uit kracht maar uit onvermogen: wat in 1740 met Chinese arbeiders begon, culmineerde in een verdrag dat institutionaliseerde dat de Compagnie de archipel niet meer in haar eentje kon beheersen.", cat:"militair", vl:["VL05", "VL06", "VL11"] },
+
+  // ══ NATIONALISME & JAPANSE BEZETTING ══
+  { n:"0701", jaar:"1908", era:"nationalisme", titel:"Budi Utomo opgericht — begin van de Nationale Ontwaking", omschr:"De eerste moderne Indonesische organisatie, Budi Utomo, wordt gesticht door Javaanse studenten aan de STOVIA geneeskundige school in Batavia — het begin van de Kebangkitan Nasional (Nationale Ontwaking).PP5 §B.4 (Beleid 9) leest de oprichting van Budi Utomo als zelfstandige articulatie van Indonesisch nationalisme in T7 — niet als reactieve respons op Nederlandse aanwezigheid — met Anderson & McVey 1971 [TL-M007], Onghokham 2003 en Asvi Warman Adam 2007 [TL-M018] als Indonesisch-Westerse consensus-bronnen.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0702", jaar:"1911", era:"nationalisme", titel:"Sarekat Islam opgericht", omschr:"De Sarekat Islam wordt opgericht als coöperatie van moslimhandelaren en groeit snel uit tot een massaorganisatie met miljoenen leden — de eerste waarlijk volkse nationalistische beweging in de Indische archipel.PP5 §B.4 (Beleid 9) plaatst Sarekat Islam als zelfstandige articulatie van Indonesisch nationalisme met islamitisch-handelsbasis in T7, niet als reactieve respons op Nederlandse oprichting; Anderson & McVey 1971 [TL-M007], Onghokham 2003 en Asvi Warman Adam 2007 [TL-M018] als Indonesisch-Westerse consensus-bronnen.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0703", jaar:"1912", era:"nationalisme", titel:"Indische Partij opgericht", omschr:"Douwes Dekker, Cipto Mangunkusumo en Ki Hajar Dewantara richten de Indische Partij op — de eerste openlijk politieke organisatie die gelijke rechten eist voor alle inwoners van de Indische archipel.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0704", jaar:"1914", era:"nationalisme", titel:"Voorloper van de Indonesische Communistische Partij (PKI) gesticht", omschr:"De Indisch Sociaal-Democratische Vereeniging (ISDV), voorloper van de PKI, wordt opgericht en introduceert marxistische ideologie in de nationalistische politiek.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0705", jaar:"1916", era:"nationalisme", titel:"Volksraad ingesteld", omschr:"De Nederlanders stellen de Volksraad in als adviesraad voor de Indische archipel, met beperkte bevoegdheden en een meerderheid van Nederlandse leden; nationalisten gebruiken hem als platform voor hun eisen.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0706", jaar:"1920", era:"nationalisme", titel:"PKI (Partai Komunis Indonesia) formeel opgericht", omschr:"De PKI wordt formeel opgericht als de eerste communistische partij in Azië buiten de Sovjet-Unie — een radicale alternatieve visie op Indonesische onafhankelijkheid.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0707", jaar:"1921", era:"nationalisme", titel:"Tan Malaka rijst op als radicale leider", omschr:"Tan Malaka, filosoof en revolutionair, wordt een vooraanstaande figuur van het Aziatische communisme en een compromisloze pleitbezorger voor de Indonesische onafhankelijkheid, waarbij hij het concept 'Madilog' ontwikkelt.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0708", jaar:"1924", era:"nationalisme", titel:"Taman Siswa-scholen gesticht", omschr:"Ki Hajar Dewantara sticht het Taman Siswa-schoolsysteem, dat inheems onderwijs buiten het koloniale kader biedt en een Javaans-gewortelde nationalistische pedagogiek articuleert.", cat:"sociaal", vl:["VL06"] },
+  { n:"0709", jaar:"1926", era:"nationalisme", titel:"PKI-communistische opstand mislukt", omschr:"Een slecht gecoördineerde PKI-opstand op Java en West-Sumatra wordt door de Nederlanders neergeslagen; duizenden worden gearresteerd en de PKI verboden, waarmee zij twee decennia van het toneel verdwijnt.", cat:"militair", vl:["VL06"] },
+  { n:"0710", jaar:"1927", era:"nationalisme", titel:"Soekarno richt de PNI op", omschr:"De jonge ingenieur Soekarno richt de Partai Nasional Indonesia (PNI) op en predikt een synthese van nationalisme, islam en marxisme (Nasakom) om de verdeelde onafhankelijkheidsbeweging te verenigen.PP5 §B.4 (Beleid 9) leest de oprichting van de PNI door Soekarno als zelfstandige articulatie van Indonesisch nationalisme — voortzetting van de zelfstandige lijn vanaf Budi Utomo en Sarekat Islam — met Anderson & McVey 1971 [TL-M007], Onghokham 2003 en Asvi Warman Adam 2007 [TL-M018] als Indonesisch-Westerse consensus-bronnen.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0711", jaar:"1928", era:"nationalisme", titel:"Jeugdeed (Sumpah Pemuda)", omschr:"Het Tweede Jeugdcongres neemt de Jeugdeed aan: één vaderland (Indonesië), één natie (de Indonesische), één taal (Bahasa Indonesia) — de stichtingsverklaring van de Indonesische nationale identiteit.PP5 §B.4 (Beleid 9) markeert Sumpah Pemuda als hoogtepunt van de zelfstandige articulatie van Indonesisch nationalisme in T7 — één taal, één volk, één vaderland als zelfdefinitie, niet als reactieve respons — met Anderson & McVey 1971 [TL-M007], Onghokham 2003 en Asvi Warman Adam 2007 [TL-M018] als Indonesisch-Westerse consensus-bronnen. Verbinding met TL-0314 (Sumpah Palapa) als pre-figuratie cf. Beleid 18.", cat:"sociaal", vl:["VL01", "VL05", "VL06", "VL07"] },
+  { n:"0712", jaar:"1929", era:"nationalisme", titel:"Soekarno gearresteerd door Nederlanders", omschr:"De Nederlandse autoriteiten arresteren Soekarno; zijn meesterlijke verdedigingsrede 'Indonesia Menggugat' (Indonesië klaagt aan) wordt een ijkpunt van de nationalistische retorica.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0713", jaar:"1930", era:"nationalisme", titel:"Indonesische taal gestandaardiseerd", omschr:"Op Maleisisch gebaseerde Bahasa Indonesia wordt officieel aangenomen als nationale taal, gekozen vanwege haar neutraliteit tussen etnische groepen en haar geschiedenis als regionale handelstaal.", cat:"cultuur", vl:["VL06"] },
+  { n:"0714", jaar:"1932", era:"nationalisme", titel:"Mohammad Hatta keert terug uit Europa", omschr:"Mohammad Hatta, econoom en onafhankelijkheidsactivist, keert terug van zijn studie in Nederland en wordt Soekarno's onmisbare partner en toekomstig 'Proklamator' van de onafhankelijkheid.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0715", jaar:"1934", era:"nationalisme", titel:"Soekarno verbannen naar Flores", omschr:"Na verdere politieke activiteit wordt Soekarno verbannen naar Ende, Flores, en later naar Bengkulu — een periode van interne ballingschap die zijn denken over islam en nationalisme verdiept.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0716", jaar:"1936", era:"nationalisme", titel:"Petitie-Soetardjo ingediend", omschr:"De gematigde nationalist Soetardjo dient bij de Volksraad een petitie in voor dominionstatus binnen het Koninkrijk der Nederlanden — afgewezen door de Nederlanders maar een belangrijke graadmeter.", cat:"staatsvorming", vl:["VL05", "VL06", "VL07"] },
+  { n:"0718", jaar:"1938", era:"nationalisme", titel:"Federatievoorstel afgewezen door Nederland", omschr:"Het herziene federatievoorstel van nationalistisch leider Soetardjo wordt door de Nederlandse regering resoluut afgewezen; de afwijzing versnelt de radicalisering van de onafhankelijkheidsbeweging.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+  { n:"0719", jaar:"1924", era:"nationalisme", titel:"Fabricius publiceert De scheepsjongens van Bontekoe", omschr:"De vijfentwintigjarige Johan Fabricius (geboren 1899 in Bandung, Indo-Europees) publiceert bij Leopold in Den Haag De scheepsjongens van Bontekoe — een bildungsroman over drie fictieve jongens (Hajo, Rolf, Padde) op de Nieuw Hoorn van 1618 [TL-0520]. Ruim vijftig drukken tijdens zijn leven; standaardlectuur Nederlandse lagere scholen tot in de jaren 1980; tweemaal verfilmd (Dudok van Heel 1946, De Jong 2007). Voor generaties Nederlanders het pedagogische standaardbeeld van Indonesië als decor van Nederlands jongensavontuur. Na 1945 onhoudbaar geworden, voedingsbodem voor het Indisch zwijgen (Van Leeuwen 2008) en de bitterzoete herinnering (Pattynama 2014).PP5 §B.4 (Beleid 7) plaatst Fabricius' publicatie als Nederlandse contemporaine reflectie binnen de bredere machtsverschuiving die in T7 begint en in T8 culmineert in de Japanse positie aan de directe randgordel, met Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] en Akashi 2008 [TL-M025] als Aziatisch-revisionistische bronnen voor het tijdvak.", cat:"cultuur", vl:["VL10"] },
+  { n:"0717", jaar:"1940", era:"nationalisme", titel:"Nederland valt onder Nazi-Duitsland", omschr:"Nazi-Duitsland bezet Nederland, wat een onmiddellijke gezagscrisis veroorzaakt in Nederlands-Indië en de voorstanders van onafhankelijkheid sterkt in hun overtuiging dat het kolonialisme ten dode is opgeschreven.", cat:"staatsvorming", vl:["VL06", "VL07"] },
+
+  // ══ REVOLUTIE & ONAFHANKELIJKHEID ══
+  { n:"0801", jaar:"1942", era:"revolutie", titel:"Japanse troepen bezetten de archipel", omschr:"Japanse troepen verslaan de Nederlandse koloniale troepen in iets meer dan een week, waarmee 350 jaar Nederlands bewind eindigt; de leuze 'Azië voor de Aziaten' wint aanvankelijk Indonesische sympathie voor de Japanse 'bevrijders'.PP5 §B.4 (Beleid 7) markeert de Japanse bezetting expliciet in de machtsverschuiving van perifere naar direct controlerende positie — Japan van van perifere naar direct controlerende positie in T7–T8 — met Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] en Akashi 2008 [TL-M025] als Aziatisch-revisionistische bronnen tegenover pre-1980 zelf-rechtvaardigende lezingen. [PP: PP_Japan_in_Nusantara]", cat:"militair", vl:["VL06", "VL08", "VL13"] },
+  { n:"0802", jaar:"1942", era:"revolutie", titel:"Soekarno en Hatta werken samen met Japan", omschr:"Soekarno en Hatta besluiten samen te werken met de Japanse bezetting — een controversiële keuze waarbij zij de gelegenheid aangrijpen om nationalistische infrastructuur en massaorganisaties op te bouwen. [PP: PP_Japan_in_Nusantara]", cat:"staatsvorming", vl:["VL07", "VL08", "VL13"] },
+  { n:"0806", jaar:"1942–1945", era:"revolutie", titel:"Japanse bestuurlijke herstructurering: Indonesiërs nemen het bestuur over", omschr:"Japan ontmantelde het Nederlandse koloniale bestuursapparaat en plaatste Indonesiërs in bestuurlijke posities op alle niveaus — van dorpsbestuur tot provinciaal beheer. Dit was geen vrijwillige dekolonisatie maar een militaire noodzaak: Japan had niet genoeg personeel. Het gevolg was echter historisch significant: een generatie Indonesiërs verwierf bestuurservaring die zij nooit zou hebben gekregen onder het Nederlandse regime. Die ervaring werd na 1945 de institutionele ruggengraat van de jonge republiek. Japan schiep onbedoeld de bestuurscapaciteit voor de onafhankelijkheid.PP5 §B.4 (Beleid 7) leest de Japanse bestuurlijke herstructurering als kerninstrument van de verschuiving naar randpositie in T8 (Indonesiërs ingebracht in lager bestuur ter ondersteuning van de Japanse extern dominante positie), met Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] en Akashi 2008 [TL-M025] als Aziatisch-revisionistische bronnen tegenover pre-1980 zelf-rechtvaardigende Japanse lezingen. [PP: PP_Japan_in_Nusantara]", cat:"staatsvorming", vl:["VL06", "VL08", "VL13"] },
+  { n:"0803", jaar:"1943", era:"revolutie", titel:"PETA (Verdediger van het Vaderland) opgericht", omschr:"Japan richt de PETA (Pembela Tanah Air) op als inheemse militie en traint tienduizenden Indonesische soldaten die de ruggengraat van de onafhankelijkheidsstrijd zullen vormen. [PP: PP_Japan_in_Nusantara]", cat:"militair", vl:["VL08", "VL13"] },
+  { n:"0824", jaar:"1943", era:"revolutie", titel:"Romusha-dwangarbeid onder Japan", omschr:"Japan mobiliseert miljoenen Indonesische romusha (dwangarbeiders) voor bouwprojecten door de gehele archipel en de regio; honderdduizenden sterven aan honger, ziekte en uitputting.PP5 §B.4 (Beleid 7) markeert de romusha-dwangarbeid expliciet als kernuiting van de Japanse positie aan de directe randgordel in T8 (mobilisatie van archipel-arbeid voor doelen van een extern dominante macht), met Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] en Akashi 2008 [TL-M025] als Aziatisch-revisionistische bronnen tegenover pre-1980 zelf-rechtvaardigende lezingen. [PP: PP_Japan_in_Nusantara]", cat:"sociaal", vl:["VL03", "VL08", "VL13"] },
+  { n:"0804", jaar:"1944", era:"revolutie", titel:"Japan belooft Indonesische onafhankelijkheid", omschr:"Naarmate geallieerde troepen oprukken, belooft Japan onafhankelijkheid aan Indonesië om de samenwerking te bewaren; de belofte versnelt nationalistische voorbereidingen en verhoogt de volksverwachtingen.", cat:"staatsvorming", vl:["VL08"] },
+  { n:"0805", jaar:"1944–1945", era:"revolutie", titel:"Hongersnood op Java: ~2,4 miljoen doden door Japanse voedselmobilisatie", omschr:"In de laatste fase van de Japanse bezetting brak op Java een catastrofale hongersnood uit. De Japanse militaire overheid had rijst, vee en landbouwgrond gevorderd voor de oorlogsinspanning. Historici schatten het aantal doden op anderhalf tot twee en een half miljoen mensen. De hongersnood, nauwelijks vermeld in de officiële Japanse of de vroeg-Indonesische historiografie, was een van de grootste humanitaire rampen van de twintigste-eeuwse Indonesische geschiedenis en een directe consequentie van de extractieve logica van de bezetting.PP5 §B.4 (Beleid 7) plaatst de hongersnood op Java binnen de machtsverschuiving van perifere naar direct controlerende positie: een product van de Japanse extern dominante positie en de daarbij behorende voedselmobilisatie in T8, met Kurasawa 1988 [TL-M023], Goto 2003 [TL-M024] en Akashi 2008 [TL-M025] als Aziatisch-revisionistische bronnen. [PP: PP_Japan_in_Nusantara]", cat:"sociaal", vl:["VL08", "VL10", "VL13"] },
+  { n:"0807", jaar:"1945", era:"revolutie", titel:"Onderzoekscommissie voor Onafhankelijkheidsvoorbereiding (BPUPKI) gevormd", omschr:"De BPUPKI wordt ingesteld om een onafhankelijkheidsgrondwet op te stellen en wordt het strijdtoneel voor de definiëring van Indonesië's stichtende ideologie, in het bijzonder de rol van de islam versus seculier nationalisme. [PP: PP_Japan_in_Nusantara]", cat:"staatsvorming", vl:["VL07", "VL08", "VL13"] },
+  { n:"0808", jaar:"1945", era:"revolutie", titel:"Soekarno houdt de Pancasila-rede", omschr:"Op 1 juni 1945 houdt Soekarno zijn rede 'Geboorte van de Pancasila', waarin hij de vijf grondbeginselen formuleert — geloof in God, humaniteit, eenheid, democratie, sociale rechtvaardigheid — die Indonesië zullen definiëren.", cat:"staatsvorming", vl:["VL07", "VL08"] },
+  { n:"0810", jaar:"1945", era:"revolutie", titel:"Grondwet van 1945 aangenomen", omschr:"De Voorbereidingscommissie neemt Indonesië's eerste grondwet aan en vestigt een presidentiële republiek; de Preambule bevat de Pancasila en het Jakartacharter-debat wordt beslecht ten gunste van seculier nationalisme.", cat:"staatsvorming", vl:["VL07", "VL08"] },
+  { n:"0811", jaar:"1945", era:"revolutie", titel:"Slag om Soerabaja — drieledig conflict", omschr:"De bloedige Slag om Soerabaja (oktober–november 1945) tegen Brits-Indiase troepen wordt een bepalend moment van de revolutie; brigadier Mallaby sneuvelt en 10 november wordt herdacht als Heldendag. PP5 §B.4 (Beleid 8) leest Surabaya 1945 expliciet als drieledig conflict (Republiek, Brits, Nederlands) — niet als bilateraal NL-Indonesisch — onder de overkoepelende Britse bezetting [TL-0816]; bron McMillan 2005, Bayly & Harper 2004.", cat:"militair", vl:["VL06", "VL08"] },
+  { n:"0812", jaar:"1945", era:"revolutie", titel:"Hatta wordt vice-president", omschr:"Mohammad Hatta wordt aangesteld als Indonesië's eerste vice-president, waarmee het stichtende tweemanschap gestalte krijgt dat de oprichtende generatie van de republiek personifieert.", cat:"staatsvorming", vl:["VL08"] },
+  { n:"0821", jaar:"1945–1946", era:"revolutie", titel:"Sociale revoluties in Sumatra: volksbeweging verdrijft pro-Nederlandse elites", omschr:"De onafhankelijkheidsverklaring van augustus 1945 ontketende in Sumatra meer dan een nationale bevrijdingsstrijd: zij loste ook diepgewortelde sociale spanningen. In Noord- en Oost-Sumatra verdreven gewapende volksgroepen pro-Nederlandse sultans, Javanese bestuurders die onder de Japanners hadden gediend, en lokale aristocratische elites. In sommige gevallen verliepen de verdrijvingen gewelddadig. De sociale revoluties toonden dat de Indonesische revolutie niet uitsluitend een nationale militaire onderneming was maar ook een strijd over klasse, macht en lokale autonomie. Dit aspect van de revolutie werd lange tijd onderbelicht in de nationalistische geschiedschrijving.", cat:"sociaal", vl:["VL06", "VL08"] },
+  { n:"0822", jaar:"1945–1946", era:"revolutie", titel:"Bersiap: geweld in de transitieperiode na de Japanse capitulatie", omschr:"In de chaotische weken na de Japanse capitulatie en de Proklamasi (augustus 1945) brak in delen van Java en Sumatra geweld uit waarbij Indonesische gewapende groepen aanvallen uitvoerden op Europese en Indo-Europese burgers. De directe aanleiding was het bericht dat Nederlandse troepen terugkeerden om de koloniale orde te herstellen. Het geweld was niet systematisch en werd door Soekarno, Hatta en Sjahrir openlijk veroordeeld. De term Bersiap is primair in de Nederlandse historiografie ingeburgerd; in de Indonesische historiografie geldt het als onderdeel van de revolutionaire chaos. PP5 §B.4 (Beleid 8) plaatst Bersiap binnen het drieledig kader van de Britse bezetting [TL-0816] (McMillan 2005), niet als bilateraal NL-Indonesisch incident.", cat:"sociaal", vl:["VL06", "VL07", "VL08"] },
+  { n:"0823", jaar:"1945–1949", era:"revolutie", titel:"Vrouwen in de onafhankelijkheidsstrijd: Laskar Wanita Indonesia", omschr:"Vrouwen speelden een actieve en veelzijdige rol in de Indonesische revolutie. De Laskar Wanita Indonesia (LWI) was een georganiseerd vrouwelijk strijdersverband dat deelnam aan gewapend verzet. Daarnaast waren vrouwen onmisbaar in logistieke rollen: voedselvoorziening voor strijders, medische verzorging, koerier- en communicatienetwerken, en het verbergen van wapens en documenten. Verpleegsters werden trainingsinstructeurs; radiopresentatrices verspreidden nieuws over de Republiek. De vroege nationalistische historiografie heeft de bijdrage van vrouwen grotendeels buiten het officiële narratief gehouden. Het Indonesische nationale syntheseproject beschouwt vrouwengeschiedenis als een van de centrale lacunes die in de herziene historiografie moeten worden hersteld.", cat:"sociaal", vl:["VL08", "VL10", "VL12"] },
+  { n:"0809", jaar:"17 aug. 1945", era:"revolutie", titel:"Proklamatie van de Indonesische onafhankelijkheid", omschr:"Soekarno en Hatta proklameren om 10 uur 's ochtends de Indonesische onafhankelijkheid in de Pegangsaan Timur in Jakarta — het stichtingsmoment van de Republiek Indonesië, twee dagen na Japan's capitulatie.", cat:"staatsvorming", vl:["VL07", "VL08"] },
+  { n:"0813", jaar:"1946", era:"revolutie", titel:"Onderhandelingen over het Akkoord van Linggarjati beginnen", omschr:"Nederlandse en Indonesische onderhandelaars sluiten onder Britse bemiddeling het Akkoord van Linggarjati, dat de de facto autoriteit van de Republiek over Java, Madoera en Sumatra erkent — hoewel de Nederlanders het later schenden. PP5 §B.4 (Beleid 10) plaatst Linggarjati binnen het bredere kader van VN-mediatie, Marshall-druk en blokvorming als constitutieve factoren van de eerste moderne dekolonisatieoorlog (Gouda & Brocades Zaalberg 2002, KITLV-NIOD-NIMH 2022).", cat:"diplomatiek", vl:["VL06", "VL08"] },
+  { n:"0814", jaar:"1947", era:"revolutie", titel:"Eerste Nederlandse 'politionele actie'", omschr:"De Nederlanden lanceren 'Operatie Product', hun eerste militaire aanval op de Republiek, en veroveren rijke landbouwgebieden; internationaal protest leidt tot VN-bemiddeling.PP5 §B.4 (Beleid 10) plaatst de eerste politionele actie binnen het kader van de Indonesische Revolutie als eerste moderne dekolonisatieoorlog, met VN-mediatie, Marshall-druk en blokvorming als constitutieve factoren; KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch referentiekader.", cat:"militair", vl:["VL05", "VL06", "VL08"] },
+  { n:"0815", jaar:"jan. 1948", era:"revolutie", titel:"Renville-akkoorden: diplomatiek compromis op een Amerikaans marineschip", omschr:"Na de eerste Nederlandse politionele actie (juli 1947) bemiddelden de Verenigde Staten en een VN-commissie een staakt-het-vuren. De onderhandelingen vonden plaats aan boord van het Amerikaanse marineschip USS Renville, voor anker in de Straat Java. Het akkoord van januari 1948 bevroor de militaire posities maar dwong de Republiek Nederlandse militaire winsten te accepteren. Nationalistisch leider Hatta noemde het een 'bittere pil'. De Renville-akkoorden werden door beide partijen als tijdelijk beschouwd; zij leidden direct tot de tweede politionele actie in december 1948.PP5 §B.4 (Beleid 10) leest het Renville-akkoord als directe uitkomst van VN-mediatie binnen het kader van de Indonesische Revolutie als eerste moderne dekolonisatieoorlog — Amerikaanse marineschip-symboliek inclusief — met Marshall-druk en blokvorming als constitutieve factoren; KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch referentiekader.", cat:"diplomatiek", vl:["VL06", "VL08"] },
+  { n:"0816", jaar:"1948", era:"revolutie", titel:"Communistische Madiun-affaire", omschr:"PKI-leider Musso en troepen rebelleren tegen de Republikeinse regering in Madiun; Soekarno's beslissende reactie om de opstand neer te slaan vergroot de geloofwaardigheid van de Republiek in westerse ogen.", cat:"militair", vl:["VL07", "VL08"] },
+  { n:"0817", jaar:"1948", era:"revolutie", titel:"Tweede Nederlandse 'politionele actie' — Soekarno gevangengenomen", omschr:"Nederlandse troepen lanceren een tweede militair offensief, waarbij Soekarno, Hatta en andere Republikeinse leiders worden gevangengenomen; guerrillaweerstand gaat door onder generaal Sudirman.PP5 §B.4 (Beleid 10) plaatst de tweede politionele actie als kantelpunt waarop VN-mediatie, Marshall-druk en blokvorming tegen de Nederlandse handelwijze keren — kernkader van de Indonesische Revolutie als eerste moderne dekolonisatieoorlog — met KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch referentiekader.", cat:"militair", vl:["VL06", "VL07", "VL08"] },
+  { n:"0818", jaar:"1949", era:"revolutie", titel:"Jogjakarta heroverd in het Algemeen Offensief", omschr:"Op 1 maart 1949 heroveren Republikeinse troepen onder kolonel Soeharto zes uur lang Jogjakarta in een algemeen offensief, wat de militaire levensvatbaarheid aantoont en de internationale steun vergroot.", cat:"militair", vl:["VL08"] },
+  { n:"0819", jaar:"1949", era:"revolutie", titel:"Akkoord van Roem-Van Roijen", omschr:"Internationale druk dwingt Nederland te onderhandelen; het Akkoord van Roem-Van Roijen leidt tot de vrijlating van Republikeinse leiders en een staakt-het-vuren, waarmee de weg naar volledige onafhankelijkheid wordt vrijgemaakt.PP5 §B.4 (Beleid 10) leest het Akkoord van Roem-Van Roijen als diplomatieke fase waarin VN-mediatie, Marshall-druk en blokvorming als constitutieve factoren de uitkomst van de Indonesische Revolutie bepalen; KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch referentiekader.", cat:"diplomatiek", vl:["VL06", "VL08"] },
+  { n:"0820", jaar:"27 dec. 1949", era:"revolutie", titel:"Nederland draagt soevereiniteit over", omschr:"Bij een ceremonie in Amsterdam draagt Nederland formeel de soevereiniteit over zijn vroegere Oost-Indische bezittingen over aan de Republiek der Verenigde Staten van Indonesië, waarmee het koloniale tijdperk eindigt.PP5 §B.4 (Beleid 10) plaatst de soevereiniteitsoverdracht als slotakte van de Indonesische Revolutie als eerste moderne dekolonisatieoorlog, met VN-mediatie, Marshall-druk en blokvorming als constitutieve factoren; KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch referentiekader.", cat:"diplomatiek", vl:["VL06", "VL08"] },
+  { n:"0825", jaar:"1945-1946", era:"revolutie", titel:"Britse bezetting Java en Sumatra", omschr:"South-East Asia Command (SEAC) onder Mountbatten met Brits-Indische troepen bezet Java en Sumatra (sep 1945 – nov 1946); cruciaal drieledig kader voor Surabaya, Bersiap en de NL-terugkeer (McMillan 2005, Bayly & Harper 2004).", cat:"militair", vl:["VL08"] },
+
+  // ══ VROEGE REPUBLIEK: SOEKARNO — EINDIGEND BIJ G30S EN NASLEEP ══
+  { n:"0901", jaar:"1950", era:"republiek", titel:"Eenheidsstaat uitgeroepen", omschr:"De federale Republiek der Verenigde Staten van Indonesië wordt ontbonden en vervangen door de unitaire Republiek Indonesië; de Grondwet van 1945 wordt hersteld na een korte federale periode.", cat:"staatsvorming", vl:["VL08", "VL09"] },
+  { n:"0902", jaar:"1950", era:"republiek", titel:"Republiek Zuid-Maluku (RMS) uitgeroepen en neergeslagen", omschr:"Separatisten roepen de Republiek der Zuid-Molukken (RMS) uit; Indonesische troepen slaan de opstand neer, hoewel sommige RMS-leden vluchten naar Nederland, wat een aanslepend diaspora-geschil schept.", cat:"militair", vl:["VL02", "VL06"] },
+  { n:"0903", jaar:"1950", era:"republiek", titel:"Indonesië treedt toe tot de Verenigde Naties", omschr:"Indonesië wordt het 60e lid van de VN en verkrijgt internationale erkenning en een forum om dekolonisatie in Azië en Afrika te bepleiten.", cat:"diplomatiek", vl:["VL09"] },
+  { n:"0923", jaar:"1950", era:"republiek", titel:"Eenheidsstaat opnieuw bevestigd", omschr:"Indonesische leiders bevestigen hun inzet aan de unitaire staatsvorm door de federale druk te overwinnen die door de Nederlanders was geëntameerd; het besluit bepaalt alle latere grondwettelijke regelingen.", cat:"staatsvorming", vl:["VL06", "VL07", "VL09"] },
+  { n:"0904", jaar:"1951", era:"republiek", titel:"Darul Islam-rebellie intensiveert", omschr:"De Darul Islam-opstand onder S.M. Kartosuwirjo intensiveert in West-Java en eist een islamitische staat; de rebellie duurt tot 1962 en inspireert latere islamistische bewegingen.", cat:"militair", vl:["VL09"] },
+  { n:"0905", jaar:"1952", era:"republiek", titel:"17-oktober-affaire — confrontatie tussen leger en parlement", omschr:"Legerofficieren eisen ontbinding van het parlement; Soekarno sust de crisis, maar de gebeurtenis onthult fundamentele spanningen tussen militaire en civiele instellingen.", cat:"staatsvorming", vl:["VL07"] },
+  { n:"0906", jaar:"1953", era:"republiek", titel:"Bank Indonesia opgericht", omschr:"Indonesië richt zijn eigen centrale bank, Bank Indonesia, op en begint met de nationalisering van het financiële stelsel dat voorheen door Nederlandse instellingen werd gedomineerd.", cat:"economie", vl:["VL06"] },
+  { n:"0907", jaar:"1955", era:"republiek", titel:"Indonesië organiseert de Bandung-conferentie", omschr:"Indonesië organiseert de Aziatisch-Afrikaanse Conferentie in Bandung, bijgewoond door 29 naties; de conferentie baart de Beweging van Niet-Gebonden Landen en vestigt Indonesië als leider van de Derde Wereld.", cat:"diplomatiek", vl:["VL09"] },
+  { n:"0908", jaar:"1955", era:"republiek", titel:"Indonesië's eerste algemene verkiezingen", omschr:"Indonesië houdt zijn eerste democratische algemene verkiezingen, met een nagenoeg gelijke vierpartijenuitslag (PNI, Masyumi, NU, PKI) die de ideologische complexiteit van de natie weerspiegelt.", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0909", jaar:"1956", era:"republiek", titel:"Hatta treedt af als vice-president", omschr:"Mohammad Hatta treedt af vanwege onoverbrugbare meningsverschillen met Soekarno over democratie en regionale autonomie; het verlies van de 'Dwi Tunggal' (het tweemanschap) wordt gezien als een keerpunt.", cat:"staatsvorming", vl:["VL07"] },
+  { n:"0910", jaar:"1957", era:"republiek", titel:"Regionale opstanden uitgebroken (PRRI/Permesta)", omschr:"Door het leger gesteunde regionale opstanden breken uit in Sumatra (PRRI) en Sulawesi (Permesta), gevoed door grieven over javanisering en verdeling van hulpbronnen; de VS steunt heimelijk de rebellen.", cat:"militair", vl:["VL09"] },
+  { n:"0911", jaar:"1957", era:"republiek", titel:"Soekarno kondigt de staat van beleg af", omschr:"Soekarno kondigt een staat van oorlog en beleg af en begint zijn overgang naar de 'Geleide Democratie', waarbij de presidentiële macht wordt uitgebreid ten koste van het parlement en de partijen.", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0912", jaar:"1957", era:"republiek", titel:"Nederlandse bedrijven genationaliseerd", omschr:"Na het mislukken van de VN-resolutie over Nieuw-Guinea nationaliseert Indonesië Nederlandse plantages en bedrijven; meer dan 46.000 Nederlanders vertrekken, waardoor de eigendomsstructuur van de economie fundamenteel verandert.", cat:"economie", vl:["VL06"] },
+  { n:"0913", jaar:"1959", era:"republiek", titel:"Soekarno kondigt 'Geleide Democratie' af", omschr:"Soekarno ontbindt de Constituerende Vergadering en herstelt bij decreet de Grondwet van 1945, waarmee hij de 'Geleide Democratie' formeel instelt — een systeem van autoritair presidentieel bestuur met militaire steun.", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0914", jaar:"1960", era:"republiek", titel:"Parlement ontbonden — DPR-GR benoemd", omschr:"Soekarno ontbindt het gekozen parlement en vervangt het door een benoemd orgaan; de verschuiving markeert het feitelijke einde van het liberale democratische experiment in Indonesië.", cat:"staatsvorming", vl:["VL07"] },
+  { n:"0915", jaar:"1961", era:"republiek", titel:"Confrontatie met de Nederlanders over West-Nieuw-Guinea begint", omschr:"Soekarno lanceert een militaire en diplomatieke campagne (Trikora) om West-Nieuw-Guinea (Irian Jaya) te ontrukken aan de Nederlanders, terwijl hij Sovjet-militaire hulp en Amerikaanse diplomatieke druk ontvangt.", cat:"militair", vl:["VL06", "VL07"] },
+  { n:"0924", jaar:"1961", era:"republiek", titel:"Top van de Beweging van Niet-Gebonden Landen — Indonesië voorop", omschr:"Indonesië speelt een leidende rol op de Belgrado-top van de Beweging van Niet-Gebonden Landen en bepleit de zaak van nieuw gedekoloniseerde naties, waarmee Soekarno zich profileert als wereldstatesman van de Derde Wereld.", cat:"diplomatiek", vl:["VL07", "VL09"] },
+  { n:"0916", jaar:"1962", era:"republiek", titel:"New York-akkoord — West-Nieuw-Guinea overgedragen", omschr:"Onder intense Amerikaanse bemiddeling stemmen de Nederlanders in met overdracht van West-Nieuw-Guinea aan tijdelijk VN-beheer en vervolgens aan Indonesië — beschouwd als Soekarno's grootste buitenlands beleidssucces.", cat:"diplomatiek", vl:["VL06", "VL07"] },
+  { n:"0917", jaar:"1963", era:"republiek", titel:"Konfrontasi met Maleisië begint", omschr:"Soekarno lanceert de gewapende Konfrontasi (Confrontatie) tegen de nieuw gevormde Federatie Maleisië, die hij bestempelt als een Brits neokoloniaal project.", cat:"militair", vl:["VL06", "VL07", "VL09"] },
+  { n:"0918", jaar:"1963", era:"republiek", titel:"Indonesië nationaliseert buitenlandse oliemaatschappijen", omschr:"De regering nationaliseert grote oliemaatschappijen en richt Pertamina op als staatsoliemaatschappij, die de dominante kracht in de Indonesische economie zal worden.", cat:"economie", vl:["VL09"] },
+  { n:"0925", jaar:"1963", era:"republiek", titel:"Soekarno uitgeroepen tot president voor het leven", omschr:"De MPRS roept Soekarno uit tot president voor het leven — het hoogtepunt van zijn persoonlijke macht en de formele afschaffing van de constitutionele democratie onder de Geleide Democratie.", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0919", jaar:"1964", era:"republiek", titel:"Indonesië verlaat de Verenigde Naties", omschr:"Als protest tegen de verkiezing van Maleisië in de VN-Veiligheidsraad verlaat Soekarno de VN — een dramatisch gebaar dat het land internationaal isoleert.", cat:"diplomatiek", vl:["VL07"] },
+  { n:"0920", jaar:"1965", era:"republiek", titel:"Beweging van 30 september (G30S) — couppoging", omschr:"Een couppoging midden in de nacht kost zes hoge generaals het leven; het leger onder majoor-generaal Soeharto slaat de coup binnen enkele uren neer en geeft de PKI de schuld, waarmee een enorme politieke crisis losbarst. PP5 §B.4 (Beleid 11) leest G30S binnen een revisionistisch kader: archief-evidentie (Roosa 2006, Robinson 2018, Bevins 2020) en post-1998 Indonesisch-historiografische bevestiging (Hermawan Sulistyo 2000, Asvi Warman Adam 2007) wijzen op CIA-faciliterende rol — zie [TL-0927].", cat:"militair", vl:["VL09"] },
+  { n:"0921", jaar:"1965-66", era:"republiek", titel:"Anti-communistische massamoorden", omschr:"Massamoorden onder leiding van het leger doden naar schatting 500.000 tot 1.000.000 vermeende PKI-leden en sympathisanten in heel Indonesië — een van de ergste massagruwelen van de twintigste eeuw. PP5 §B.4 (Beleid 11, 12) plaatst de massamoorden in revisionistisch CIA-faciliteerd-kader (Roosa 2006, Bevins 2020, Robinson 2018) en markeert de specifieke anti-Chinese-component apart als [TL-0925]; voor de CIA-rol zelf zie [TL-0927].", cat:"militair", vl:["VL09"] },
+  { n:"0921c", jaar:"1965-1966", era:"republiek", titel:"Anti-Chinese-component massamoorden", omschr:"Specifieke gewelddadigheid tegen Chinees-Indonesische gemeenschappen binnen de massamoorden 1965–66; lange-lijn-Chinees-Indonesische frictie (Wang Gungwu 1991, Liu Hong 2011, Coppel 1983).PP5 §B.4 (Beleid 11 + 12) leest de anti-Chinese-component van de massamoorden 1965–66 als specifieke uiting binnen het revisionistische CIA-faciliteerd-kader (Roosa 2006 [TL-M017], Robinson 2018 [TL-M020], Bevins 2020 [TL-M021]) én binnen de lange-lijn-Chinees-Indonesische verhouding (Wang Gungwu 1991 + Liu Hong 2011 [TL-M027]); cf. TL-0604 (Chinezenmoord 1740) voor de longue durée.", cat:"sociaal", vl:["VL09", "VL11"] },
+  { n:"0922", jaar:"1966", era:"republiek", titel:"Supersemar — machtsoverdracht aan Soeharto", omschr:"Soekarno tekent het Supersemar-besluit, dat Soeharto verregaande bevoegdheden verleent; Soeharto gebruikt het om de Geleide Democratie te ontmantelen en zijn eigen bewind te consolideren. PP5 §B.4 (Beleid 11) plaatst Supersemar in de consolidatiefase van het Nieuw-Orde-regime, dat onder andere via de CIA-faciliterende rol bij G30S [TL-0927] tot stand kwam (Roosa 2006, Robinson 2018, Bevins 2020).", cat:"staatsvorming", vl:["VL07", "VL09"] },
+  { n:"0526", jaar:"1646", era:"vroeg-koloniaal", titel:"Bontekoe publiceert het Iournael", omschr:"Willem IJsbrantszoon Bontekoe publiceert in Hoorn bij Jan Jansz Deutel zijn Iournael ofte gedenckwaerdige beschrijvinghe vande Oost-Indische reyse — 28 jaar na de ontploffing van de Nieuw Hoorn in Straat Soenda (1619). Calvinistische heilsgeschiedenis als omlijsting van een ramp die 134 van de 206 opvarenden het leven kostte. Tussen 1646 en 1800 verschijnen meer dan zeventig herdrukken; Grotius, Multatuli en Slauerhoff lezen het. Het boek wordt het Nederlandse archetypische VOC-reisverhaal en de bureaucratische infrastructuur (drukpers van Deutel, kennisapparaat van VOC-kamer Hoorn, geletterd lezerspubliek) waarop het vaart, is wat het VOC-systeem heeft achtergelaten op de bodem van het Nederlandse collectieve bewustzijn. PP_Japan v2.0 Deel I plaatst Bontekoe binnen de Hollandse archipel-empirie die rangaku-receptief was — de Japanse Hollandse-studie-traditie nam vanaf 1720 westerse (incl. Bataviase) kennis op via Hollandse leermeesters op Deshima.", cat:"cultuur", vl:["VL01", "VL10", "VL13"] },
+  { n:"0527", jaar:"1667", era:"vroeg-koloniaal", titel:"Vrede van Breda — uti possidetis bevestigt Engelse Manhattan en Engelse afstand van Run", omschr:"Op 31 juli 1667 ondertekent de Republiek met Engeland (en Frankrijk + Denemarken als secundaire partijen) het verdrag dat de Tweede Engels-Nederlandse Oorlog (1665-1667) beëindigt. Onderhandeld in Breda van 27 mei tot 31 juli 1667, onder druk van De Ruyters Tocht naar Chatham (juni 1667). Uti possidetis: partijen behouden wat zij feitelijk in handen hebben. Engeland behoudt Nieuw-Nederland (Manhattan sinds 8 september 1664 in Engelse handen), de Republiek behoudt Suriname (Crijnssens verovering februari 1667), en Engeland staat Run formeel af aan de Republiek — een eiland dat sinds Courthopes capitulatie in oktober 1620 al feitelijk onder VOC-controle stond. Het populaire 'Manhattan-voor-Run-ruil'-narratief slokt drie details op: er was geen quid-pro-quo maar bekrachtiging van bestaande posities; in 1673–1674 herovert Cornelis Evertsen Nieuw-Nederland kortstondig (negen maanden Nieuw-Oranje); pas de Vrede van Westminster (februari 1674) bezegelt de definitieve overdracht aan Engeland.", cat:"diplomatiek", vl:["VL01", "VL06"] },
+  { n:"0530", jaar:"1782", era:"vroeg-koloniaal", titel:"Mercuur-muiterij — Balinese slaven op VOC-schip", omschr:"Tijdens de Vierde Engels-Nederlandse Oorlog (1780–1784) experimenteert de VOC met Balinese slaven als matrozen. Op 6 september 1782 ligt het VOC-schip Mercuur voor Edam (Onrust-archipel) gereed voor terugreis: 13 Europese en 26 Javaanse zeelui plus 79 Balinese slaven. Op 11 september in de Soenda-straat: muiterij — een gebeurtenis die de plantage-economie blootlegt.", cat:"militair", vl:["VL06"] },
+  { n:"0531", jaar:"~1607-1636", era:"vroeg-koloniaal", titel:"Hikayat Aceh", omschr:"Maleis-Atjeese hofkroniek over Sultan Iskandar Muda; Atjeese zelf-historiografie naast Nederlandse VOC-archieven (Hasymi 1981, Reid 2005, Lombard 1967).", cat:"cultuur", vl:["VL05", "VL06"] },
+  { n:"0532", jaar:"17e eeuw", era:"vroeg-koloniaal", titel:"Babad Tanah Jawi", omschr:"Javaanse hofkroniek die de Mataram-dynastie verbindt met Majapahit en Wali Songo; Beleid 3-bron voor organische islamisering en Indonesische zelfhistoriografie (Ricklefs 1998, Pigeaud 1959, Reid 1988–93).", cat:"cultuur", vl:["VL04", "VL05", "VL06"] },
+  { n:"0614b", jaar:"1860", era:"nederlands-koloniaal", titel:"Wet afschaffing slavernij in Nederlandsch-Indië", omschr:"Op 1 januari 1860 treedt de Wet houdende afschaffing der slavernij in Nederlandsch-Indië in werking (Tweede Kamer 21 juli 1859, 48 tegen 10 stemmen). Direct vrijgemaakt: slechts 4.739 personen — uitsluitend op Java, Madoera en de Banda-eilanden. Compensatie aan eigenaren: 30–60 gulden per persoon. Buitengewesten en koelie-ordonnanties bleven buiten beeld.", cat:"staatsvorming", vl:["VL02", "VL03", "VL06"] },
+  { n:"0616b", jaar:"1871", era:"nederlands-koloniaal", titel:"Sumatra-Traktaat: Goudkust verkocht, vrije hand op Atjeh", omschr:"Anglo-Dutch Treaties (1870–1871). Geratificeerd 25 februari 1871 voor het Goudkust-deel: Nederland verkoopt alle factorijen aan de Britten en krijgt vrije hand in Atjeh. Het verdrag heft het Atjeh-onafhankelijkheidsartikel uit het Traktaat van Londen 1824 op — directe aanleiding voor de Atjeh-oorlog van 1873 [TL-0626].PP5 §B.4 (Beleid 6) plaatst het Sumatra-Traktaat als externe diplomatieke voorwaarde voor de uitbreiding van het exploitatieve koloniale bewind in T6, met Furnivalls plurale-economy als analytisch raster en Limpach 2016 [TL-M019] + KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"diplomatiek", vl:["VL06"] },
+  { n:"0617b", jaar:"1880", era:"nederlands-koloniaal", titel:"Algemene Koeli Ordonnantie met poenale sanctie", omschr:"Op 22 juli 1880 vaardigt gouverneur-generaal sJacob de Algemene Koeli Ordonnantie uit voor Sumatras Oostkust (Stb. 1880 nr. 133). Centraal: de poenale sanctie. De werkgever kan contractbreuken (te laat komen, weglopen, klagen) zelf strafrechtelijk vervolgen. Een halve eeuw lang het wettelijke fundament van de plantage-economie.PP5 §B.4 (Beleid 6) leest de Algemene Koeli Ordonnantie met poenale sanctie als juridische kerninstantie van het exploitatieve koloniale bewind in T6 — een gelaagd regime van plantage-onvrijheid — met Furnivalls plurale-economy als analytisch raster en Limpach 2016 [TL-M019] + KITLV-NIOD-NIMH 2022 [TL-M022] als revisionistisch achtergrondkader.", cat:"staatsvorming", vl:["VL03", "VL06"] },
+  { n:"0621b", jaar:"1904", era:"nederlands-koloniaal", titel:"Rhemrev-rapport documenteert Deli-misstanden", omschr:"Procureur-generaal J.L.T. Rhemrev wordt in 1903 naar Sumatras Oostkust gestuurd na publicatie van Van den Brand, De miljoenen uit Deli (1902). Het rapport van 1904 bevestigt systematische mishandeling en sterftecijfers van 10–20% per jaar onder contractkoelies. Niet gepubliceerd; pas in 1987 door Breman ontdekt en uitgegeven.", cat:"staatsvorming", vl:["VL03", "VL06"] },
+  { n:"0630", jaar:"1721-1911", era:"nederlands-koloniaal", titel:"Riau-Lingga Sultanaat", omschr:"Bugis-Maleisische opvolger van het Johor-sultanaat; culturele scharnier tussen Sumatra, het Maleisisch schiereiland en Java; vehikel voor klassiek Maleis hofcultuur tot 1911 (Andaya 1975, Trocki 1979).", cat:"staatsvorming", vl:["VL05", "VL06", "VL12"] },
+  { n:"0710b", jaar:"1931", era:"nationalisme", titel:"Poenale sanctie afgeschaft onder Amerikaanse handelsdruk", omschr:"In 1929–1930 kondigen de Verenigde Staten aan dat zij vanaf 1932 import zullen verbieden van producten geproduceerd met dwangarbeid — gericht op Sumatraanse tabak. Onder die dreiging schaffen de planters in 1930 vrijwillig hun gebruik af; in 1931 wordt zij formeel uit de Koelie Ordonnantie verwijderd. Geen Nederlandse politieke of morele beslissing, maar exportbescherming.", cat:"staatsvorming", vl:["VL03", "VL07"] },
+  { n:"0710c", jaar:"1929-1942", era:"nationalisme", titel:"Marshall-druk-prefase", omschr:"Amerikaanse handelsverenigingen (Java Sugar Trade Association, Standard Vacuum) zetten via consulaten en US Department of State druk op Nederlands-Indisch koloniaal beleid; pré-conditie voor de Marshall-druk 1948 (Stoler 1985, Cribb 2017).", cat:"diplomatiek", vl:["VL06"] },
+  { n:"0921b", jaar:"1965–1979", era:"republiek", titel:"Buru-eiland: werkkamp voor politieke gevangenen", omschr:"Na de massamoorden 1965–1966 [TL-0924] sluit de Nieuwe Orde van Suharto meer dan 10.000 politieke gevangenen — verdacht van banden met de PKI — zonder proces op in een werkkamp op Buru-eiland in de Molukken. Onder hen vanaf 1969 de schrijver Pramoedya Ananta Toer, die er tot 1979 zou blijven. Gevangenen schreven Pramoedya's Buru-kwartet in herinnering.", cat:"cultureel", vl:["VL03", "VL09"] },
+  { n:"0926", jaar:"1965-1966", era:"republiek", titel:"CIA-betrokkenheid G30S", omschr:"Faciliterende rol van CIA-Jakarta-station (Hugh Tovar, Mary Vance Trent), namenlijsten en logistieke ondersteuning binnen het Cold War-kader; revisionistisch erkend (Roosa 2006, Robinson 2018, Bevins 2020).PP5 §B.4 (Beleid 11) markeert de CIA-betrokkenheid G30S expliciet binnen het revisionistische CIA-faciliteerd-kader, met Roosa 2006 [TL-M017], Robinson 2018 [TL-M020] en Bevins 2020 [TL-M021] als achtergrondkader en Asvi Warman Adam 2007 [TL-M018] + Hermawan Sulistyo 2000 [TL-M011] als post-1998 Indonesische consolidatie.", cat:"diplomatiek", vl:["VL09"] },
+];
+
+
+const ERA_NAMEN = {
+  prehistorie:          "Wortels van de Beschaving",
+  oud:                  "Oude Koninkrijken (400–1200)",
+  klassiek:             "Klassieke Koninkrijken (1200–1400)",
+  islamitisch:          "Islamitische Sultanaten (1300–1600)",
+  "vroeg-koloniaal":    "Vroeg Koloniaal Tijdperk (1596–1700)",
+  "nederlands-koloniaal":"Nederlands Koloniaal Bestuur (1700–1908)",
+  nationalisme:         "Nationale Ontwaking (1908–1942)",
+  revolutie:            "Japanse Bezetting & Revolutie (1942–1949)",
+  republiek:            "Vroege Republiek & G30S met Nasleep (1950–1966)"
+}
+
+const VL_NAMEN = {
+  VL01: "Ontdekking en kartering",
+  VL02: "Specerijenhandel",
+  VL03: "Gedwongen arbeid",
+  VL04: "Indianisering en islamisering",
+  VL05: "Mandala-imperia",
+  VL06: "Nederlandse aanwezigheid",
+  VL07: "Indonesisch nationalisme",
+  VL08: "Indonesische Revolutie",
+  VL09: "1965 en de Nieuwe Orde",
+  VL10: "Culinaire kruisbestuiving",
+  VL11: "Chinese diaspora-lange-lijn",
+  VL12: "Vrouwen als naamloze actoren",
+  VL13: "Japan in de Indonesische geschiedenis"
+};
+
+const CAT_KLEUREN = {
+  staatsvorming:'#e88', militair:'#db9', maritiem:'#46b', religie:'#aaf', cultuur:'#8d8',
+  economie:'#ee8', diplomatiek:'#8ee', wetenschap:'#8cf', sociaal:'#f9b'
+};
+
+let huidigEra = 'all', huidigCat = null, huidigZoek = '', huidigVL = null;
+
+function bouwTijdlijn() {
+  const container = document.getElementById('timeline');
+  container.innerHTML = '';
+  let vorigEra = null;
+  let teller = 0;
+
+  EVENTS.forEach((ev) => {
+    const matchEra  = (huidigEra === 'all' || ev.era === huidigEra);
+    const matchCat  = (!huidigCat || ev.cat === huidigCat);
+    const matchVL   = (!huidigVL || (ev.vl && ev.vl.includes(huidigVL)));
+    const q = huidigZoek.toLowerCase();
+    const matchZoek = !q || ev.titel.toLowerCase().includes(q) ||
+                      ev.omschr.toLowerCase().includes(q) ||
+                      ev.jaar.toLowerCase().includes(q) ||
+                      ev.cat.toLowerCase().includes(q) ||
+                      (ev.vl && ev.vl.some(v => v.toLowerCase().includes(q)));
+
+    if (!matchEra || !matchCat || !matchVL || !matchZoek) return;
+
+    if (ev.era !== vorigEra) {
+      const lbl = document.createElement('div');
+      lbl.className = 'era-label';
+      lbl.innerHTML = `<span class="era-label-text">${ERA_NAMEN[ev.era] || ev.era}</span>`;
+      container.appendChild(lbl);
+      vorigEra = ev.era;
+    }
+
+    const kant = (teller % 2 === 0) ? 'left' : 'right';
+    const div = document.createElement('div');
+    const isNew = typeof ev.n === 'string' && ev.n.startsWith('N');
+    div.className = `event ${kant}`;
+    div.style.animationDelay = `${(teller % 20) * 0.04}s`;
+
+    div.innerHTML = `
+      <div class="event-card${isNew ? ' event-card-new' : ''}">
+        <span class="event-number${isNew ? ' event-number-new' : ''}">TL-${ev.n}</span>
+        <div class="event-year">
+          <span class="event-category-dot dot-${ev.cat}" style="background:${CAT_KLEUREN[ev.cat]}"></span>
+          ${ev.jaar}
+        </div>
+        <div class="event-title">${ev.titel}</div>
+        <div class="event-desc">${ev.omschr}</div>
+        <span class="event-tag cat-${ev.cat}">${ev.cat}</span>
+        ${(ev.vl || []).map(v => `<span class="event-tag vl-tag" style="background:rgba(201,146,42,0.15); border:1px solid rgba(201,146,42,0.4); color:#E8B84B; margin-left:4px; font-size:10px;">${VL_NAMEN[v] || v}</span>`).join('')}
+      </div>`;
+    container.appendChild(div);
+    teller++;
+  });
+
+  document.getElementById('stats').textContent =
+    `${teller} van de ${EVENTS.length} gebeurtenissen zichtbaar`;
+  document.getElementById('no-results').style.display = teller === 0 ? 'block' : 'none';
+}
+
+function filterEra(era) {
+  huidigEra = era;
+  document.querySelectorAll('.era-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  bouwTijdlijn();
+  if (era !== 'all') {
+    const eerste = document.querySelector('.event');
+    if (eerste) eerste.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function filterCat(cat) {
+  huidigCat = (cat === 'all') ? null : cat;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  if (event && event.target) event.target.classList.add('active');
+  bouwTijdlijn();
+}
+
+function filterVL(vl) {
+  huidigVL = (vl === 'all') ? null : vl;
+  document.querySelectorAll('.vl-btn').forEach(b => b.classList.remove('active'));
+  if (event && event.target) event.target.classList.add('active');
+  bouwTijdlijn();
+}
+
+function doSearch() {
+  huidigZoek = document.getElementById('search').value;
+  bouwTijdlijn();
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('scrollBtn').classList.toggle('visible', window.scrollY > 600);
+});
+
+bouwTijdlijn();
+</script>
+</body>
+</html>
