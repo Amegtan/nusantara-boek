@@ -907,6 +907,15 @@ const EVENTS = [
 ];
 
 
+const ERA2CH = {prehistorie:"2",oud:"3",klassiek:"4",islamitisch:"5","vroeg-koloniaal":"6","nederlands-koloniaal":"7",nationalisme:"8",revolutie:"9",republiek:"10"};
+const TLMAP = {"0105":"2","0107":"2","0113":"2","0115":"2","0201":"3","0203":"3","0207":"3","0208":"3","0209":"3","0210":"3","0211":"3","0212":"3","0213":"3","0215":"3","0218":"3","0302":"3","0305":"3","0308":"3","0312":"4","0313":"4","0314":"4","0315":"4","0316":"4","0319":"4","0320":"4","0322":"4","0712":"4.2","0401":"5","0403":"5","0404":"5","0405":"5","0406":"5","0411":"5","0412":"5","0521":"5","0502":"5","0924":"5","0510":"6","0512":"6","0518":"6","0516":"6","0525":"6","0522":"6","0520":"6","0526":"6","0530":"6","0604":"6","0607":"6","0610":"6","0626":"6","0605":"6","0606":"6","0627":"6.7","0616":"7","0618":"7","0621":"7","0622":"7","0623":"7","0625":"7","0630":"7","0632":"7","0716":"7","0701":"8","0706":"8","0711":"8","0718":"8","0721":"8","0805":"8","0801":"9","0804":"9","0809":"9","0817":"9","0819":"9","0821":"9","0825":"9","0923":"9","0902":"10","0908":"10","0909":"10","0911":"10","0914":"10","0919":"10","0926":"10","0917":"10"};
+function repertoriumLink(ev){
+  var ch = ERA2CH[ev.era]; var s = TLMAP[ev.n];
+  if (s && ch && (s === ch || s.indexOf(ch + ".") === 0)) return "/boek/lezen/#" + s;
+  if (ch) return "/boek/lezen/#" + ch;
+  return "/boek/lezen/";
+}
+
 const ERA_NAMEN = {
   prehistorie:          "Wortels van de Beschaving",
   oud:                  "Oude Koninkrijken (400–1200)",
@@ -986,6 +995,7 @@ function bouwTijdlijn() {
         <div class="event-desc">${ev.omschr}</div>
         <span class="event-tag cat-${ev.cat}">${ev.cat}</span>
         ${(ev.vl || []).map(v => `<span class="event-tag vl-tag" style="background:rgba(201,146,42,0.15); border:1px solid rgba(201,146,42,0.4); color:#E8B84B; margin-left:4px; font-size:10px;">${VL_NAMEN[v] || v}</span>`).join('')}
+        <a class="event-read" href="${repertoriumLink(ev)}" target="_top" style="display:block; margin-top:10px; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#E8B84B; text-decoration:none; border-top:1px solid rgba(201,146,42,0.2); padding-top:7px;">&rarr; Lees in het Repertorium</a>
       </div>`;
     container.appendChild(div);
     teller++;

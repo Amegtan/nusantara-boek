@@ -36,7 +36,7 @@ Site/
 
 ## Wat staat er nog niet
 
-- **D3-interconnecties-graaf**: bestand moet uit het boek-werkmap worden geidentificeerd en overgezet (placeholder-tekst staat in `interconnecties/index.html`).
+- **D3-interconnecties-graaf**: bestand moet uit het Repertorium-werkmap worden geidentificeerd en overgezet (placeholder-tekst staat in `interconnecties/index.html`).
 - **Bijlage A.M-events-integratie**: tijdlijn-bestand moet uitgebreid van 159 naar 212 events. Apart werkpad.
 - **Open Graph-meta-images**: nog geen og-image.
 - **Favicon**.
