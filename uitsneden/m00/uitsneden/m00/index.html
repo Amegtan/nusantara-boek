@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wat Padde op Java aantrof — De Uitsnede (Marge) — Nusantara</title>
+<style>
+  :root{
+    --c-papier:#FBF9F5; --c-perkament:#F2E9D2;
+    --c-inkt:#2A2018; --c-tekst:#1C1C1C; --c-gedempt:#6A6A6A;
+    --c-rood:#8B2C2C; --c-accent:#B5452F;
+    --c-groen:#C9D6C4; --c-hairline:#D8D2C2;
+    --font-serif:'Georgia','Iowan Old Style',Cambria,'Times New Roman',serif;
+    --font-sans:'Helvetica Neue',Arial,system-ui,sans-serif;
+    --maxw:720px; --maxw-wide:980px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--c-papier);color:var(--c-tekst);
+    font-family:var(--font-serif);font-size:18px;line-height:1.62;}
+  a{color:var(--c-rood);text-decoration:none;}
+  a:hover{color:var(--c-accent);text-decoration:underline;}
 
+  header.site{border-bottom:1px solid var(--c-hairline);background:var(--c-papier);}
+  header.site .row{max-width:var(--maxw-wide);margin:0 auto;padding:1rem 1.25rem;
+    display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.75rem;}
+  .brand{font-family:var(--font-serif);font-weight:700;font-size:1.25rem;letter-spacing:.02em;color:var(--c-inkt);}
+  .brand .tag{display:block;font-weight:400;font-size:.8rem;color:var(--c-gedempt);
+    font-family:var(--font-sans);margin-top:.15rem;letter-spacing:.01em;}
+  .langsw{font-family:var(--font-sans);font-size:.85rem;color:var(--c-gedempt);}
+  .langsw a{color:var(--c-gedempt);}
+  .langsw .on{color:var(--c-rood);font-weight:700;}
+  .langsw a:hover{color:var(--c-rood);text-decoration:none;}
+
+  article{max-width:var(--maxw);margin:0 auto;padding:2.2rem 1.25rem 3rem;}
+  .eyebrow{font-family:var(--font-sans);font-size:.72rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--c-rood);font-weight:700;}
+  h1{font-family:var(--font-serif);color:var(--c-inkt);font-size:2.3rem;line-height:1.18;margin:.35rem 0 .35rem;}
+  .sub{font-style:italic;color:var(--c-gedempt);font-size:1.1rem;margin:0 0 1.2rem;}
+  .byline{font-family:var(--font-sans);font-size:.82rem;color:var(--c-gedempt);
+    border-top:1px solid var(--c-hairline);border-bottom:1px solid var(--c-hairline);
+    padding:.6rem 0;margin:0 0 1.1rem;}
+  .classbar{display:flex;flex-wrap:wrap;gap:.55rem 1.6rem;margin:0 0 1.4rem;font-family:var(--font-sans);}
+  .classgroup{display:flex;align-items:center;flex-wrap:wrap;gap:.45rem;}
+  .classgroup .k{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--c-rood);font-weight:700;}
+  .tag{font-size:.76rem;background:var(--c-perkament);border:1px solid var(--c-hairline);
+    border-radius:999px;padding:.16rem .62rem;color:var(--c-inkt);white-space:nowrap;}
+  h2{font-family:var(--font-serif);color:var(--c-inkt);font-size:1.4rem;margin:2.1rem 0 .5rem;}
+  h2::after{content:"";display:block;width:48px;height:2px;background:var(--c-accent);margin-top:.45rem;}
+  p{margin:1rem 0;}
+  ul{margin:.7rem 0 1.1rem 1.2rem;}
+  li{margin:.4rem 0;}
+  em{font-style:italic;} strong{font-weight:700;color:var(--c-inkt);}
+
+  figure{margin:1.7rem 0;background:var(--c-perkament);border:1px solid var(--c-hairline);
+    border-radius:6px;overflow:hidden;}
+  figure img{display:block;width:100%;height:auto;}
+  figure.narrow{max-width:340px;}
+  figcaption{font-family:var(--font-sans);font-size:.82rem;color:var(--c-gedempt);
+    padding:.6rem .85rem;line-height:1.4;}
+
+  hr.rule{border:none;border-top:1px solid var(--c-hairline);margin:2rem 0;}
+  .bronblock{background:var(--c-perkament);border:1px solid var(--c-hairline);border-radius:6px;
+    padding:1rem 1.1rem;margin-top:1.6rem;font-size:.92rem;}
+  .bronblock .h{font-family:var(--font-sans);font-size:.68rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--c-rood);font-weight:700;margin-bottom:.45rem;}
+  .closing{font-style:italic;color:var(--c-tekst);}
+
+  footer.site{border-top:1px solid var(--c-hairline);background:var(--c-perkament);}
+  footer.site .row{max-width:var(--maxw);margin:0 auto;padding:1.4rem 1.25rem;
+    font-family:var(--font-sans);font-size:.8rem;color:var(--c-gedempt);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;}
+  .draftbar{background:var(--c-inkt);color:#f3ead7;font-family:var(--font-sans);font-size:.78rem;
+    text-align:center;padding:.45rem 1rem;letter-spacing:.02em;}
+  .rightsnote{font-family:var(--font-sans);font-size:.76rem;color:var(--c-gedempt);
+    max-width:var(--maxw);margin:.4rem auto 0;padding:0 1.25rem 2rem;}
+</style>
+<link rel="canonical" href="https://nusantara2026.nl/uitsneden/m00/">
+</head>
+<body>
+
+<div class="draftbar">Huisstijl-render (preview) van M00 — De Uitsnede, Marge · NL complicité v1.6 · 17 juni 2026. Niet gepubliceerd.</div>
+
+<header class="site">
+  <div class="row">
+    <div class="brand" style="display:flex;align-items:center;gap:.65rem;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="36" height="36" role="img" aria-label="Nusantara" style="flex-shrink:0;">
+    <g fill="none" stroke="#2A2018" stroke-width="1.6">
+      <circle cx="32" cy="32" r="29"/>
+      <circle cx="32" cy="32" r="22"/>
+      <circle cx="32" cy="32" r="15"/>
+    </g>
+    <circle cx="24" cy="27" r="6.5" fill="#8B2C2C"/>
+  </svg><span>Nusantara<span class="tag">Uitsnede - Marge</span></span></div>
+    <nav class="langsw"><span class="on">NL</span> · <a href="/en/uitsneden/m00/"</a> · <a href="/id/uitsneden/m00/"</a></nav>
+  </div>
+</header>
+
+<article>
+  <div class="eyebrow">Aankondiging · M00</div>
+  <h1>Wat Padde op Java aantrof</h1>
+  <p class="sub">Nusantara gaat live op 1 juli 2026</p>
+  <div class="byline">Door Herrie Heckman · 1 juli 2026</div>
+
+  <div class="classbar">
+    <div class="classgroup"><span class="k">Tijdperk</span><span class="tag">Vroeg Koloniaal</span><span class="tag">Nederlands Koloniaal</span><span class="tag">Epiloog</span></div>
+    <div class="classgroup"><span class="k">Thema</span><span class="tag">Maritiem</span><span class="tag">Cultuur</span></div>
+  </div>
+
+  <figure>
+    <img alt="De scheepsjongens van Bontekoe in brons - Houten Hoofd, Hoorn" src="figures/00-hook.jpg">
+    <figcaption>De scheepsjongens van Bontekoe in brons — Houten Hoofd, Hoorn (Jan van Druten, 1968).</figcaption>
+  </figure>
+
+  <p>Beste lezer, laten wij beginnen bij een jongen die u vrijwel zeker kent. Een ronde knaap met een bezorgde blik, een leren broek, een riem om zijn buik. Het is Padde Kelemeyn, de komische scheepsjongen uit Johan Fabricius&rsquo; <em>De Scheepsjongens van Bontekoe</em> (1924); in Hoorn staat hij sinds 1968 in brons. Grote kans dat u hem nog van de lagere school herkent &mdash; en dat is precies waar dit verhaal begint. Want Padde heeft nooit bestaan. Bontekoe noteerde de naam &eacute;&eacute;n keer in zijn <em>Iournael</em> uit 1646: een botteliersknecht die een kaars in een vat brandewijn liet vallen. E&eacute;n inktstreep. Daaromheen bouwde Fabricius een heel jongensavontuur. Niets eraan was historisch waar &mdash; en toch volgden vijftig drukken, twee verfilmingen, een stripverhaal en generaties Nederlanders die het voor waarheid hielden.</p>
+
+  <p>Het opmerkelijke is niet <em>d&aacute;t</em> de fabel bestond. Het opmerkelijke is hoelang wij eraan bleven vasthouden. Indonesi&euml; werd in augustus 1945 onafhankelijk; de soevereiniteitsoverdracht volgde in december 1949. Maar <em>De Scheepsjongens van Bontekoe</em> bleef tot ver in de jaren tachtig standaardlectuur op de Nederlandse lagere school &mdash; en pas in 2026 is het niet langer verkrijgbaar. Driekwart eeuw na de onafhankelijkheid eindigt nu pas het fabel-tijdperk. Houd dat getal even vast: driekwart eeuw. U komt het zo nog tegen.</p>
+
+  <h2>Het verhaal is gevallen</h2>
+  <p>U herinnert zich misschien hoe het in 2022 ging. NIOD, KITLV en NIMH publiceerden <em>Over de grens</em>, en de conclusie was hard: het Nederlandse geweld in de Indonesische onafhankelijkheidsoorlog was niet incidenteel maar structureel &mdash; bekend bij de top, getolereerd door de regering, uitgevoerd als beleid. Minister-president Rutte en koning Willem-Alexander boden excuses aan. In Nederland was het schok, debat, een omslag in het zelfbeeld.</p>
+
+  <figure class="narrow">
+    <img alt="Cover Over de grens (NIOD/KITLV/NIMH, AUP 2022)" src="figures/01-cover-over-de-grens.jpg">
+    <figcaption>Cover <em>Over de grens</em> (NIOD/KITLV/NIMH, AUP 2022).</figcaption>
+  </figure>
+
+  <p>En nu komt het. <strong>Aan Indonesische zijde was het geen nieuws.</strong> Die geschiedenis is daar generaties lang gekend, doorverteld aan de keukentafel, gedocumenteerd door historici als Sartono Kartodirdjo en Taufik Abdullah, opgenomen in de schoolboeken. Het NIOD-keerpunt markeert dus niet de waarheid die ontdekt werd, maar het moment waarop Nederland eindelijk in zijn eigen archief ging lezen wat de archipel allang wist.</p>
+
+  <h2>Het patroon herhaalt zich</h2>
+  <p>Padde en NIOD staan niet op zichzelf, en als u eenmaal weet waar u op moet letten, ziet u het overal. De afschaffing van de slavernij in Nederlands-Indi&euml; (1860) maakte enkele duizenden mensen formeel vrij &mdash; waarna de onvrijheid verschoof naar schuldslavernij en contractarbeid en via de <em>poenale sanctie</em> doorliep tot ver in de twintigste eeuw. De Ethische Politiek (1901-1942) beloofde welvaart en onderwijs, en leverde irrigatie aan de cultuurregio&rsquo;s en onderwijs aan een minieme elite; precies daarbinnen ontstond de Indonesische nationale beweging. En dan de rijsttafel &mdash; die u misschien onlangs met vrienden in een Indisch restaurant hebt gegeten, en die internationaal doorgaat als h&eacute;t &ldquo;Indonesische&rdquo; gerecht. Het is een koloniaal-Nederlandse showcase-stijl uit omstreeks 1900. In Indonesi&euml; kent men de rijsttafel niet.</p>
+
+  <figure>
+    <img alt="Rijsttafel ten huize van de familie C.H. Japing, Bandoeng, mei 1936" src="figures/02-rijsttafel.jpg">
+    <figcaption>Rijsttafel ten huize van de familie C.H. Japing, met tante Jet en oom Jan Breeman, Bandoeng, mei 1936. Foto: C.H. Japing. Collectie Wereldmuseum (v/h Tropenmuseum), Nationaal Museum van Wereldculturen (CC BY-SA 3.0; bijgesneden).</figcaption>
+  </figure>
+
+  <p>Ziet u het patroon? Telkens loopt het Nederlandse verhaal over Indonesi&euml; driekwart eeuw achter op de werkelijkheid. Nusantara is een poging dat beeld bij te stellen &mdash; niet alleen voor Nederlanders, maar ook voor Indonesi&euml;rs en voor iedereen die nieuwsgierig is naar dit prachtige land.</p>
+
+  <h2>Wat Nusantara wil zijn</h2>
+  <p>Nusantara verkent de geschiedenis van Indonesi&euml; opnieuw &mdash; geen populair verhaal, maar een verkenning op basis van de kennis van nu. Vier uitgangspunten:</p>
+  <ul>
+    <li><strong>de archipel is de hoofdrolspeler, niet het decor</strong>;</li>
+    <li><strong>de Nederlandse aanwezigheid is een hoofdstuk, geen kader</strong> (300 van de meer dan 4.000 jaar);</li>
+    <li><strong>wij lezen historici uit alle windrichtingen</strong> &mdash; Indonesische, Australische, Amerikaanse, Franse en Britse, maar ook Maleisische, Indiase, Chinese en Japanse naast Nederlandse; en</li>
+    <li><strong>aandacht voor wie maar &eacute;&eacute;n keer in het archief voorkomt</strong> &mdash; Padde staat voor duizenden naamlozen.</li>
+  </ul>
+
+  <h2>Wat u kunt verwachten</h2>
+  <p>Het project loopt van de prehistorie tot de formele afzetting van president Soekarno op 12 maart 1967, met <strong>218 sleutelgebeurtenissen</strong> langs zes criteria, van politiek tot historiografisch. De eerste reeks vanaf 1 juli is de <strong>Openingslijn</strong>: zeven blogs die door alle tien tijdvakken lopen. Daarna verhaallijnen die elk een eigen tijdvak nemen &mdash; <em>Ontdekking</em>, <em>Gedwongen arbeid</em>, <em>China als krachtenveld</em>, en meer. En tussendoor <em>Capita Selecta</em>: korte, leuke wetenswaardigheden.</p>
+  <p>Elke blog verschijnt in drie talen: <strong>Nederlands</strong> (de werktaal), <strong>Engels</strong> en <strong>Indonesisch</strong>. Twee per week.</p>
+
+  <h2>Drie sporen, samen &eacute;&eacute;n verhaal</h2>
+  <p>Een traditioneel boek is een statisch eindproduct. Nusantara werkt anders: op 1 juli openen drie sporen tegelijk en zij vormen samen &eacute;&eacute;n gesprek. De <strong>blogs</strong> (op Substack) zijn het denkwerk in samenspraak met u, niet meer gereviseerd na publicatie. De <strong>site Nusantara 2026</strong> is het portaal met de architectuur en de Tijdlijn. En het <strong>Boek</strong> is een dynamisch referentiewerk dat zichtbaar aangroeit door de blogs en de discussies eromheen.</p>
+
+  <h2>Een uitnodiging</h2>
+  <p>Nusantara is een individuele zoektocht, maar geen solo-onderneming &mdash; en daar komt u in beeld. Vakhistorici met empirische kritiek, Indonesische lezers met perspectief op hun eigen historiografie, Indische lezers met familieherinneringen die de offici&euml;le geschiedenis niet dekt: u bent allen welkom. Onder elke blog komt een reactiemogelijkheid; op de site een contactformulier. Het ligt in de bedoeling binnenkort een klankbordgroep van experts op te richten. Het principe blijft: kritisch schrijven over Indonesi&euml; vanuit Nederland kan alleen als de eigen positie zichtbaar blijft. Keuzes en standpunten worden expliciet geformuleerd en verantwoord &mdash; niet weggepoetst als neutrale weergave.</p>
+
+  <h2>Methode en de rol van AI</h2>
+  <p>Ik ben er open over: in het schrijfproces speelt AI &mdash; in dit geval Claude &mdash; een rol als methodologische assistent. Structuurbewaking, bronnen-cross-check, consistentie-controle, een eerste formulering die ik vervolgens herzie. Elke claim is verbonden aan een gedocumenteerde bron; alle interpretatieve keuzes staan in een traceerbaar register met versie-historie. Die werkwijze beperkt twee risico&rsquo;s &mdash; <em>hallucinatie</em> (plausibel klinkende maar onbestaande feiten) en, ernstiger, <em>fabulatie</em> (verhalen-bouwen waar de bronnen zwijgen) &mdash; en maakt mogelijk dat &eacute;&eacute;n auteur produceert wat anders een onderzoeksteam zou vergen.</p>
+
+  <h2>Wie schrijft dit</h2>
+  <p>Een objectief verhaal over geschiedenis bestaat niet; daarom hoort u wie ik ben. Mijn naam is Herrie Heckman, geboren in Den Haag in 1948. Mijn ouders zijn geboren in Nederlands-Indi&euml;. Zelf heb ik zes jaar in Indonesi&euml; gewerkt; ik spreek en lees Indonesisch. Gesprekken met Indonesische vrienden en collega&rsquo;s over de Nederlandse omgang met het koloniaal verleden hebben mij regelmatig verbaasd &mdash; een verbazing die wederzijds bleek. Toen ik dieper dook, verbaasde ik mij opnieuw: over hoe rijk de Indonesische geschiedenis op zichzelf is, los van het Nederlandse hoofdstuk. Die verbazing hoop ik met u te delen &mdash; met empathie, zonder de zwarte kanten te verdoezelen.</p>
+
+  <hr class="rule">
+  <p class="closing">Vandaag verschijnt ook deel 1 van de Openingslijn-reeks: &ldquo;Padde op de ree van Batavia&rdquo;. Eerstvolgende blog &mdash; dinsdag 7 juli 2026: &ldquo;De zee die ouder is dan haar bewoners&rdquo; &mdash; deel 2.</p>
+
+  <div class="bronblock">
+    <div class="h">Bronnen waarop dit stuk rust</div>
+    Bontekoe, <em>Iournael</em> (1646); Fabricius, <em>De Scheepsjongens van Bontekoe</em> (1924, niet meer leverbaar 2026); NIOD/KITLV/NIMH, <em>Over de grens</em> (AUP, 2022); Carey, <em>The Power of Prophecy</em> (2007); Fasseur, <em>Kultuurstelsel en koloniale baten</em> (1975); Locher-Scholten, <em>Ethiek in fragmenten</em> (1981). Voor de volledige projectarchitectuur zie de site Nusantara 2026 vanaf 1 juli.
+  </div>
+</article>
+
+<footer class="site">
+  <div class="row">
+    <span>&copy; 2026 H.A. Heckman &mdash; Nusantara. Niet voor commercieel hergebruik.</span>
+    <span>nusantara-boek.nl &middot; De Uitsnede</span>
+  </div>
+</footer>
+<p class="rightsnote">Beeldrechten: rijsttafel CC BY-SA 3.0 (Collectie Wereldmuseum/NMVW) &mdash; vrij met naamsvermelding. Standbeeld (Houten Hoofd, Hoorn) en boekomslag <em>Over de grens</em>: credits weergegeven; rechtenstatus vóór publieke publicatie definitief verifiëren conform het rechten-spoor.</p>
+
+</body>
+</html>
